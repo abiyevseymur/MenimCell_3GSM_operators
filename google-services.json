@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "767485387864",
+    "firebase_url": "https://cellular-arbor-165202.firebaseio.com",
+    "project_id": "cellular-arbor-165202",
+    "storage_bucket": "cellular-arbor-165202.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767485387864:android:30415336d374b99f",
+        "android_client_info": {
+          "package_name": "com.example.seymur.azercell2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767485387864-939sb62dmkaepckbd1o0m14el3g3eh1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdliMlDIjOwSLo8v0UWxq6da05P1rePGI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,234 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_gradient"
+    android:layout_height="match_parent"
+    tools:context="com.example.seymur.azercell2.fragments.Xercler">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/mainXercler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|right"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:text="Today"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <TextView
+                android:id="@+id/percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingEnd="0dp"
+                android:paddingStart="10dp"
+                android:text="--%"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:layout_column="2"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="0"
+                android:background="@drawable/progress_bar_backgr"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="65"
+                android:progressDrawable="@drawable/progress_bar" />
+
+            <TextView
+                android:id="@+id/nameOfCosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/allProgressTittle"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="252dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingEnd="50dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingStart="50dp">
+
+                    <GridLayout
+                        android:id="@+id/aallProgressBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="0.00"
+                        android:background="@drawable/whitebtn"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:id="@+id/allProgress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_column="1"
+                            android:layout_gravity="center_vertical|fill"
+                            android:layout_row="0"
+                            android:layout_weight="0.00"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/allProgressTittle"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:id="@+id/callsSmsBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="0.00"
+                        android:background="@drawable/whitebtn"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_column="0"
+                            android:layout_row="0"
+                            android:layout_weight="0.00"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/calls" />
+
+                        <TextView
+                            android:id="@+id/callsSms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_gravity="center_vertical|fill"
+                            android:layout_row="0"
+                            android:layout_weight="0.00"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/zengler"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:id="@+id/internetBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="0.00"
+                        android:background="@drawable/whitebtn"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/internet" />
+
+                        <TextView
+                            android:id="@+id/internetProgressTittle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|fill"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/internet"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp" />
+                    </GridLayout>
+
+                    <GridLayout
+                        android:id="@+id/CreditBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="0.00"
+                        android:background="@drawable/whitebtn"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/credit_costs" />
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|fill"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/kredit"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp" />
+                    </GridLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </GridLayout>
+    </LinearLayout>
+
+</FrameLayout>

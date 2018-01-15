@@ -1,0 +1,129 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.seymur.azercell2.fragments.VAS.CallForward">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView27"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="69dp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="Forward To"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/callforwardPhoneNumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView25"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:ems="10"
+            android:hint="@string/operatorCodeNumber"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/activeCallForwarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radioGroup2"
+            android:layout_alignStart="@+id/radioGroup2"
+            android:layout_below="@+id/radioGroup2"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/button"
+            android:text="Active" />
+
+        <Button
+            android:id="@+id/deactiveCallForwarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/activeCallForwarding"
+            android:layout_alignBottom="@+id/activeCallForwarding"
+            android:layout_alignEnd="@+id/radioGroup2"
+            android:layout_alignRight="@+id/radioGroup2"
+            android:background="@drawable/button"
+            android:text="Deactive" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView27"
+            android:gravity="center_horizontal|center"
+            android:paddingEnd="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingStart="20dp"
+            android:text="In case of active forwarding subscriber pays for incoming calls according to the price of standard call in tariff used." />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="Call Forwarding"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/callforwardPhoneNumb"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:checkedButton="@+id/AllCallsForwarding">
+
+            <RadioButton
+                android:id="@+id/AllCallsForwarding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="All Calls" />
+
+            <RadioButton
+                android:id="@+id/callforwardingBusy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="When the phone is busy" />
+
+            <RadioButton
+                android:id="@+id/CallForwardingNotAnswered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="When calls are not answered" />
+
+            <RadioButton
+                android:id="@+id/callForwardingSwitchedOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="When the phone is switched off" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</FrameLayout>

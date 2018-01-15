@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\ac14ec68d010dcf6d129ca74456ce0b2d56895ca\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_db5fa8d39d6145f9e7e3d252eae36104fab56498.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\15f227b8c76b2cbc5fd49cc69a13c979f2a6f0e9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_971e961fe1785d214b516d0872080e020bff89d0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\761baf9f30fed94c58d73e9b238d66a920dad938\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_5703cf096f30bc37b93779638cc5f4278758d71c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\f7be84ecc381d39369d7613b91f764bb760c69e6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a2e83ee8006cc878c42cd717eb671606cb941ddc">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_050e165a5ddbfbfee4e1c684400ecbaaf0dfe95c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\04f4e696c9b65acd744542ad938c4c3ab4c55662\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_e8ba86866c6b2252868e858261cd3d856b931018.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\sdkcomp\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\support-annotations-26.0.0-alpha1_c943a617f77670c336bc69c382670d46798f88bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\6d515bcfe19c4121e24d7ed96b6ce15f3c719a5c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_daec0e944359592ed65ac126f6032ce06324268a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\d8ceb3b10e299ecbee13fc968d2d8def6ab537f4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_46492ef2e614e5bfa825156fbe16facf1fb57049.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\d7d1637abf5733ccaae27cd6a4aa07b4e2a7169c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_d46abb8568a0a029065539b0a70b0693cb6ae433.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\d326053a9cbd8d66d9a0b85c467524e96a0d1c72\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_c18bddb19598092c3ab7bc39dd84e84d6207f22b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\gson-2.4_791a621f1948ba2a2d7d1153e62e8e4abeea0aad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.0-beta4\739e00dea1f0ac04fdb9b6160d667e23cc50a791\retrofit-2.0.0-beta4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="739e00dea1f0ac04fdb9b6160d667e23cc50a791">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\retrofit-2.0.0-beta4_64a993c16b1dc31c4c31e21f07d808c7cbac5928.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\sdkcomp\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_b8f09136acd98add7a926921ea57cf5775f416cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.0.1\b34c1f2d993044656e87f88970b6818e99e886ba\okhttp-3.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\okhttp-3.0.1_927fabe9a36f69acffc3559e4f97f5fda310a429.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\fa2ec6f6f42c9db47ed89d3a4708fcb019cee176\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="057fb316bed8467398333f30926c2d5506e275b2">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_173f0c651dbe6c618c24b790e8d442937420d498.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\c8c82c3551f5655f03c1f52eb4c0264c91790176\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_70ee70586c1ca8923f0d800d93e36a5ae717b4b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\9b3d3c2d01280bfeb5795085fcfd65371d7c82c4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1c4f62b5874f45a6fd3617fa6447714adb7a72a7">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_ddaa0f1f9ed8f256578d401c5a5c7c70ca7a7ba0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\9841c262c5f0b497fb87b5453aaf60d30ae63b09\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_8a45de64dfeb12f38b6c68676fc34689cfb9f6ad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\9d9f977aa537cfeb0eac996d58d770a075b886d5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cf251baf39f5c5138224b67b4106eb6331abbd13">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_c3bae658951e16464299fcc854a7e2a22d52a881.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\94f051e9548f4a7a330ef35b4dfdc983ee625c05\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_79d3ef9b5085a8938119d161d060c18fd521909e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.gradle\caches\modules-2\files-2.1\org.parceler\parceler-api\1.0.4\4f7392b86e064f3f6da06977f54c21a48e6b6871\parceler-api-1.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4f7392b86e064f3f6da06977f54c21a48e6b6871">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\parceler-api-1.0.4_99f171e2a702f6928aadc01cdecfdb8fcbac3c5d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.0-beta4\de5935a367ba5e343e9df786ac8fc0c7d52b5f0c\converter-gson-2.0.0-beta4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="de5935a367ba5e343e9df786ac8fc0c7d52b5f0c">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\converter-gson-2.0.0-beta4_467f3c158ffd8f16cce8dd64b8654421a04018af.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\503378ab248a5f4b5f7a4efb9c8476db2519fae7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_e8f6a318bc535ad17818fb94e03ba7222806a371.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\ce25b6b4e3fc2bd4672d587f62f553e775565dab\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="41f47bbcd281fdb1e42e220220ab3bfa1da591e0">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_62ec9340a8169a6bd14da002b97b4e785bc72455.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\okio-1.6.0_8d597beaa9d3d74b8fb1ba38750e44bfad16cf82.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Seymur\.android\build-cache\edf84241774541ab916fed2210d8f5b356d13a64\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\Seymur\AndroidStudioProjects\Azercell2\app\build\intermediates\pre-dexed\debug\classes_9106392609d799fc41f0d7009ab03f2740820a44.jar" />
+    </item>
+
+</items>

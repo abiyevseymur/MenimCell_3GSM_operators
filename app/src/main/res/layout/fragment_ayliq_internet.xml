@@ -1,0 +1,228 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context="com.example.seymur.azercell2.fragments.ayliqInternet">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/ayliqMip"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <GridLayout
+                        android:layout_width="290dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button"
+                        android:elevation="0dp">
+
+                        <Button
+                            android:id="@+id/mip50"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="3"
+                            android:background="@drawable/buttonpink"
+                            android:text="@string/derhalQosulma"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="82dp"
+                            android:layout_column="0"
+                            android:layout_gravity="center"
+                            android:layout_row="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/mipFiftyPrice"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="290dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button"
+                        android:elevation="0dp">
+
+                        <Button
+                            android:id="@+id/mip500"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="3"
+                            android:background="@drawable/buttonpink"
+                            android:text="@string/derhalQosulma"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="82dp"
+                            android:layout_column="0"
+                            android:layout_gravity="center"
+                            android:layout_row="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/mipfiveHundredPrice"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="290dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button"
+                        android:elevation="0dp">
+
+                        <Button
+                            android:id="@+id/mip1000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="3"
+                            android:background="@drawable/buttonpink"
+                            android:text="@string/derhalQosulma"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="82dp"
+                            android:layout_column="0"
+                            android:layout_gravity="center"
+                            android:layout_row="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/mipOneGbPrice"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="290dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button"
+                        android:elevation="0dp">
+
+                        <Button
+                            android:id="@+id/mip5000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="3"
+                            android:background="@drawable/buttonpink"
+                            android:text="@string/derhalQosulma"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="82dp"
+                            android:layout_column="0"
+                            android:layout_gravity="center"
+                            android:layout_row="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/mipFiveGbPrice"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="290dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button"
+                        android:elevation="0dp">
+
+                        <Button
+                            android:id="@+id/mip10000"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="3"
+                            android:background="@drawable/buttonpink"
+                            android:text="@string/derhalQosulma"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="82dp"
+                            android:layout_column="0"
+                            android:layout_gravity="center"
+                            android:layout_row="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/mipTenGbPrice"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="290dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button"
+                        android:elevation="0dp">
+
+                        <Button
+                            android:id="@+id/mipLimitsiz"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="3"
+                            android:background="@drawable/buttonpink"
+                            android:text="@string/derhalQosulma"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="82dp"
+                            android:layout_column="0"
+                            android:layout_gravity="center"
+                            android:layout_row="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/mipUnlimitPrice"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+                    </GridLayout>
+                </LinearLayout>
+            </ScrollView>
+        </GridLayout>
+    </LinearLayout>
+
+</FrameLayout>

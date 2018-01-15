@@ -1,0 +1,136 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutCredit"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context="com.example.seymur.azercell2.fragments.BalanceNew">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/getCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/balance_button"
+            android:padding="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/getcredit"
+            android:layout_below="@+id/getBalanceBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/getBalanceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/getCredit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/getCredit"
+            android:layout_below="@+id/getBalance"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/balance_button"
+            android:text="Get Balance"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/getTransfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/balance_button"
+            android:padding="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/transfer"
+            android:layout_below="@+id/refillBtn"
+            android:layout_alignLeft="@+id/refill"
+            android:layout_alignStart="@+id/refill" />
+
+        <Button
+            android:id="@+id/refillBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/getTransfer"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/getTransfer"
+            android:layout_below="@+id/refill"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/balance_button"
+            android:text="Refill Online"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/refill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/balance_button"
+            android:padding="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.502"
+            app:srcCompat="@drawable/gettariff"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />
+
+        <Button
+            android:id="@+id/getCreditBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/getCredit"
+            android:layout_alignLeft="@+id/getCredit"
+            android:layout_alignRight="@+id/getCredit"
+            android:layout_alignStart="@+id/getCredit"
+            android:layout_below="@+id/getCredit"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/balance_button"
+            android:text="Credit"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/getBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/balance_button"
+            android:padding="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/getbalance"
+            tools:ignore="UnknownId"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/TransferBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/getTransfer"
+            android:layout_alignLeft="@+id/getTransfer"
+            android:layout_alignRight="@+id/getTransfer"
+            android:layout_alignStart="@+id/getTransfer"
+            android:layout_below="@+id/getTransfer"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/balance_button"
+            android:text="Transfer"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
