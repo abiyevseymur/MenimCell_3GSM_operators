@@ -12,7 +12,9 @@ import android.widget.LinearLayout;
 
 import com.example.seymur.azercell2.BalanceMenu;
 import com.example.seymur.azercell2.R;
+import com.example.seymur.azercell2.fragments.VAS.CallBarring;
 import com.example.seymur.azercell2.fragments.VAS.CallForward;
+import com.example.seymur.azercell2.fragments.VAS.CallScreening;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,9 +66,15 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         fCallForwarding = new CallForward();
+        fCallbarring = new CallBarring();
+        fCallScreening = new CallScreening();
     }
     CallForward fCallForwarding;
     LinearLayout CallForwarding;
+    CallBarring fCallbarring;
+    LinearLayout Callbarring;
+    CallScreening fCallScreening;
+    LinearLayout CallScreening;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -75,7 +83,11 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
 
         ((BalanceMenu)getActivity()).hideUpButton();
         CallForwarding = (LinearLayout) view.findViewById(R.id.callForwardMain);
+        Callbarring = (LinearLayout)view.findViewById(R.id.CallBarring);
+        CallScreening = (LinearLayout)view.findViewById(R.id.CallScreening);
+        CallScreening.setOnClickListener(this);
         CallForwarding.setOnClickListener(this);
+        Callbarring.setOnClickListener(this);
         return view;
     }
 
@@ -101,6 +113,18 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
                 ft.replace(R.id.fragment_container,fCallForwarding,"e");
                 ft.addToBackStack("e");
                 ft.commit();
+                break;
+            case(R.id.CallBarring):
+                FragmentTransaction ftm = this.getFragmentManager().beginTransaction();
+                ftm.replace(R.id.fragment_container,fCallbarring,"e");
+                ftm.addToBackStack("e");
+                ftm.commit();
+                break;
+            case(R.id.CallScreening):
+                FragmentTransaction ftCB = this.getFragmentManager().beginTransaction();
+                ftCB.replace(R.id.fragment_container,fCallScreening,"e");
+                ftCB.addToBackStack("e");
+                ftCB.commit();
                 break;
         }
     }

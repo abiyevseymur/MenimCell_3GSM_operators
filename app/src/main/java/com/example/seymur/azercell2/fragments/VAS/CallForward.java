@@ -116,7 +116,6 @@ public class CallForward extends Fragment implements View.OnClickListener {
     String CfNoAnswr = "**61*";
     String CfOff = "**62*";
     String textMessage;
-    private static Context mContext;
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -124,19 +123,19 @@ public class CallForward extends Fragment implements View.OnClickListener {
                 if (CallforwardingNumber.getText().toString().trim().length() == 13) {
                     if (callForwardingAll.isChecked()) {
                         textMessage = callForwardingAll.getText().toString();
-                       sendUssdCode(CFAllCalls, getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
+                       sendUssdCode(CFAllCalls + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
                                 getString(R.string.number));
                     } else if (callForwardingBusy.isChecked()) {
                         textMessage = callForwardingBusy.getText().toString();
-                        sendUssdCode(CFBusy, getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
+                        sendUssdCode(CFBusy + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
                                 getString(R.string.number));
                     } else if (callForwardingNoAnswer.isChecked()) {
                         textMessage = callForwardingNoAnswer.getText().toString();
-                       sendUssdCode(CfNoAnswr, getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
+                       sendUssdCode(CfNoAnswr + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
                                 getString(R.string.number));
                     } else if (CallForwardingOff.isChecked()) {
                         textMessage = CallForwardingOff.getText().toString();
-                       sendUssdCode(CfOff, getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
+                       sendUssdCode(CfOff + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
                                 getString(R.string.number));
                     } else {
                         Toast.makeText(getActivity(), R.string.switchtypeofForwarding, Toast.LENGTH_SHORT).show();

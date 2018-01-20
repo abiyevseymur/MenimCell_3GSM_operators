@@ -20,7 +20,7 @@
             android:layout_marginTop="69dp"
             android:foregroundGravity="center"
             android:gravity="center"
-            android:text="Forward To"
+            android:text="@string/ForwardTo"
             android:textColor="@color/colorAccent"
             android:textSize="20sp" />
 
@@ -47,7 +47,11 @@
             android:layout_below="@+id/radioGroup2"
             android:layout_marginTop="38dp"
             android:background="@drawable/button"
-            android:text="Active" />
+            android:paddingEnd="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Activate" />
 
         <Button
             android:id="@+id/deactiveCallForwarding"
@@ -55,10 +59,16 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/activeCallForwarding"
             android:layout_alignBottom="@+id/activeCallForwarding"
-            android:layout_alignEnd="@+id/radioGroup2"
-            android:layout_alignRight="@+id/radioGroup2"
+            android:layout_marginLeft="34dp"
+            android:layout_marginStart="34dp"
+            android:layout_toEndOf="@+id/activeCallForwarding"
+            android:layout_toRightOf="@+id/activeCallForwarding"
             android:background="@drawable/button"
-            android:text="Deactive" />
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:text="@string/deaktive" />
 
         <TextView
             android:id="@+id/textView26"
@@ -72,7 +82,7 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:paddingStart="20dp"
-            android:text="In case of active forwarding subscriber pays for incoming calls according to the price of standard call in tariff used." />
+            android:text="@string/CallForwardingDesc" />
 
         <TextView
             android:id="@+id/textView27"
@@ -81,7 +91,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
-            android:text="Call Forwarding"
+            android:text="@string/CallForwarding"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp" />
 
@@ -100,28 +110,28 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="true"
-                android:text="All Calls" />
+                android:text="@string/allCalls" />
 
             <RadioButton
                 android:id="@+id/callforwardingBusy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="When the phone is busy" />
+                android:text="@string/Whenbusy" />
 
             <RadioButton
                 android:id="@+id/CallForwardingNotAnswered"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="When calls are not answered" />
+                android:text="@string/WhenNotAnswered" />
 
             <RadioButton
                 android:id="@+id/callForwardingSwitchedOff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="When the phone is switched off" />
+                android:text="@string/WhenOff" />
         </RadioGroup>
 
     </RelativeLayout>

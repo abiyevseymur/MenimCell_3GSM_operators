@@ -23,6 +23,7 @@ public class sendUSSDcode extends AppCompatActivity {
     String messageBundle;
     TextView messageTittle;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

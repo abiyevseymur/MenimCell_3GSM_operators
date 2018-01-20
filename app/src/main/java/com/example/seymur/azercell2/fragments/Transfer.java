@@ -106,7 +106,6 @@ public class Transfer extends Fragment implements View.OnClickListener {
     String numbOf50qPaycell = "9200";
     String numbOf1aznPaycell = "9202";
     String textMessage;
-    private RadioGroup radioGroup;
     @Override
     public void onClick(View view) {
 

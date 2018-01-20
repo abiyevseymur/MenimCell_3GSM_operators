@@ -64,7 +64,7 @@ public class Credit extends Fragment implements View.OnClickListener {
         fragment.setArguments(args);
         return fragment;
     }
-
+    public static Context mContext;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +72,13 @@ public class Credit extends Fragment implements View.OnClickListener {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        mContext = getApplicationContext();
     }
+
+    public static Context getApplicationContext() {
+        return mContext;
+    }
+
     Button credit1azn;
     Button credit14azn;
     Button credit18azn;
@@ -85,18 +91,18 @@ public class Credit extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_credit, container, false);
 
-        checkDebts = (TextView) view.findViewById(R.id.checkDebts);
+        checkDebts = view.findViewById(R.id.checkDebts);
         checkDebts.setText(Html.fromHtml(getString(R.string.checkMyDebts)));
 
         ((BalanceMenu)getActivity()).showUpButton();
 
-        credit1azn = (Button)view.findViewById(R.id.creditOneAznBtn);
+        credit1azn = view.findViewById(R.id.creditOneAznBtn);
         credit1azn.setOnClickListener(this);
-        credit14azn = (Button)view.findViewById(R.id.creditOneFortyAznBtn);
+        credit14azn = view.findViewById(R.id.creditOneFortyAznBtn);
         credit14azn.setOnClickListener(this);
-        credit18azn = (Button)view.findViewById(R.id.creditOneEightyAznBtn);
+        credit18azn = view.findViewById(R.id.creditOneEightyAznBtn);
         credit18azn.setOnClickListener(this);
-        credit2azn = (Button)view.findViewById(R.id.creditwoAznBtn);
+        credit2azn = view.findViewById(R.id.creditwoAznBtn);
         credit2azn.setOnClickListener(this);
         checkDebts.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -145,7 +151,7 @@ public class Credit extends Fragment implements View.OnClickListener {
 
 
                 sendUssdCode(getString(R.string.ussdCodeOneAzn),getString(R.string.get),getString(R.string.creditOneAzn),getString(R.string.credit),
-                    getString(R.string.creditOneAznFee),getString(R.string.fee));
+                    getString(R.string.creditOneAznFee),getString(R.string.fee));;
                 break;
 
             case (R.id.creditOneFortyAznBtn):

@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Azercell</string>
+    <string name="app_name">MenimCell</string>
     <string name="heyet">Life is more beautiful with </string>
     <string name="heyet2"> Azercell! </string>
     <string name="xaiw">Please, sign up to use our services</string>
-    <string name="qeydiyyat">Sign Up</string>
+    <string name="qeydiyyat" translatable="false">Sign Up</string>
     <string name="nomreqeyd">Enter The Number</string>
     <string name="buttondavam">Verify your number</string>
     <string name="code">Kodı daxil edin</string>
@@ -161,12 +161,33 @@
     <string name="toThis">to This:</string>
     <string name="number">number</string>
     <string name="switchtypeofForwarding">Switch,please,the Type of Forwarding</string>
-    <string name="deaktive">Deaktive</string>
+    <string name="deaktive">Deactivate</string>
     <string name="allTypesofCF">All Types of Call Forwarding</string>
     <string name="inYour">in Your</string>
     <string name="operatorCodeNumber"><font size="15">+994 operator code, number</font></string>
     <string name="get">get</string>
     <string name="credit">Credit</string>
     <string name="fee">fee</string>
-
+    <string name="CallBarring">CALL BARRING</string>
+    <string name="CallBarringDesc">Depending on your choice, you can use the following options to block calls:</string>
+    <string name="AllIncoming">All Incoming</string>
+    <string name="AllOutgoing">All Outgoing</string>
+    <string name="Calls">Calls</string>
+    <string name="byDefault0000"><font size="15">0000 by default</font></string>
+    <string name="setYourBarringCode">Set your Barring code:</string>
+    <string name="Activate">Activate</string>
+    <string name="CallForwardingDesc">In case of active forwarding subscriber pays for incoming calls according to the price of standard call in tariff used.</string>
+    <string name="CallForwarding">CALL FORWARDING</string>
+    <string name="allCalls">All Calls</string>
+    <string name="Whenbusy">When the phone is busy</string>
+    <string name="WhenNotAnswered">When calls are not answered</string>
+    <string name="WhenOff">When the phone is switched off</string>
+    <string name="ForwardTo">Forward To</string>
+    <string name="barringTo">Barring to</string>
+    <string name="CallScreening">CALL SCREENING</string>
+    <string name="CheckTheNumberBlackList"><u>Check the numbers in the Black list</u></string>
+    <string name="AddThis">Add this</string>
+    <string name="numberToBL">Number to Black List</string>
+    <string name="removeThis">Remove this:</string>
+    <string name="numberFromBL">Number from Black List</string>
 </resources>

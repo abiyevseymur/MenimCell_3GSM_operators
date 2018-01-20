@@ -21,7 +21,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal" android:baselineAligned="false">
 
                 <LinearLayout
                     android:id="@+id/callForwardMain"
@@ -38,7 +38,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.07"
                         android:adjustViewBounds="true"
-                        app:srcCompat="@drawable/call_forward" />
+                        app:srcCompat="@drawable/call_forward" android:contentDescription="TODO" />
 
                     <Button
                         android:id="@+id/callForwardBtn"
@@ -51,6 +51,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/CallBarring"
                     android:layout_width="wrap_content"
                     android:layout_height="158dp"
                     android:layout_margin="4dp"
@@ -59,7 +60,7 @@
                     android:weightSum="1">
 
                     <ImageView
-                        android:id="@+id/callBarring"
+                        android:id="@+id/CallBarringPhoto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1.10"
@@ -84,6 +85,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/CallScreening"
                     android:layout_width="wrap_content"
                     android:layout_height="158dp"
                     android:layout_margin="4dp"
@@ -92,12 +94,12 @@
                     android:weightSum="1">
 
                     <ImageView
-                        android:id="@+id/callScreening"
+                        android:id="@+id/callScreeningPhoto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1.07"
                         android:adjustViewBounds="true"
-                        app:srcCompat="@drawable/call_screening" />
+                        app:srcCompat="@drawable/call_screening" android:contentDescription="TODO"/>
 
                     <Button
                         android:id="@+id/callScreeningBtn"
