@@ -4,8 +4,10 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 
+import com.example.seymur.azercell2.Helper.LocaleHelper;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
@@ -32,6 +34,8 @@ import com.example.seymur.azercell2.fragments.*;
 import java.util.Date;
 import java.util.Objects;
 import java.util.Random;
+
+import io.paperdb.Paper;
 
 
 public class BalanceMenu extends AppCompatActivity {
@@ -83,6 +87,10 @@ public class BalanceMenu extends AppCompatActivity {
 
     };
 
+    /*@Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.onAttach(newBase,"en"));
+    }*/
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -127,6 +135,14 @@ public class BalanceMenu extends AppCompatActivity {
         firstFragment.setArguments(getIntent().getExtras());
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fragment_container, firstFragment).commit();
+       /* //init Paper first
+        Paper.init(this);
+        //Default language is English
+        String language  =Paper.book().read("language");
+        if(language == null){
+            Paper.book().write("language","en");
+        }
+        updateView((String)Paper.book().read("language"));*/
         //bottom menu size
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -210,6 +226,11 @@ public class BalanceMenu extends AppCompatActivity {
         fxercler = new ServicesVAS();
         fayar = new Ayar();
     }
+
+    private void updateView(String lang) {
+        Context context = LocaleHelper.setLocale(this,lang);
+    }
+
     private String generateDistinctId() {
         final Random random = new Random();
         final byte[] randomBytes = new byte[32];
