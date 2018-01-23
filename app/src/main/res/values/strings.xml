@@ -189,5 +189,16 @@
     <string name="AddThis">Add this</string>
     <string name="numberToBL">Number to Black List</string>
     <string name="removeThis">Remove this:</string>
+
     <string name="numberFromBL">Number from Black List</string>
+    <string name="greet">Hello!!</string>
+    <string name="title_activity_android_localize">AndroidLocalize</string>
+    <string name="langselection">select the language</string>
+    <string name="chooselang">Choose the language</string>
+    <string-array name="languages">
+        <item>Select language</item>
+        <item>Russian</item>
+        <item>Azerbaijani</item>
+        <item>English</item>
+    </string-array>
 </resources>

@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="title_home">Главная</string>
+    <string name="app_name">Androidlocalization</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_android_localize">AndroidLocalize</string>
+    <string name="greet">Привет!</string>
+    <string name="langselection">जВыбкрите язык приложения</string>
+    <string name="chooselang">Выбрать язык</string>
+    <string-array name="languages">
+        <item>Язык</item>
+        <item>Русский</item>
+        <item>Азербайджанский</item>
+        <item>Английский</item>
+    </string-array>
+    <string name="noAnyNumb">Нет номера</string>
 </resources>

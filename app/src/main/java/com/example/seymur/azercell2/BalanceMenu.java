@@ -5,9 +5,11 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 
 import com.example.seymur.azercell2.Helper.LocaleHelper;
+import com.example.seymur.azercell2.map.MapsActivity;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
@@ -28,6 +30,7 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.seymur.azercell2.fragments.*;
 
@@ -35,15 +38,15 @@ import java.util.Date;
 import java.util.Objects;
 import java.util.Random;
 
-import io.paperdb.Paper;
 
-
-public class BalanceMenu extends AppCompatActivity {
+public class BalanceMenu extends AppCompatActivity implements View.OnClickListener {
     final String TAG = "cycle";
     ServicesVAS fxercler;
     Xidmetler fxidmetler;
     BalanceNew fbalance;
     Ayar fayar;
+    ImageView logoSettings;
+    int mainLogo;
     String projectToken = "5908ccdb281d509b82825cb12f81f7a8"; // e.g.: "1ef7e30d2a58d27f4b90c42e31d6d7ad"
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -65,8 +68,6 @@ public class BalanceMenu extends AppCompatActivity {
                     getSupportFragmentManager().popBackStack();
                     ftrans.replace(R.id.fragment_container, fxidmetler);
                     ftrans.commit();
-
-
                     return true;
                 case R.id.navigation_xercler:
                     ftrans = getSupportFragmentManager().beginTransaction();
@@ -135,14 +136,7 @@ public class BalanceMenu extends AppCompatActivity {
         firstFragment.setArguments(getIntent().getExtras());
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fragment_container, firstFragment).commit();
-       /* //init Paper first
-        Paper.init(this);
-        //Default language is English
-        String language  =Paper.book().read("language");
-        if(language == null){
-            Paper.book().write("language","en");
-        }
-        updateView((String)Paper.book().read("language"));*/
+
         //bottom menu size
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -179,30 +173,33 @@ public class BalanceMenu extends AppCompatActivity {
             carrierName = tManager.getNetworkOperator();
         }
         //
-
+        logoSettings = (ImageView)findViewById(R.id.logoSettings);
+        logoSettings.setOnClickListener(this);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        getSupportActionBar().setLogo(R.drawable.ic_action_bar_logo);
+        mainLogo = R.drawable.ic_action_bar_logo;
+        AppLogo(mainLogo);
+
 
         //Azercell
         if(Objects.equals(carrierName, "40001")&& phoneNumber!=null){
-            getSupportActionBar().setTitle(" " + phoneNumber);
+            getSupportActionBar().setTitle("  " + phoneNumber);
             NetworkCarrierName = "Azercell";
         }
 
         //Bakcell
         else if(Objects.equals(carrierName, "40002") && phoneNumber!=null){
-            getSupportActionBar().setTitle(" " + phoneNumber);
+            getSupportActionBar().setTitle("  " + phoneNumber);
             NetworkCarrierName= "Bakcell";
         }
         //Nar
         else if(Objects.equals(carrierName, "40004")&& phoneNumber!=null){
-            getSupportActionBar().setTitle(" " + phoneNumber);
+            getSupportActionBar().setTitle("  " + phoneNumber);
             NetworkCarrierName = "Nar";
         }
         //other
         else {
-            getSupportActionBar().setTitle(" " + getString(R.string.noAnyNumb));
+            getSupportActionBar().setTitle("  " + getString(R.string.noAnyNumb));
         }
         //
         //Mix Panel Token
@@ -225,6 +222,10 @@ public class BalanceMenu extends AppCompatActivity {
         fbalance = new BalanceNew();
         fxercler = new ServicesVAS();
         fayar = new Ayar();
+    }
+
+    public void AppLogo(int logo) {
+        getSupportActionBar().setLogo(logo);
     }
 
     private void updateView(String lang) {
@@ -290,5 +291,14 @@ public class BalanceMenu extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "BottomMenu onDestroy");
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case(R.id.logoSettings):
+                Intent intent = new Intent(this, AndroidLocalize.class);
+                startActivity(intent);
+        }
     }
 }

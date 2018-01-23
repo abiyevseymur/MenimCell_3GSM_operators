@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.seymur.azercell2.AndroidLocalize;
 import com.example.seymur.azercell2.BalanceMenu;
 import com.example.seymur.azercell2.map.MapsActivity;
 import com.example.seymur.azercell2.R;
@@ -66,16 +67,19 @@ public class Ayar extends Fragment implements View.OnClickListener {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         inetConfig = new InternetSettings();
+
     }
 
     InternetSettings inetConfig;
-
+    int SettingLogo = R.drawable.settings;
+    int AppLogo = R.drawable.ic_action_bar_logo;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ayar, container, false);
         ((BalanceMenu)getActivity()).hideUpButton();
+
         view.findViewById(R.id.simsimBtn).setOnClickListener(this);
         view.findViewById(R.id.onlineServiceBtn).setOnClickListener(this);
         view.findViewById(R.id.speedtestBtn).setOnClickListener(this);
@@ -94,6 +98,7 @@ public class Ayar extends Fragment implements View.OnClickListener {
     @Override
     public void onDetach() {
         super.onDetach();
+        ((BalanceMenu)getActivity()).AppLogo(AppLogo);
         mListener = null;
     }
 
@@ -113,6 +118,7 @@ public class Ayar extends Fragment implements View.OnClickListener {
             startActivity(intent);
 
         } else if (view.getId() == R.id.speedtestBtn){
+
 
         }
         else if(view.getId() == R.id.mapBtn){
