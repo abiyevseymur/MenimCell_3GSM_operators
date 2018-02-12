@@ -8,7 +8,6 @@
     <string name="langselection">जВыбкрите язык приложения</string>
     <string name="chooselang">Выбрать язык</string>
     <string-array name="languages">
-        <item>Язык</item>
         <item>Русский</item>
         <item>Азербайджанский</item>
         <item>Английский</item>

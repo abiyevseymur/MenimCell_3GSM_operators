@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,15 +21,19 @@ import java.util.Locale;
  * Created by Seymur on 18/01/23.
  */
 
-public class AndroidLocalize extends Activity {
+public class AndroidLocalize extends AppCompatActivity {
     Spinner spinnerctrl;
-    Button btn;
     Locale myLocale;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting_lang);
+       //Action Toolbar
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.settings);
+
         spinnerctrl = (Spinner) findViewById(R.id.spinner1);
         spinnerctrl.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 

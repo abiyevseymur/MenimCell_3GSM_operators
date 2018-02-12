@@ -8,10 +8,12 @@ import com.example.seymur.azercell2.Helper.LocaleHelper;
 import com.example.seymur.azercell2.map.MapsActivity;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
 import android.util.Base64;
 import android.util.Log;
@@ -115,6 +117,7 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
     BalanceNew firstFragment;
     String NetworkCarrierName = "None";
     static String phoneNumber;
+    private Context mContext;
     @SuppressLint("HardwareIds")
     @TargetApi(Build.VERSION_CODES.M)
     @Override
@@ -127,7 +130,7 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
         // Add the fragment to the 'fragment_container' FrameLayout
         final String trackingDistinctId = getTrackingDistinctId();
 
-
+        mContext = getApplicationContext();
 //        mixpanel.getPeople().identify(trackingDistinctId); //this is the distinct_id
 //        // that will be used for people analytics. You must set this explicitly in order
 //        // to dispatch people data.
@@ -260,6 +263,7 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onStart() {
         super.onStart();
+        getPrefs();
         Log.d(TAG,"BottomMenu onStart");
     }
 
@@ -293,6 +297,7 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
         Log.d(TAG, "BottomMenu onDestroy");
     }
 
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -300,5 +305,29 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
                 Intent intent = new Intent(this, AndroidLocalize.class);
                 startActivity(intent);
         }
+    }
+    boolean CheckboxPreference;
+    String ListPreference;
+    String editTextPreference;
+    String ringtonePreference;
+    String secondEditTextPreference;
+    String customPref;
+
+    private void getPrefs() {
+        // Get the xml/preferences.xml preferences
+        SharedPreferences prefs = PreferenceManager
+                .getDefaultSharedPreferences(getBaseContext());
+        CheckboxPreference = prefs.getBoolean("checkboxPref", true);
+        ListPreference = prefs.getString("listPref", "nr1");
+        editTextPreference = prefs.getString("editTextPref",
+                "Nothing has been entered");
+        ringtonePreference = prefs.getString("ringtonePref",
+                "DEFAULT_RINGTONE_URI");
+        secondEditTextPreference = prefs.getString("SecondEditTextPref",
+                "Nothing has been entered");
+        // Get the custom preference
+        SharedPreferences mySharedPreferences = getSharedPreferences(
+                "myCustomSharedPrefs", Activity.MODE_PRIVATE);
+        customPref = mySharedPreferences.getString("myCusomPref", "");
     }
 }

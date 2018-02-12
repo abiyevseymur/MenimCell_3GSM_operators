@@ -114,12 +114,16 @@
                 <category android:name="com.example.seymur.azercell2" />
             </intent-filter>
         </receiver>
+
         <activity
             android:name=".AndroidLocalize"
-            android:label="@string/title_activity_android_localize"
             android:configChanges="locale|orientation|keyboardHidden"
-            android:noHistory="true">
-
+            android:label="@string/title_activity_android_localize"
+            android:noHistory="true"
+            android:parentActivityName=".BalanceMenu">
+        <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="com.example.seymur.azercell2.BalanceMenu" />
         </activity>
     </application>
 
