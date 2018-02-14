@@ -8,8 +8,7 @@
     <string name="buttondavam">Verify your number</string>
     <string name="code">Kodı daxil edin</string>
     <string name="daxil">Davam et</string>
-    <string name="yournumb">Sizin Nömrəniz:</string>
-    <string name="title_activity_balance_menu">Azercell</string>
+    <string name="title_activity_balance_menu">MenimCell</string>
     <string name="title_home">Home</string>
     <string name="title_Xercler">Costs</string>
     <string name="title_Xidmetler">Services</string>
@@ -92,7 +91,7 @@
     <string name="connect">Connet</string>
     <string name="simsim">SimSim</string>
     <string name="nearestoficces">Nearest Offices</string>
-    <string name="speedtest">Speed Test</string>
+    <string name="trafficUsage">Traffic Usage</string>
     <string name="all">All</string>
     <string name="title_activity_maps">Map</string>
     <string name="nearestOffices">Show Nearest Offices</string>
@@ -193,8 +192,10 @@
     <string name="numberFromBL">Number from Black List</string>
     <string name="greet">Hello!!</string>
     <string name="title_activity_android_localize">AndroidLocalize</string>
-    <string name="langselection">select the language</string>
+    <string name="langselection">Select the Language</string>
     <string name="chooselang">Choose the language</string>
+    <string name="BackToMenu">Back To Menu</string>
+    <string name="theBalanceWillSend">The Balance will send via SMS to your Phone</string>
     <string-array name="languages">
         <item>Select language</item>
         <item>Russian</item>

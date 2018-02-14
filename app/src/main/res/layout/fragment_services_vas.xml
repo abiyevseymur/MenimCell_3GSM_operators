@@ -110,6 +110,7 @@
                         android:textColor="@android:color/black"
                         android:textSize="12sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="158dp"
@@ -124,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.10"
                         android:adjustViewBounds="true"
-                        app:srcCompat="@drawable/call_screeningplus" />
+                        app:srcCompat="@drawable/call_screeningplus" android:contentDescription="TODO"/>
 
                     <Button
                         android:id="@+id/callScreeningPlusBtn"
@@ -171,6 +172,7 @@
 
 
                 <LinearLayout
+                    android:id="@+id/roamingLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="158dp"
                     android:layout_margin="4dp"
@@ -191,7 +193,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="24dp"
                         android:background="@android:color/white"
-                        android:text="@string/MeneZengEt"
+                        android:text="Roaming"
                         android:textColor="@android:color/black"
                         android:textSize="12sp" />
                 </LinearLayout>

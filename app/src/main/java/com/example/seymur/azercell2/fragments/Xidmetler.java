@@ -102,7 +102,9 @@ public class Xidmetler extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_xidmetler, container, false);
-        ((BalanceMenu)getActivity()).hideUpButton();
+        if (getActivity() != null){
+            ((BalanceMenu) getActivity()).hideUpButton();
+    }
         view.findViewById(R.id.tarif1).setOnClickListener(this);
         view.findViewById(R.id.tarif2).setOnClickListener(this);
         view.findViewById(R.id.tarif3).setOnClickListener(this);

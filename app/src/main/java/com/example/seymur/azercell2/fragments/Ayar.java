@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.example.seymur.azercell2.AndroidLocalize;
 import com.example.seymur.azercell2.BalanceMenu;
+import com.example.seymur.azercell2.MBUsage;
 import com.example.seymur.azercell2.map.MapsActivity;
 import com.example.seymur.azercell2.R;
 import com.example.seymur.azercell2.WebOnlineChat;
@@ -78,11 +79,13 @@ public class Ayar extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ayar, container, false);
-        ((BalanceMenu)getActivity()).hideUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).hideUpButton();
+        }
 
         view.findViewById(R.id.simsimBtn).setOnClickListener(this);
         view.findViewById(R.id.onlineServiceBtn).setOnClickListener(this);
-        view.findViewById(R.id.speedtestBtn).setOnClickListener(this);
+        view.findViewById(R.id.trafficUsage).setOnClickListener(this);
         view.findViewById(R.id.mapBtn).setOnClickListener(this);
         return view;
     }
@@ -98,7 +101,9 @@ public class Ayar extends Fragment implements View.OnClickListener {
     @Override
     public void onDetach() {
         super.onDetach();
-        ((BalanceMenu)getActivity()).AppLogo(AppLogo);
+        if(getActivity() != null)
+
+            ((BalanceMenu)getActivity()).AppLogo(AppLogo);
         mListener = null;
     }
 
@@ -117,7 +122,9 @@ public class Ayar extends Fragment implements View.OnClickListener {
             Intent intent = new Intent(getActivity(), WebOnlineChat.class);
             startActivity(intent);
 
-        } else if (view.getId() == R.id.speedtestBtn){
+        } else if (view.getId() == R.id.trafficUsage){
+            Intent intent = new Intent(getActivity(), MBUsage.class);
+            startActivity(intent);
 
 
         }

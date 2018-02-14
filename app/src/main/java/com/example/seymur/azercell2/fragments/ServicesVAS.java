@@ -80,6 +80,7 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_services_vas, container, false);
+        if(getActivity() != null)
 
         ((BalanceMenu)getActivity()).hideUpButton();
         CallForwarding = (LinearLayout) view.findViewById(R.id.callForwardMain);

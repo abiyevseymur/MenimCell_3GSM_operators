@@ -8,10 +8,12 @@ import com.example.seymur.azercell2.Helper.LocaleHelper;
 import com.example.seymur.azercell2.map.MapsActivity;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
+import android.app.usage.NetworkStats;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.support.v4.app.ActivityCompat;
 import android.util.Base64;
 import android.util.Log;
@@ -38,8 +40,15 @@ import java.util.Date;
 import java.util.Objects;
 import java.util.Random;
 
+import io.paperdb.Paper;
 
-public class BalanceMenu extends AppCompatActivity implements View.OnClickListener {
+import static android.net.ConnectivityManager.TYPE_MOBILE;
+import static android.net.TrafficStats.getMobileRxBytes;
+import static android.net.TrafficStats.getMobileRxPackets;
+import static java.lang.System.currentTimeMillis;
+
+
+public class BalanceMenu extends AppCompatActivity {
     final String TAG = "cycle";
     ServicesVAS fxercler;
     Xidmetler fxidmetler;
@@ -53,7 +62,7 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        public boolean onNavigationItemSelected(@NonNull MenuItem  item) {
             FragmentTransaction ftrans;
             switch (item.getItemId()) {
                 case R.id.navigation_home:
@@ -104,10 +113,12 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
     }
 
     public void showUpButton() {
+        if(getSupportActionBar() != null)
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void hideUpButton() {
+        if(getSupportActionBar() != null)
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
     }
 
@@ -121,16 +132,18 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_balance_menu);
+
         // Create Frist fragment here:
         // In case this activity was started with special instructions from an Intent,
         // pass the Intent's extras to the fragment as arguments
         // Add the fragment to the 'fragment_container' FrameLayout
         final String trackingDistinctId = getTrackingDistinctId();
 
-
-//        mixpanel.getPeople().identify(trackingDistinctId); //this is the distinct_id
-//        // that will be used for people analytics. You must set this explicitly in order
-//        // to dispatch people data.
+//
+        fxidmetler = new Xidmetler();
+        fbalance = new BalanceNew();
+        fxercler = new ServicesVAS();
+        fayar = new Ayar();
 
         firstFragment = new BalanceNew();
         firstFragment.setArguments(getIntent().getExtras());
@@ -173,37 +186,47 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
             carrierName = tManager.getNetworkOperator();
         }
         //
-        logoSettings = (ImageView)findViewById(R.id.logoSettings);
-        logoSettings.setOnClickListener(this);
+/*        logoSettings = (ImageView)findViewById(R.id.logoSettings);
+        logoSettings.setOnClickListener(this);*/
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+        if(getSupportActionBar() != null)
+        getSupportActionBar().setTitle("test");
         mainLogo = R.drawable.ic_action_bar_logo;
         AppLogo(mainLogo);
 
 
         //Azercell
         if(Objects.equals(carrierName, "40001")&& phoneNumber!=null){
-            getSupportActionBar().setTitle("  " + phoneNumber);
+            if(getSupportActionBar() != null)
+
+                getSupportActionBar().setTitle("  " + phoneNumber);
             NetworkCarrierName = "Azercell";
         }
 
         //Bakcell
         else if(Objects.equals(carrierName, "40002") && phoneNumber!=null){
-            getSupportActionBar().setTitle("  " + phoneNumber);
+            if(getSupportActionBar() != null)
+
+                getSupportActionBar().setTitle("  " + phoneNumber);
             NetworkCarrierName= "Bakcell";
         }
         //Nar
         else if(Objects.equals(carrierName, "40004")&& phoneNumber!=null){
-            getSupportActionBar().setTitle("  " + phoneNumber);
+            if(getSupportActionBar() != null)
+
+                getSupportActionBar().setTitle("  " + phoneNumber);
             NetworkCarrierName = "Nar";
         }
         //other
         else {
-            getSupportActionBar().setTitle("  " + getString(R.string.noAnyNumb));
+            if(getSupportActionBar() != null)
+
+                getSupportActionBar().setTitle("  " +"test"+  getString(R.string.noAnyNumb)  );
         }
         //
         //Mix Panel Token
-//        mixpanel.identify(phoneNumber); //this is the distinct_id value that
+        //mixpanel.identify(phoneNumber); //this is the distinct_id value that
         // will be sent with events. If you choose not to set this,
         // the SDK will generate one for you
 
@@ -217,21 +240,21 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
         mixpanel.getPeople().set("$Update Date", new Date());
 
         //
-        //
-        fxidmetler = new Xidmetler();
-        fbalance = new BalanceNew();
-        fxercler = new ServicesVAS();
-        fayar = new Ayar();
+
     }
+
 
     public void AppLogo(int logo) {
-        getSupportActionBar().setLogo(logo);
-    }
+        if(getSupportActionBar() != null)
 
+            getSupportActionBar().setLogo(logo);
+    }
+//language
     private void updateView(String lang) {
         Context context = LocaleHelper.setLocale(this,lang);
+        Resources resources = context.getResources();
     }
-
+//
     private String generateDistinctId() {
         final Random random = new Random();
         final byte[] randomBytes = new byte[32];
@@ -293,6 +316,8 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
         Log.d(TAG, "BottomMenu onDestroy");
     }
 
+   /*
+    setting button (if need)
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -300,5 +325,5 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
                 Intent intent = new Intent(this, AndroidLocalize.class);
                 startActivity(intent);
         }
-    }
+    }*/
 }

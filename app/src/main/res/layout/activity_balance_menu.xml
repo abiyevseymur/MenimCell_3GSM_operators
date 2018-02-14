@@ -23,7 +23,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <ImageView
+ <!--       <ImageView
             android:id="@+id/logoSettings"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
@@ -32,7 +32,7 @@
             android:paddingEnd="20dp"
             android:paddingRight="20dp"
             android:src="@drawable/settings"
-            android:contentDescription="settings" />
+            android:contentDescription="settings" />-->
     </android.support.v7.widget.Toolbar>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/fragment_container"

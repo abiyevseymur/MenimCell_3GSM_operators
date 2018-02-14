@@ -151,7 +151,7 @@ public class Credit extends Fragment implements View.OnClickListener {
 
 
                 sendUssdCode(getString(R.string.ussdCodeOneAzn),getString(R.string.get),getString(R.string.creditOneAzn),getString(R.string.credit),
-                    getString(R.string.creditOneAznFee),getString(R.string.fee));;
+                    getString(R.string.creditOneAznFee),getString(R.string.fee));
                 break;
 
             case (R.id.creditOneFortyAznBtn):

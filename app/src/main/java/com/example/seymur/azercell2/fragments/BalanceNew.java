@@ -1,12 +1,15 @@
 package com.example.seymur.azercell2.fragments;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
@@ -22,6 +25,7 @@ import com.example.seymur.azercell2.BalanceMenu;
 import com.example.seymur.azercell2.R;
 import com.example.seymur.azercell2.WebOnlineChat;
 import com.example.seymur.azercell2.WebRefillOnline;
+import com.example.seymur.azercell2.sendUSSDcode;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -93,7 +97,9 @@ public class BalanceNew extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_balance_new, container, false);
-        ((BalanceMenu)getActivity()).hideUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).hideUpButton();
+        }
         //recieve balance
         getBalanceImageBtn = (ImageButton) view.findViewById(R.id.getBalance);
         getBalanceImageBtn.setOnTouchListener(new View.OnTouchListener() {
@@ -196,16 +202,18 @@ public class BalanceNew extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.getBalance:
-                Intent my_callIntent;
+               /* Intent my_callIntent;
                 my_callIntent = new Intent(Intent.ACTION_CALL);
                 my_callIntent.setData(Uri.parse("tel:" + getString(R.string.balanceUSSDcode) + Uri.encode("#")));
                 //here the word 'tel' is important for making a call...
-                startActivity(my_callIntent);
+                startActivity(my_callIntent);*/
+                sendUssdCode(getString(R.string.balanceUSSDcode),getString(R.string.theBalanceWillSend));
             break;
 
             case  R.id.refill:
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse("https://azercell.3dsecure.az/"));
+                if(getActivity() != null)
                 getActivity().startActivity(i);
             break;
 
@@ -225,6 +233,16 @@ public class BalanceNew extends Fragment implements View.OnClickListener {
                 break;
         }
 
+    }
+
+    private void sendUssdCode(String USSDcode,String messageText) {
+        Intent intent = new Intent(getActivity(), sendUSSDcode.class);
+        Bundle b = new Bundle();
+        b.putString("first", USSDcode);
+        b.putString("messageTittle", messageText);
+        intent.putExtras(b);
+
+        startActivity(intent);
     }
 
  /*   public void onBackStackChanged() {

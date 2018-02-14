@@ -109,7 +109,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/simsimBtn" />
 
             <ImageButton
-                android:id="@+id/speedtestBtn"
+                android:id="@+id/trafficUsage"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:layout_marginBottom="8dp"
@@ -134,12 +134,12 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/speedtest"
+                android:text="@string/trafficUsage"
                 android:textAlignment="center"
                 app:layout_constraintHorizontal_bias="0.553"
-                app:layout_constraintLeft_toLeftOf="@+id/speedtestBtn"
-                app:layout_constraintRight_toRightOf="@+id/speedtestBtn"
-                app:layout_constraintTop_toBottomOf="@+id/speedtestBtn" />
+                app:layout_constraintLeft_toLeftOf="@+id/trafficUsage"
+                app:layout_constraintRight_toRightOf="@+id/trafficUsage"
+                app:layout_constraintTop_toBottomOf="@+id/trafficUsage" />
 
             <TextView
                 android:id="@+id/textView12"
