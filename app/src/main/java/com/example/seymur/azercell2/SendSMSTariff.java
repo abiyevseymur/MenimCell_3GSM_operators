@@ -1,5 +1,6 @@
 package com.example.seymur.azercell2;
 
+import android.*;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.PendingIntent;
@@ -7,6 +8,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -46,7 +51,7 @@ public class SendSMSTariff extends AppCompatActivity {
     TextView messageTittle;
     String messageBundle;
     String MIXPANEL_TOKEN = "5908ccdb281d509b82825cb12f81f7a8";
-
+    private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,10 +72,27 @@ public class SendSMSTariff extends AppCompatActivity {
         buttonTarif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SmsManager smsManager = SmsManager.getDefault();
-                smsManager.sendTextMessage(Numb,null,TextSMS,send_pi,deliver_pi);
-                Toast.makeText(getApplicationContext(), R.string.accepted,Toast.LENGTH_SHORT).show();
-                finish();
+                if (ContextCompat.checkSelfPermission(SendSMSTariff.this, android.Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
+
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(SendSMSTariff.this,
+                            android.Manifest.permission.SEND_SMS)) {
+                     return;
+                    } else {
+                        ActivityCompat.requestPermissions(SendSMSTariff.this,
+                                new String[]{android.Manifest.permission.CALL_PHONE},
+                                MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+                    }
+
+                }else{
+                    //have permission
+                    try {
+                        startSMS();
+                    } catch (SecurityException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+
             }
         });
         buttonTarifcancel = (Button) findViewById(R.id.SendSmstarrifCancel);
@@ -81,7 +103,36 @@ public class SendSMSTariff extends AppCompatActivity {
             }
         });
     };
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String permissions[], @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_READ_CONTACTS: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+                    startSMS();
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request.
+        }
+    }
+    private void startSMS(){
+        SmsManager smsManager = SmsManager.getDefault();
+        smsManager.sendTextMessage(Numb,null,TextSMS,send_pi,deliver_pi);
+        Toast.makeText(getApplicationContext(), R.string.accepted,Toast.LENGTH_SHORT).show();
+        finish();
+    }
 /*    public void NumbAndMessage(String number,String message){
         Numb.setText(number);
         TextSMS.setText(message);

@@ -56,7 +56,6 @@
         </activity>
         <activity android:name=".Balance" />
 
-        <!-- <activity android:name=".VerifyCode" /> -->
         <activity
             android:name=".BalanceMenu"
             android:label="@string/title_activity_balance_menu"
@@ -120,8 +119,9 @@
 
         <activity
             android:name=".AndroidLocalize"
-            android:configChanges="locale|orientation|keyboardHidden"></activity>
-        <activity android:name=".MBUsage"></activity>
+            android:configChanges="locale|orientation|keyboardHidden" />
+
+        <activity android:name=".MBUsage" />
     </application>
 
 </manifest>

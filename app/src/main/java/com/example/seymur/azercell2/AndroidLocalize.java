@@ -39,5 +39,4 @@ public class AndroidLocalize extends Activity {
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
-        this.setContentView(R.layout.setting_lang);
     }}

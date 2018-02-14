@@ -205,9 +205,15 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
     @Override
     public void onClick(View view) {
         LatLong = (TextView) findViewById(R.id.LatLong);
-        checkNearestDistance();
-        showNearestOffice();
-
+        if (ActivityCompat.checkSelfPermission(MapsActivity.this,Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MapsActivity.this,Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCAION);
+        }
+        else {
+            checkNearestDistance();
+            showNearestOffice();
+        }
         LatLong.setText("The nearest Office is "+keyDist+"\n Distance: " + valueDist + "m ");
     }
     Integer min;
@@ -239,8 +245,15 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
         nearbyOfficeLat = Double.parseDouble(String.valueOf(valueOfOficceName.keySet()).replace("[","").replace("]",""));
         nearbyOffivceLong = Double.parseDouble(String.valueOf(valueOfOficceName.values()).replace("[","").replace("]",""));
         //current location
-        latitude =location.getLatitude();
-        longitude= location.getLongitude();
+        if (ActivityCompat.checkSelfPermission(MapsActivity.this,Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MapsActivity.this,Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCAION);
+        }
+        else {
+            latitude = location.getLatitude();
+            longitude = location.getLongitude();
+        }
         GoogleDirection.withServerKey(serverKey)
                 .from(new LatLng(latitude,longitude))
                 .to(new LatLng(nearbyOfficeLat,nearbyOffivceLong))
