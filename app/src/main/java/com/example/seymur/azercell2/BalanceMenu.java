@@ -198,7 +198,6 @@ public class BalanceMenu extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         if(getSupportActionBar() != null)
-        getSupportActionBar().setTitle("test");
         mainLogo = R.drawable.ic_action_bar_logo;
         AppLogo(mainLogo);
 
@@ -229,7 +228,7 @@ public class BalanceMenu extends AppCompatActivity {
         else {
             if(getSupportActionBar() != null)
 
-                getSupportActionBar().setTitle("  " +"test"+  getString(R.string.noAnyNumb)  );
+                getSupportActionBar().setTitle("  " +  getString(R.string.noAnyNumb)  );
         }
         //
         //Mix Panel Token
