@@ -59,7 +59,7 @@ public class Ayar extends Fragment implements View.OnClickListener {
         fragment.setArguments(args);
         return fragment;
     }
-
+    Xercler fMBUsage ;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +68,7 @@ public class Ayar extends Fragment implements View.OnClickListener {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         inetConfig = new InternetSettings();
-
+        fMBUsage = new Xercler();
     }
 
     InternetSettings inetConfig;
@@ -123,8 +123,10 @@ public class Ayar extends Fragment implements View.OnClickListener {
             startActivity(intent);
 
         } else if (view.getId() == R.id.trafficUsage){
-            Intent intent = new Intent(getActivity(), MBUsage.class);
-            startActivity(intent);
+            FragmentTransaction ft = this.getFragmentManager().beginTransaction();
+            ft.replace(R.id.fragment_container,fMBUsage,"back");
+            ft.addToBackStack("back");
+            ft.commit();
 
 
         }

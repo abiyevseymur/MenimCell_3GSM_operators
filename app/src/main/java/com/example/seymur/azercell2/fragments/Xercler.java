@@ -3,11 +3,15 @@ package com.example.seymur.azercell2.fragments;
 import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.TrafficStats;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -105,7 +109,9 @@ public class Xercler extends Fragment implements View.OnClickListener {
 
     int counter = 0;
     /////-----------------//////
-
+    private Handler mHandler = new Handler();
+    private long mStartRX = 0;
+    private long mStartTX = 0;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -121,10 +127,39 @@ public class Xercler extends Fragment implements View.OnClickListener {
         mprogressBar = (ProgressBar) view.findViewById(R.id.progressBar);
         tv = (TextView) view.findViewById(R.id.percentage);
         ProgressTittle = (TextView) view.findViewById(R.id.nameOfCosts);
-        getProgressNumb(Integer.parseInt(getString(R.string.AllProgressNumb)));
+//        getProgressNumb(Integer.parseInt(String.valueOf("1")));
+        getProgressNumb(Integer.parseInt((String) tv.getText()));
+
+        //MBusage
+        mStartRX = TrafficStats.getTotalRxBytes();
+        mStartTX = TrafficStats.getTotalTxBytes();
+        if (mStartRX == TrafficStats.UNSUPPORTED || mStartTX == TrafficStats.UNSUPPORTED) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
+            alert.setTitle("Uh Oh!");
+            alert.setMessage("Your device does not support traffic stat monitoring.");
+            alert.show();
+        } else {
+            mHandler.postDelayed(mRunnable, 1000);
+        }
         return view;
     }
-
+    private final Runnable mRunnable = new Runnable() {
+        @SuppressLint("SetTextI18n")
+        public void run() {
+//            TextView RX = (TextView)getView().findViewById(R.id.RX);
+//            TextView TX = (TextView)getView().findViewById(R.id.TX);
+            long rxBytes = (TrafficStats.getTotalRxBytes()- mStartRX)
+//                    /100000
+                                ;
+            Integer rxMB  = (int) rxBytes;
+            tv.setText(Integer.toString(rxMB
+                    /10
+            ));
+//            long txBytes = (TrafficStats.getTotalTxBytes()- mStartTX);
+//            TX.setText(Long.toString(rxBytes));
+            mHandler.postDelayed(mRunnable, 1);
+        }
+    };
 
     // Add Fragments to Tabs
     private void setupViewPager(ViewPager viewPager) {
@@ -170,7 +205,7 @@ public class Xercler extends Fragment implements View.OnClickListener {
         animator.setObjectValues(counter, ProgressNumb);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             public void onAnimationUpdate(ValueAnimator animation) {
-                tv.setText(String.valueOf(animation.getAnimatedValue())+"%");
+              tv.getText();
             }
         });
         animator.setEvaluator(new TypeEvaluator<Integer>() {
@@ -202,6 +237,7 @@ public class Xercler extends Fragment implements View.OnClickListener {
     GridLayout GDinternet;
     GridLayout GDcredit;
 //---------------------//
+    @SuppressLint("ResourceType")
     @Override
     public void onClick(View view) {
 
@@ -214,7 +250,7 @@ public class Xercler extends Fragment implements View.OnClickListener {
         GDcredit =(GridLayout)view.findViewById(R.id.CreditBtn);
         if(view.getId()==R.id.aallProgressBtn) {
             if(ProgressTittle.getText() != getResources().getString(R.string.allProgressTittle)) {
-                getProgressNumb(Integer.parseInt(getString(R.string.AllProgressNumb)));
+                getProgressNumb(Integer.parseInt((String) tv.getText()));
                 ProgressTittle.setText(getResources().getString(R.string.allProgressTittle));
             }
         }
