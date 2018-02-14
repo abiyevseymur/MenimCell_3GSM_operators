@@ -119,20 +119,14 @@
 
         <activity
             android:name=".AndroidLocalize"
-<<<<<<< HEAD
             android:configChanges="locale|orientation|keyboardHidden" />
 
         <activity android:name=".MBUsage" />
-=======
-            android:configChanges="locale|orientation|keyboardHidden"
-            android:label="@string/title_activity_android_localize"
-            android:noHistory="true"
-            android:parentActivityName=".BalanceMenu">
-        <meta-data
-        android:name="android.support.PARENT_ACTIVITY"
-        android:value="com.example.seymur.azercell2.BalanceMenu" />
-        </activity>
->>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
+
+
+
+
+<!-- 5231f67325196afa0ebaf041b8ba95cb67756817-->
     </application>
 
 </manifest>

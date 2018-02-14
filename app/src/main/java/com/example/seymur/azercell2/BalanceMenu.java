@@ -8,20 +8,14 @@ import com.example.seymur.azercell2.Helper.LocaleHelper;
 import com.example.seymur.azercell2.map.MapsActivity;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
-<<<<<<< HEAD
 import android.app.usage.NetworkStats;
-=======
 import android.app.Activity;
->>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-<<<<<<< HEAD
 import android.content.res.Resources;
-=======
 import android.preference.PreferenceManager;
->>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
 import android.support.v4.app.ActivityCompat;
 import android.util.Base64;
 import android.util.Log;
@@ -146,20 +140,17 @@ public class BalanceMenu extends AppCompatActivity {
         // In case this activity was started with special instructions from an Intent,
         // pass the Intent's extras to the fragment as arguments
         // Add the fragment to the 'fragment_container' FrameLayout
-        final String trackingDistinctId = getTrackingDistinctId();
 
-<<<<<<< HEAD
+//        final String trackingDistinctId = getTrackingDistinctId();
 //
         fxidmetler = new Xidmetler();
         fbalance = new BalanceNew();
         fxercler = new ServicesVAS();
         fayar = new Ayar();
-=======
         mContext = getApplicationContext();
 //        mixpanel.getPeople().identify(trackingDistinctId); //this is the distinct_id
 //        // that will be used for people analytics. You must set this explicitly in order
 //        // to dispatch people data.
->>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
 
         firstFragment = new BalanceNew();
         firstFragment.setArguments(getIntent().getExtras());
@@ -271,13 +262,16 @@ public class BalanceMenu extends AppCompatActivity {
         Resources resources = context.getResources();
     }
 //
-    private String generateDistinctId() {
+/*    private String generateDistinctId() {
         final Random random = new Random();
         final byte[] randomBytes = new byte[32];
         random.nextBytes(randomBytes);
-        return Base64.encodeToString(randomBytes, Base64.NO_WRAP | Base64.NO_PADDING);
-}
-    private String getTrackingDistinctId() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO) {
+            return Base64.encodeToString(randomBytes, Base64.NO_WRAP | Base64.NO_PADDING);
+        }
+    }*/
+
+/*    private String getTrackingDistinctId() {
         final SharedPreferences prefs = getPreferences(MODE_PRIVATE);
 
         String ret = prefs.getString(MIXPANEL_DISTINCT_ID_NAME, null);
@@ -285,11 +279,13 @@ public class BalanceMenu extends AppCompatActivity {
             ret = generateDistinctId();
             final SharedPreferences.Editor prefsEditor = prefs.edit();
             prefsEditor.putString(MIXPANEL_DISTINCT_ID_NAME, ret);
-            prefsEditor.apply();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+                prefsEditor.apply();
+            }
         }
 
         return ret;
-    }
+    }*/
 
     public static String PhoneNumber(){
         return  phoneNumber;
@@ -333,23 +329,6 @@ public class BalanceMenu extends AppCompatActivity {
         Log.d(TAG, "BottomMenu onDestroy");
     }
 
-<<<<<<< HEAD
-   /*
-    setting button (if need)
-=======
-
->>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case(R.id.logoSettings):
-                Intent intent = new Intent(this, AndroidLocalize.class);
-                startActivity(intent);
-        }
-<<<<<<< HEAD
-    }*/
-=======
-    }
     boolean CheckboxPreference;
     String ListPreference;
     String editTextPreference;
@@ -374,5 +353,4 @@ public class BalanceMenu extends AppCompatActivity {
                 "myCustomSharedPrefs", Activity.MODE_PRIVATE);
         customPref = mySharedPreferences.getString("myCusomPref", "");
     }
->>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
 }
