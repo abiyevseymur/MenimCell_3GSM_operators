@@ -8,12 +8,20 @@ import com.example.seymur.azercell2.Helper.LocaleHelper;
 import com.example.seymur.azercell2.map.MapsActivity;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
+<<<<<<< HEAD
 import android.app.usage.NetworkStats;
+=======
+import android.app.Activity;
+>>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+<<<<<<< HEAD
 import android.content.res.Resources;
+=======
+import android.preference.PreferenceManager;
+>>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
 import android.support.v4.app.ActivityCompat;
 import android.util.Base64;
 import android.util.Log;
@@ -126,6 +134,7 @@ public class BalanceMenu extends AppCompatActivity {
     BalanceNew firstFragment;
     String NetworkCarrierName = "None";
     static String phoneNumber;
+    private Context mContext;
     @SuppressLint("HardwareIds")
     @TargetApi(Build.VERSION_CODES.M)
     @Override
@@ -139,11 +148,18 @@ public class BalanceMenu extends AppCompatActivity {
         // Add the fragment to the 'fragment_container' FrameLayout
         final String trackingDistinctId = getTrackingDistinctId();
 
+<<<<<<< HEAD
 //
         fxidmetler = new Xidmetler();
         fbalance = new BalanceNew();
         fxercler = new ServicesVAS();
         fayar = new Ayar();
+=======
+        mContext = getApplicationContext();
+//        mixpanel.getPeople().identify(trackingDistinctId); //this is the distinct_id
+//        // that will be used for people analytics. You must set this explicitly in order
+//        // to dispatch people data.
+>>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
 
         firstFragment = new BalanceNew();
         firstFragment.setArguments(getIntent().getExtras());
@@ -283,6 +299,7 @@ public class BalanceMenu extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        getPrefs();
         Log.d(TAG,"BottomMenu onStart");
     }
 
@@ -316,8 +333,12 @@ public class BalanceMenu extends AppCompatActivity {
         Log.d(TAG, "BottomMenu onDestroy");
     }
 
+<<<<<<< HEAD
    /*
     setting button (if need)
+=======
+
+>>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -325,5 +346,33 @@ public class BalanceMenu extends AppCompatActivity {
                 Intent intent = new Intent(this, AndroidLocalize.class);
                 startActivity(intent);
         }
+<<<<<<< HEAD
     }*/
+=======
+    }
+    boolean CheckboxPreference;
+    String ListPreference;
+    String editTextPreference;
+    String ringtonePreference;
+    String secondEditTextPreference;
+    String customPref;
+
+    private void getPrefs() {
+        // Get the xml/preferences.xml preferences
+        SharedPreferences prefs = PreferenceManager
+                .getDefaultSharedPreferences(getBaseContext());
+        CheckboxPreference = prefs.getBoolean("checkboxPref", true);
+        ListPreference = prefs.getString("listPref", "nr1");
+        editTextPreference = prefs.getString("editTextPref",
+                "Nothing has been entered");
+        ringtonePreference = prefs.getString("ringtonePref",
+                "DEFAULT_RINGTONE_URI");
+        secondEditTextPreference = prefs.getString("SecondEditTextPref",
+                "Nothing has been entered");
+        // Get the custom preference
+        SharedPreferences mySharedPreferences = getSharedPreferences(
+                "myCustomSharedPrefs", Activity.MODE_PRIVATE);
+        customPref = mySharedPreferences.getString("myCusomPref", "");
+    }
+>>>>>>> 5231f67325196afa0ebaf041b8ba95cb67756817
 }
