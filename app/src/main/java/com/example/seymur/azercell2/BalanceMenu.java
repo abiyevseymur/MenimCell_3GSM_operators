@@ -15,6 +15,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.net.TrafficStats;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
 import android.util.Base64;
@@ -35,6 +37,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.seymur.azercell2.fragments.*;
 
@@ -99,10 +102,8 @@ public class BalanceMenu extends AppCompatActivity {
 
     };
 
-    /*@Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(LocaleHelper.onAttach(newBase,"en"));
-    }*/
+
+    //back button
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -156,6 +157,7 @@ public class BalanceMenu extends AppCompatActivity {
         firstFragment.setArguments(getIntent().getExtras());
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fragment_container, firstFragment).commit();
+
 
         //bottom menu size
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -255,36 +257,9 @@ public class BalanceMenu extends AppCompatActivity {
 
             getSupportActionBar().setLogo(logo);
     }
-//language
-    private void updateView(String lang) {
-        Context context = LocaleHelper.setLocale(this,lang);
-        Resources resources = context.getResources();
-    }
-//
-/*    private String generateDistinctId() {
-        final Random random = new Random();
-        final byte[] randomBytes = new byte[32];
-        random.nextBytes(randomBytes);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO) {
-            return Base64.encodeToString(randomBytes, Base64.NO_WRAP | Base64.NO_PADDING);
-        }
-    }*/
 
-/*    private String getTrackingDistinctId() {
-        final SharedPreferences prefs = getPreferences(MODE_PRIVATE);
 
-        String ret = prefs.getString(MIXPANEL_DISTINCT_ID_NAME, null);
-        if (ret == null) {
-            ret = generateDistinctId();
-            final SharedPreferences.Editor prefsEditor = prefs.edit();
-            prefsEditor.putString(MIXPANEL_DISTINCT_ID_NAME, ret);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
-                prefsEditor.apply();
-            }
-        }
-
-        return ret;
-    }*/
+    //phone number
 
     public static String PhoneNumber(){
         return  phoneNumber;
@@ -294,7 +269,6 @@ public class BalanceMenu extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        getPrefs();
         Log.d(TAG,"BottomMenu onStart");
     }
 
@@ -328,28 +302,5 @@ public class BalanceMenu extends AppCompatActivity {
         Log.d(TAG, "BottomMenu onDestroy");
     }
 
-    boolean CheckboxPreference;
-    String ListPreference;
-    String editTextPreference;
-    String ringtonePreference;
-    String secondEditTextPreference;
-    String customPref;
 
-    private void getPrefs() {
-        // Get the xml/preferences.xml preferences
-        SharedPreferences prefs = PreferenceManager
-                .getDefaultSharedPreferences(getBaseContext());
-        CheckboxPreference = prefs.getBoolean("checkboxPref", true);
-        ListPreference = prefs.getString("listPref", "nr1");
-        editTextPreference = prefs.getString("editTextPref",
-                "Nothing has been entered");
-        ringtonePreference = prefs.getString("ringtonePref",
-                "DEFAULT_RINGTONE_URI");
-        secondEditTextPreference = prefs.getString("SecondEditTextPref",
-                "Nothing has been entered");
-        // Get the custom preference
-        SharedPreferences mySharedPreferences = getSharedPreferences(
-                "myCustomSharedPrefs", Activity.MODE_PRIVATE);
-        customPref = mySharedPreferences.getString("myCusomPref", "");
-    }
 }

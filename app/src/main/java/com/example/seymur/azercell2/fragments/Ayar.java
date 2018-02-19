@@ -5,15 +5,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.seymur.azercell2.AndroidLocalize;
 import com.example.seymur.azercell2.BalanceMenu;
-import com.example.seymur.azercell2.MBUsage;
 import com.example.seymur.azercell2.map.MapsActivity;
 import com.example.seymur.azercell2.R;
 import com.example.seymur.azercell2.WebOnlineChat;
@@ -59,7 +55,7 @@ public class Ayar extends Fragment implements View.OnClickListener {
         fragment.setArguments(args);
         return fragment;
     }
-    Xercler fMBUsage ;
+    DataUsage fMBUsage ;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +64,7 @@ public class Ayar extends Fragment implements View.OnClickListener {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         inetConfig = new InternetSettings();
-        fMBUsage = new Xercler();
+        fMBUsage = new DataUsage();
     }
 
     InternetSettings inetConfig;

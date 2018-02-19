@@ -88,7 +88,9 @@ public class ayliqInternet extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ayliq_internet, container, false);
-        ((BalanceMenu)getActivity()).showUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
         mip50 = (Button) view.findViewById(R.id.mip50);
         mip50.setOnClickListener(new View.OnClickListener() {
             @Override

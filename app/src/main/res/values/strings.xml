@@ -192,5 +192,9 @@
     <string name="numberFromBL">Number from Black List</string>
     <string name="BackToMenu">Back To Menu</string>
     <string name="theBalanceWillSend">The Balance will send via SMS to your Phone</string>
+    <string name="OneGB">1000 MB</string>
+    <string name="fivehundredMB">500 Mb</string>
+    <string name="fiftyMB">50 MB</string>
+    <string name="yourPackageIs">Your Package is</string>
 
 </resources>
