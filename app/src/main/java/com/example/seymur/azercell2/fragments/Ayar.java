@@ -56,6 +56,7 @@ public class Ayar extends Fragment implements View.OnClickListener {
         return fragment;
     }
     DataUsage fMBUsage ;
+    Roaming Roaming;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +66,7 @@ public class Ayar extends Fragment implements View.OnClickListener {
         }
         inetConfig = new InternetSettings();
         fMBUsage = new DataUsage();
+        Roaming = new Roaming();
     }
 
     InternetSettings inetConfig;
@@ -80,7 +82,7 @@ public class Ayar extends Fragment implements View.OnClickListener {
         }
 
         view.findViewById(R.id.simsimBtn).setOnClickListener(this);
-        view.findViewById(R.id.onlineServiceBtn).setOnClickListener(this);
+        view.findViewById(R.id.RoamingBtn).setOnClickListener(this);
         view.findViewById(R.id.trafficUsage).setOnClickListener(this);
         view.findViewById(R.id.mapBtn).setOnClickListener(this);
         return view;
@@ -114,9 +116,11 @@ public class Ayar extends Fragment implements View.OnClickListener {
 
         }
 
-        else if (view.getId() == R.id.onlineServiceBtn) {
-            Intent intent = new Intent(getActivity(), WebOnlineChat.class);
-            startActivity(intent);
+        else if (view.getId() == R.id.RoamingBtn) {
+            FragmentTransaction ft = this.getFragmentManager().beginTransaction();
+            ft.replace(R.id.fragment_container,Roaming,"back");
+            ft.addToBackStack("back");
+            ft.commit();
 
         } else if (view.getId() == R.id.trafficUsage){
             FragmentTransaction ft = this.getFragmentManager().beginTransaction();

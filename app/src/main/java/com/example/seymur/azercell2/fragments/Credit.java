@@ -16,9 +16,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.seymur.azercell2.BalanceMenu;
+import com.example.seymur.azercell2.ObjectClasses.USSDcodes;
 import com.example.seymur.azercell2.R;
 import com.example.seymur.azercell2.SendSMSTariff;
-import com.example.seymur.azercell2.sendUSSDcode;
 
 import static com.example.seymur.azercell2.R.color.pinkAcces;
 import static com.example.seymur.azercell2.R.color.white;
@@ -84,23 +84,27 @@ public class Credit extends Fragment implements View.OnClickListener {
     Button credit18azn;
     Button credit2azn;
     TextView checkDebts;
+    private Context context;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_credit, container, false);
-
+        context = getContext();
         checkDebts = view.findViewById(R.id.checkDebts);
         checkDebts.setText(Html.fromHtml(getString(R.string.checkMyDebts)));
 
-        ((BalanceMenu)getActivity()).showUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
 
-        credit1azn = view.findViewById(R.id.creditOneAznBtn);
+        credit1azn = view.findViewById(R.id.creditOneAzn);
         credit1azn.setOnClickListener(this);
-        credit14azn = view.findViewById(R.id.creditOneFortyAznBtn);
+        credit14azn = view.findViewById(R.id.CreditOneForty);
         credit14azn.setOnClickListener(this);
-        credit18azn = view.findViewById(R.id.creditOneEightyAznBtn);
+        credit18azn = view.findViewById(R.id.creditOneEightyAzn);
         credit18azn.setOnClickListener(this);
         credit2azn = view.findViewById(R.id.creditwoAznBtn);
         credit2azn.setOnClickListener(this);
@@ -143,28 +147,34 @@ public class Credit extends Fragment implements View.OnClickListener {
     String kreditTextDebts="Info";
     String Simkredit = "SimCredit";
     String Maximumkredit = "MaximumCredit";
-    private Context context;
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case (R.id.creditOneAznBtn):
+            case (R.id.creditOneAzn):
 
-
-                sendUssdCode(getString(R.string.ussdCodeOneAzn),getString(R.string.get),getString(R.string.creditOneAzn),getString(R.string.credit),
-                    getString(R.string.creditOneAznFee),getString(R.string.fee));
+                USSDcodes ussdA = new USSDcodes();
+               Intent intent = ussdA.sendUssdCode(getString(R.string.ussdCodeOneAzn),getString(R.string.get),getString(R.string.creditOneAzn),getString(R.string.credit),
+                    getString(R.string.creditOneAznFee),getString(R.string.fee),context);
+               startActivity(intent);
                 break;
 
-            case (R.id.creditOneFortyAznBtn):
-                sendUssdCode(getString(R.string.ussdCodeOneFortyAzn),getString(R.string.get),getString(R.string.creditOneFortyAzn),getString(R.string.credit),
-                        getString(R.string.creditOneFortyAznFee),getString(R.string.fee));
+            case (R.id.CreditOneForty):
+                USSDcodes ussd = new USSDcodes();
+                Intent intentA = ussd.sendUssdCode(getString(R.string.ussdCodeOneFortyAzn),getString(R.string.get),getString(R.string.creditOneFortyAzn),getString(R.string.credit),
+                        getString(R.string.creditOneFortyAznFee),getString(R.string.fee),context);
+                startActivity(intentA);
                 break;
-            case (R.id.creditOneEightyAznBtn):
-                sendUssdCode(getString(R.string.ussdCodeOneEightyAzn),getString(R.string.get),getString(R.string.creditOneEightyAzn),getString(R.string.credit),
-                        getString(R.string.creditOneEightyAznFee),getString(R.string.fee));
+            case (R.id.creditOneEightyAzn):
+                USSDcodes ussdB = new USSDcodes();
+                Intent intentB = ussdB.sendUssdCode(getString(R.string.ussdCodeOneEightyAzn),getString(R.string.get),getString(R.string.creditOneEightyAzn),getString(R.string.credit),
+                        getString(R.string.creditOneEightyAznFee),getString(R.string.fee),context);
+                startActivity(intentB);
                 break;
             case (R.id.creditwoAznBtn):
-                 sendUssdCode(getString(R.string.ussdCodeTwoAzn),getString(R.string.get),getString(R.string.creditTwoAzn),getString(R.string.credit),
-                        getString(R.string.creditTwoAznFee),getString(R.string.fee));
+                USSDcodes ussdC = new USSDcodes();
+                 Intent intentC = ussdC.sendUssdCode(getString(R.string.ussdCodeTwoAzn),getString(R.string.get),getString(R.string.creditTwoAzn),getString(R.string.credit),
+                        getString(R.string.creditTwoAznFee),getString(R.string.fee),context);
+                 startActivity(intentC);
                 break;
             case (R.id.checkDebts):
                 setSendPaycell(MaximumKreditDebts,kreditTextDebts,Maximumkredit);
@@ -174,7 +184,7 @@ public class Credit extends Fragment implements View.OnClickListener {
         }
     }
 
-    public void sendUssdCode(String USSDCode, String WillWhatWord, String numbOrPriceValue, String ThirdWord, String BeforeLastWord, String LastWord){
+/*    public void sendUssdCode(String USSDCode, String WillWhatWord, String numbOrPriceValue, String ThirdWord, String BeforeLastWord, String LastWord){
         Intent intent = new Intent(getActivity(), sendUSSDcode.class);
         Bundle b = new Bundle();
         b.putString("first", USSDCode);
@@ -182,7 +192,7 @@ public class Credit extends Fragment implements View.OnClickListener {
         intent.putExtras(b);
 
         startActivity(intent);
-    }
+    }*/
     public void setSendPaycell(String numb,String Text, String kreditType){
         Intent intent = new Intent(getActivity(), SendSMSTariff.class);
         Bundle b = new Bundle();

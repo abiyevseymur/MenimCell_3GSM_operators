@@ -36,10 +36,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintHorizontal_bias="0.17"
-                app:layout_constraintVertical_bias="0.626" />
+                app:layout_constraintVertical_bias="0.626" android:contentDescription="TODO" android:layout_marginEnd="32dp" android:layout_marginStart="0dp"/>
 
             <ImageButton
-                android:id="@+id/onlineServiceBtn"
+                android:id="@+id/RoamingBtn"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:layout_weight="0.04"
@@ -57,7 +57,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginBottom="32dp"
                 app:layout_constraintHorizontal_bias="0.14"
-                app:layout_constraintVertical_bias="0.194" />
+                app:layout_constraintVertical_bias="0.194" android:contentDescription="TODO"/>
 
             <TextView
                 android:id="@+id/textView11"
@@ -69,9 +69,9 @@
                 android:text="@string/onlineservices"
                 android:textAlignment="center"
                 app:layout_constraintHorizontal_bias="0.509"
-                app:layout_constraintLeft_toLeftOf="@+id/onlineServiceBtn"
-                app:layout_constraintRight_toRightOf="@+id/onlineServiceBtn"
-                app:layout_constraintTop_toBottomOf="@+id/onlineServiceBtn" />
+                app:layout_constraintLeft_toLeftOf="@+id/RoamingBtn"
+                app:layout_constraintRight_toRightOf="@+id/RoamingBtn"
+                app:layout_constraintTop_toBottomOf="@+id/RoamingBtn" />
 
             <ImageButton
                 android:id="@+id/simsimBtn"
@@ -125,7 +125,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.649"
-                app:srcCompat="@drawable/speedtest" />
+                app:srcCompat="@drawable/speedtest" android:contentDescription="TODO"/>
 
             <TextView
                 android:id="@+id/textView13"

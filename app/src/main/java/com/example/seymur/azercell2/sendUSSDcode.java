@@ -16,7 +16,7 @@ import android.widget.TextView;
  * Created by Seymur on 17/12/23.
  */
 
-public class sendUSSDcode extends AppCompatActivity {
+public class sendUSSDcode extends AppCompatActivity implements View.OnClickListener {
     Button SendUssdCode;
     Button cancelUssdCode;
     Bundle bundle;
@@ -25,6 +25,7 @@ public class sendUSSDcode extends AppCompatActivity {
     TextView messageTittle;
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 0;
 
+    private boolean clicked ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,42 +35,12 @@ public class sendUSSDcode extends AppCompatActivity {
         assert bundle != null;
         ussdCode = bundle.getString("first");
         messageBundle = bundle.getString("messageTittle");
-
         messageTittle = (TextView) findViewById(R.id.youSure);
         messageTittle.setText(messageBundle);
         SendUssdCode = (Button) findViewById(R.id.SendSmstarrif);
-        SendUssdCode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                if (ActivityCompat.checkSelfPermission(sendUSSDcode.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-
-                    ActivityCompat.requestPermissions(sendUSSDcode.this,
-                            new String[]{Manifest.permission.CALL_PHONE},
-                            MY_PERMISSIONS_REQUEST_CALL_PHONE);
-
-                    return;
-                } else {
-                    //You already have permission
-                    try {
-                        startUSSD();
-                    } catch (SecurityException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                finish();
-            }
-        });
-
+        SendUssdCode.setOnClickListener(this);
         cancelUssdCode = (Button) findViewById(R.id.SendSmstarrifCancel);
-        cancelUssdCode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        cancelUssdCode.setOnClickListener(this);
     }
 
     @Override
@@ -96,6 +67,7 @@ public class sendUSSDcode extends AppCompatActivity {
     }
 
     private void startUSSD() {
+        clicked = true;
         Intent my_callIntent;
         my_callIntent = new Intent(Intent.ACTION_CALL);
         my_callIntent.setData(Uri.parse("tel:" + ussdCode.trim() + Uri.encode("#")));
@@ -110,5 +82,43 @@ public class sendUSSDcode extends AppCompatActivity {
             return;
         }
         startActivity(my_callIntent);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case (R.id.SendSmstarrif):
+
+                if (ActivityCompat.checkSelfPermission(sendUSSDcode.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(sendUSSDcode.this,
+                            new String[]{Manifest.permission.CALL_PHONE},
+                            MY_PERMISSIONS_REQUEST_CALL_PHONE);
+
+                    return;
+                } else {
+                    //You already have permission
+                    try {
+
+                        startUSSD();
+                    } catch (SecurityException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                finish();
+
+                break;
+            case (R.id.SendSmstarrifCancel):
+                clicked = false;
+                finish();
+                break;
+
+        }
+
+    }
+
+    public boolean isClicked() {
+        return clicked;
     }
 }

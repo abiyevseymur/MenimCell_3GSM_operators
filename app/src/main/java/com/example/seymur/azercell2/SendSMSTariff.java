@@ -60,9 +60,15 @@ public class SendSMSTariff extends AppCompatActivity {
         deliver_pi = PendingIntent.getBroadcast(SendSMSTariff.this,0,send_intent,0);
 
          bundle = getIntent().getExtras();
-        Numb= bundle.getString("first");
-        TextSMS= bundle.getString("second");
-        messageBundle = bundle.getString("messageTittle");
+        if (bundle != null) {
+            Numb= bundle.getString("first");
+        }
+        if (bundle != null) {
+            TextSMS= bundle.getString("second");
+        }
+        if (bundle != null) {
+            messageBundle = bundle.getString("messageTittle");
+        }
 //         TextSMS = bundle.getString("second");
 
         messageTittle = (TextView)findViewById(R.id.youSure) ;

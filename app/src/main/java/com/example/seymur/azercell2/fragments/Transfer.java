@@ -121,7 +121,7 @@ public class Transfer extends Fragment implements View.OnClickListener {
                     }
                     else if(check1azn.isChecked()){
                         textMessage = check1azn.getText().toString();
-                        setSendPaycell(numbOf1aznPaycell);;
+                        setSendPaycell(numbOf1aznPaycell);
                     }
                     else{
                         Toast.makeText(getActivity(), R.string.HowMuchToast,Toast.LENGTH_SHORT).show();

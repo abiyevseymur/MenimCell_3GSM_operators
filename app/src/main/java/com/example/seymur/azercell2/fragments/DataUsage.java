@@ -5,14 +5,20 @@ import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.TrafficStats;
 import android.net.Uri;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -97,7 +103,13 @@ public class DataUsage extends Fragment implements View.OnClickListener {
     private Handler mHandler = new Handler();
     private long mStartRX = 0;
     private long mStartTX = 0;
-    Integer rxMB = 10;
+    boolean isWifiConn;
+    boolean isMobileConn;
+    private Context context ;
+    Integer rxMB=10;
+    Double RXmbD ;
+    long mobilenetworkbyte;
+    private static final String DEBUG_TAG = "NetworkStatusExample";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -114,19 +126,23 @@ public class DataUsage extends Fragment implements View.OnClickListener {
         mprogressBar = (ProgressBar) view.findViewById(R.id.progressBar);
         tv = (TextView) view.findViewById(R.id.percentage);
         ProgressTittle = (TextView) view.findViewById(R.id.dataUsageTittle);
-
+        context = getContext();
 //        getProgressNumb(Integer.parseInt((String) tv.getText()));
 //        getProgressNumb(Integer.parseInt((String) tv.getText()));
         //MBusage
-//        mStartRX = TrafficStats.getTotalRxBytes();
-        mStartTX = TrafficStats.getTotalTxBytes();
+
+
+//            mStartRX = TrafficStats.getTotalRxBytes();
+            mobilenetworkbyte = TrafficStats.getMobileRxBytes();
+//        mStartTX = TrafficStats.getTotalTxBytes();
 
             if (mStartRX == TrafficStats.UNSUPPORTED || mStartTX == TrafficStats.UNSUPPORTED) {
                 AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
                 alert.setTitle("Uh Oh!");
                 alert.setMessage("Your device does not support traffic stat monitoring.");
                 alert.show();
-            } else {
+            } else  {
+
                 mHandler.postDelayed(mRunnable, 1000);
 //                getProgressNumb(Integer.parseInt((String)tv.getText()));
                 mHandler.postDelayed(getmRunnable,1000);
@@ -142,16 +158,18 @@ public class DataUsage extends Fragment implements View.OnClickListener {
         public void run() {
 //            TextView RX = (TextView)getView().findViewById(R.id.RX);
 //            TextView TX = (TextView)getView().findViewById(R.id.TX);
-            long rxBytes = (TrafficStats.getTotalRxBytes()- mStartRX)
+
+                long rxBytes = (TrafficStats.getMobileRxBytes() - mobilenetworkbyte)
                     /100000
-                    ;
-            rxMB  = (int) rxBytes;
-            tv.setText(Integer.toString(rxMB
-                    /10
-            ));
+                        ;
+                rxMB = (int) rxBytes;
+                RXmbD = Double.valueOf(rxMB);
+                tv.setText(Double.toString(RXmbD
+                        / 10
+                ));
 //            long txBytes = (TrafficStats.getTotalTxBytes()- mStartTX);
 //            TX.setText(Long.toString(rxBytes));
-            mHandler.postDelayed(mRunnable, 1000);
+                mHandler.postDelayed(mRunnable, 1000);
 
         }
     };
@@ -164,6 +182,19 @@ public class DataUsage extends Fragment implements View.OnClickListener {
         }
 
     });
+    public void checkWiifiConn(){
+        ConnectivityManager connMgr = (ConnectivityManager)
+                context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert connMgr != null;
+        NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        isWifiConn = networkInfo.isConnected();
+        networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        isMobileConn = networkInfo.isConnected();
+
+        Log.d(DEBUG_TAG, "Wifi connected: " + isWifiConn);
+        Log.d(DEBUG_TAG, "Mobile connected: " + isMobileConn);
+
+    }
     public void getProgressNumb(int ProgressNumb){
 
         ObjectAnimator anim = ObjectAnimator.ofInt(mprogressBar, "progress", rxMB/10, ProgressNumb);

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.seymur.azercell2.BalanceMenu;
 import com.example.seymur.azercell2.R;
 import com.example.seymur.azercell2.SendSMSTariff;
 
@@ -76,6 +77,9 @@ public class InternetSettings extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_internet_settings, container, false);
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
         settingConfig = (Button) view.findViewById(R.id.settings9595);
         settingConfig.setOnClickListener(new View.OnClickListener() {
             @Override

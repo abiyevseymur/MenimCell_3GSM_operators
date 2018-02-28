@@ -191,10 +191,28 @@
     <string name="removeThis">Remove this:</string>
     <string name="numberFromBL">Number from Black List</string>
     <string name="BackToMenu">Back To Menu</string>
-    <string name="theBalanceWillSend">The Balance will send via SMS to your Phone</string>
+    <string name="theBalanceWillSend">get The Balance via SMS</string>
     <string name="OneGB">1000 MB</string>
     <string name="fivehundredMB">500 Mb</string>
     <string name="fiftyMB">50 MB</string>
     <string name="yourPackageIs">Your Package is</string>
+    <string name="roaming">Roaming</string>
+    <string name="activateRoamingUSSD">*135*1</string>
+    <string name="activateRoaming">Activate Roaming</string>
+    <string name="deactivateRoaming">Deactivate Roaming</string>
+    <string name="deactivateRoamingUSSD">*135*0</string>
+    <string name="CFallCallsUSSD">**21*</string>
+    <string name="CFdeactiveUSSD">##002</string>
+    <string name="CFbussyUSSD">**67*</string>
+    <string name="CFNoAnswUSSD">**61*</string>
+    <string name="CFoffUSSD">**62*</string>
+    <string name="toAddOneNtoBL">To add one number to Black list</string>
+    <string name="toRmvOrChNFromBL">To remove or check numbers from Black list</string>
+    <string name="willstored30days">Numbers will be stored in Black list for 30 days.</string>
+    <string name="mayAddmax3N">You may add maximum 3 numbers into Black list.</string>
+    <string name="BlackListDesc">If you are being disturbed from any number you can block calls from this number by adding it to Black list.</string>
+    <string name="youWill">You will</string>
+    <string name="subscribeFor">Subscribe for</string>
+    <string name="ClirStatus">CLIR Status</string>
 
 </resources>

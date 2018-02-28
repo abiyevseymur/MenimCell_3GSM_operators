@@ -1,35 +1,23 @@
 package com.example.seymur.azercell2.fragments;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.FragmentManager;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.example.seymur.azercell2.BalanceMenu;
+import com.example.seymur.azercell2.ObjectClasses.USSDcodes;
 import com.example.seymur.azercell2.R;
-import com.example.seymur.azercell2.WebOnlineChat;
-import com.example.seymur.azercell2.WebRefillOnline;
-import com.example.seymur.azercell2.sendUSSDcode;
 
-import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -39,7 +27,7 @@ import java.net.URLConnection;
  * Use the {@link BalanceNew#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BalanceNew extends Fragment implements View.OnClickListener {
+public class BalanceNew extends Fragment implements View.OnClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -85,7 +73,7 @@ public class BalanceNew extends Fragment implements View.OnClickListener {
 
     }
 
-
+    Context context;
     ImageButton getBalanceImageBtn;
     ImageButton refillImageBtn;
     ImageButton getCreditImageBtn;
@@ -97,6 +85,7 @@ public class BalanceNew extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_balance_new, container, false);
+        context = getContext();
         if (((BalanceMenu)getActivity()) != null) {
             ((BalanceMenu)getActivity()).hideUpButton();
         }
@@ -202,12 +191,9 @@ public class BalanceNew extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.getBalance:
-               /* Intent my_callIntent;
-                my_callIntent = new Intent(Intent.ACTION_CALL);
-                my_callIntent.setData(Uri.parse("tel:" + getString(R.string.balanceUSSDcode) + Uri.encode("#")));
-                //here the word 'tel' is important for making a call...
-                startActivity(my_callIntent);*/
-                sendUssdCode(getString(R.string.balanceUSSDcode),getString(R.string.theBalanceWillSend));
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.balanceUSSDcode),getString(R.string.theBalanceWillSend),context);
+                startActivity(intentA);
             break;
 
             case  R.id.refill:
@@ -218,12 +204,10 @@ public class BalanceNew extends Fragment implements View.OnClickListener {
             break;
 
             case R.id.getCredit:
-
                 FragmentTransaction ft = this.getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_container,fcredit,"back");
                 ft.addToBackStack("back");
                 ft.commit();
-
                 break;
             case R.id.getTransfer:
                 FragmentTransaction t = this.getFragmentManager().beginTransaction();
@@ -235,22 +219,8 @@ public class BalanceNew extends Fragment implements View.OnClickListener {
 
     }
 
-    private void sendUssdCode(String USSDcode,String messageText) {
-        Intent intent = new Intent(getActivity(), sendUSSDcode.class);
-        Bundle b = new Bundle();
-        b.putString("first", USSDcode);
-        b.putString("messageTittle", messageText);
-        intent.putExtras(b);
 
-        startActivity(intent);
-    }
 
- /*   public void onBackStackChanged() {
-        // enable Up button only  if there are entries on the backstack
-//        if(getActivity().getSupportFragmentManager().getBackStackEntryCount() < 1) {
-            ((BalanceMenu)getActivity()).hideUpButton();
-//        }
-    }*/
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated

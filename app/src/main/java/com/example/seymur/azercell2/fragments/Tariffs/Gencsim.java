@@ -76,7 +76,9 @@ public class Gencsim extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_gencsim, container, false);
-        ((BalanceMenu)getActivity()).showUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
         tittleMessage = (TextView)view.findViewById(R.id.thePriceOfTariffGencsim) ;
         gencsimBtn = (Button) view.findViewById(R.id.gencSimBtn);
         gencsimBtn.setOnClickListener(new View.OnClickListener() {

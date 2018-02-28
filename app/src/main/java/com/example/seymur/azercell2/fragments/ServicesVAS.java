@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 
 import com.example.seymur.azercell2.BalanceMenu;
 import com.example.seymur.azercell2.R;
+import com.example.seymur.azercell2.fragments.VAS.CLIR_SOCLIR;
 import com.example.seymur.azercell2.fragments.VAS.CallBarring;
 import com.example.seymur.azercell2.fragments.VAS.CallForward;
 import com.example.seymur.azercell2.fragments.VAS.CallScreening;
@@ -68,6 +69,7 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
         fCallForwarding = new CallForward();
         fCallbarring = new CallBarring();
         fCallScreening = new CallScreening();
+        fClirSoclir = new CLIR_SOCLIR();
     }
     CallForward fCallForwarding;
     LinearLayout CallForwarding;
@@ -75,6 +77,8 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
     LinearLayout Callbarring;
     CallScreening fCallScreening;
     LinearLayout CallScreening;
+    CLIR_SOCLIR fClirSoclir;
+    LinearLayout ClirSoclir;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -86,6 +90,8 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
         CallForwarding = (LinearLayout) view.findViewById(R.id.callForwardMain);
         Callbarring = (LinearLayout)view.findViewById(R.id.CallBarring);
         CallScreening = (LinearLayout)view.findViewById(R.id.CallScreening);
+        ClirSoclir = (LinearLayout)view.findViewById(R.id.ClirAndSoclir);
+        ClirSoclir.setOnClickListener(this);
         CallScreening.setOnClickListener(this);
         CallForwarding.setOnClickListener(this);
         Callbarring.setOnClickListener(this);
@@ -126,6 +132,12 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
                 ftCB.replace(R.id.fragment_container,fCallScreening,"e");
                 ftCB.addToBackStack("e");
                 ftCB.commit();
+                break;
+            case(R.id.ClirAndSoclir):
+                FragmentTransaction ftCS = this.getFragmentManager().beginTransaction();
+                ftCS.replace(R.id.fragment_container,fClirSoclir,"e");
+                ftCS.addToBackStack("e");
+                ftCS.commit();
                 break;
         }
     }

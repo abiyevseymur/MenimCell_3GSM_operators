@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.seymur.azercell2.BalanceMenu;
 import com.example.seymur.azercell2.R;
 import com.example.seymur.azercell2.SendSMSTariff;
 
@@ -75,6 +76,9 @@ public class CallScreening extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_call_screening, container, false);
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
         AddBlackList = (Button) view.findViewById(R.id.AddBL);
         RemoveBlackList = (Button)view.findViewById(R.id.RemoveBL);
         checkTheNumbersBL = (TextView)view.findViewById(R.id.checkTheNumbersBL);

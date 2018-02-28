@@ -77,7 +77,9 @@ public class Tarif extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tarif, container, false);
-        ((BalanceMenu)getActivity()).showUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
         tittleMessage = (TextView)view.findViewById(R.id.thePriceofTariffChange);
         tittleMessageString = tittleMessage.getText().toString();
         btnTarrif = (Button) view.findViewById(R.id.btnAzercelim);

@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.example.seymur.azercell2.BalanceMenu;
 import com.example.seymur.azercell2.R;
-import com.example.seymur.azercell2.sendUSSDcode;
+import com.example.seymur.azercell2.ObjectClasses.USSDcodes;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -68,7 +68,7 @@ public class CallForward extends Fragment implements View.OnClickListener {
         }
 
     }
-
+    Context context;
     EditText CallforwardingNumber;
     Button callForwardActive;
     Button callForwardDeactive;
@@ -82,8 +82,10 @@ public class CallForward extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_call_forward, container, false);
-
-        ((BalanceMenu) getActivity()).showUpButton();
+        context = getContext();
+        if (((BalanceMenu) getActivity()) != null) {
+            ((BalanceMenu) getActivity()).showUpButton();
+        }
         CallforwardingNumber = (EditText) view.findViewById(R.id.callforwardPhoneNumb);
         callForwardingAll = (RadioButton) view.findViewById(R.id.AllCallsForwarding);
         callForwardingBusy = (RadioButton) view.findViewById(R.id.callforwardingBusy);
@@ -110,11 +112,7 @@ public class CallForward extends Fragment implements View.OnClickListener {
         mListener = null;
     }
 
-    String CFAllCalls = "**21*";
-    String CFDeactive = "##002";
-    String CFBusy = "**67* ";
-    String CfNoAnswr = "**61*";
-    String CfOff = "**62*";
+
     String textMessage;
     @Override
     public void onClick(View v) {
@@ -123,20 +121,28 @@ public class CallForward extends Fragment implements View.OnClickListener {
                 if (CallforwardingNumber.getText().toString().trim().length() == 13) {
                     if (callForwardingAll.isChecked()) {
                         textMessage = callForwardingAll.getText().toString();
-                       sendUssdCode(CFAllCalls + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
-                                getString(R.string.number));
+                        USSDcodes s = new USSDcodes();
+                       Intent intent  = s.sendUssdCode(getString(R.string.CFallCallsUSSD) + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
+                                getString(R.string.number),context);
+                       startActivity(intent);
                     } else if (callForwardingBusy.isChecked()) {
                         textMessage = callForwardingBusy.getText().toString();
-                        sendUssdCode(CFBusy + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
-                                getString(R.string.number));
+                        USSDcodes s = new USSDcodes();
+                        Intent intent = s.sendUssdCode(getString(R.string.CFbussyUSSD) + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
+                                getString(R.string.number),context);
+                        startActivity(intent);
                     } else if (callForwardingNoAnswer.isChecked()) {
                         textMessage = callForwardingNoAnswer.getText().toString();
-                       sendUssdCode(CfNoAnswr + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
-                                getString(R.string.number));
+                        USSDcodes s = new USSDcodes();
+                       Intent intent = s.sendUssdCode(getString(R.string.CFNoAnswUSSD) + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
+                                getString(R.string.number),context);
+                       startActivity(intent);
                     } else if (CallForwardingOff.isChecked()) {
                         textMessage = CallForwardingOff.getText().toString();
-                       sendUssdCode(CfOff + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
-                                getString(R.string.number));
+                        USSDcodes s = new USSDcodes();
+                        Intent intent = s.sendUssdCode(getString(R.string.CFoffUSSD) + CallforwardingNumber.getText().toString(), getString(R.string.forward), textMessage, getString(R.string.toThis), CallforwardingNumber.getText().toString(),
+                                getString(R.string.number),context);
+                        startActivity(intent);
                     } else {
                         Toast.makeText(getActivity(), R.string.switchtypeofForwarding, Toast.LENGTH_SHORT).show();
                     }
@@ -146,8 +152,10 @@ public class CallForward extends Fragment implements View.OnClickListener {
 
                 break;
             case (R.id.deactiveCallForwarding):
-                        sendUssdCode(CFDeactive, getString(R.string.deaktive), "", getString(R.string.allTypesofCF),getString(R.string.inYour),
-                                getString(R.string.number));
+                USSDcodes u = new USSDcodes() ;
+                Intent intent = u.sendUssdCode( getString(R.string.CFdeactiveUSSD), getString(R.string.deaktive), "", getString(R.string.allTypesofCF),getString(R.string.inYour),
+                                getString(R.string.number),context);
+                startActivity(intent);
                 break;
         }
 
@@ -155,15 +163,6 @@ public class CallForward extends Fragment implements View.OnClickListener {
 
 
 
-    public void sendUssdCode(String USSDCode, String WillWhatWord, String numbOrPriceValue, String ThirdWord, String BeforeLastWord, String LastWord){
-        Intent intent = new Intent(getActivity(), sendUSSDcode.class);
-        Bundle b = new Bundle();
-        b.putString("first", USSDCode);
-        b.putString("messageTittle","You will"+" "+WillWhatWord+" "+numbOrPriceValue + " "+ ThirdWord + " "+ BeforeLastWord+ " "+ LastWord  );
-        intent.putExtras(b);
-
-        startActivity(intent);
-    }
 
     /**
      * This interface must be implemented by activities that contain this

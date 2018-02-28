@@ -80,7 +80,9 @@ public class TariffDouble extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          View view = inflater.inflate(R.layout.fragment_tariff_double, container, false);
-        ((BalanceMenu)getActivity()).showUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
         //textTarifDes = (TextView) view.findViewById(R.id.tarifDes);
         G5price = (TextView)view.findViewById(R.id.G5tarrifsPrice);
         G8price = (TextView) view.findViewById(R.id.G8tariffsPrice) ;

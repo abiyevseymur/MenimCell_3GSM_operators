@@ -78,7 +78,9 @@ public class TarifDoubleK extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tarif_double_k, container, false);
-        ((BalanceMenu)getActivity()).showUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
         Kombo8 = (Button) view.findViewById(R.id.Kombo8Btn);
         Kombo8.setOnClickListener(new View.OnClickListener() {
             @Override

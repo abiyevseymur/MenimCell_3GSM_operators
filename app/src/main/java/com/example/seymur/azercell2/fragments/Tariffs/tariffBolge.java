@@ -78,7 +78,9 @@ public class tariffBolge extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tariff_bolge, container, false);
-        ((BalanceMenu)getActivity()).showUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
         messageBolge = (TextView)view.findViewById(R.id.thePriceofBolge);
         bolgeBtn = (Button) view.findViewById(R.id.btnBolge);
         bolgeBtn.setOnClickListener(new View.OnClickListener() {
