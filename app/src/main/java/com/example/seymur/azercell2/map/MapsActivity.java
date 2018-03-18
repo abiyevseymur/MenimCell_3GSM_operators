@@ -267,10 +267,7 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
                         if(status.equals(RequestResult.OK)) {
                             Route route = direction.getRouteList().get(0);
                             Leg leg = route.getLegList().get(0);
-//                        Info distanceInfo = leg.getDistance();
-//                        Info durationInfo = leg.getDuration();
-//                        distance = distanceInfo.getText();
-//                        duration = durationInfo.getText();
+
                             directionPositionList = leg.getDirectionPoint();
                             mMap.addPolyline(DirectionConverter.createPolyline(getApplicationContext(), directionPositionList, 5, Color.BLUE));
                             duration = "new string";
@@ -278,6 +275,7 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
 
                         }else if(status.equals(RequestResult.NOT_FOUND)) {
                             // Do something
+                            Toast.makeText(MapsActivity.this, R.string.CantFindNearestWay, Toast.LENGTH_SHORT).show();
                         }
 
                     }

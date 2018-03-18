@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.example.seymur.azercell2.BalanceMenu;
@@ -72,13 +73,13 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
         fClirSoclir = new CLIR_SOCLIR();
     }
     CallForward fCallForwarding;
-    LinearLayout CallForwarding;
+    ImageButton CallForwarding;
     CallBarring fCallbarring;
-    LinearLayout Callbarring;
+    ImageButton Callbarring;
     CallScreening fCallScreening;
-    LinearLayout CallScreening;
+    ImageButton CallScreening;
     CLIR_SOCLIR fClirSoclir;
-    LinearLayout ClirSoclir;
+    ImageButton ClirSoclir;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -87,10 +88,10 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
         if(getActivity() != null)
 
         ((BalanceMenu)getActivity()).hideUpButton();
-        CallForwarding = (LinearLayout) view.findViewById(R.id.callForwardMain);
-        Callbarring = (LinearLayout)view.findViewById(R.id.CallBarring);
-        CallScreening = (LinearLayout)view.findViewById(R.id.CallScreening);
-        ClirSoclir = (LinearLayout)view.findViewById(R.id.ClirAndSoclir);
+        CallForwarding = (ImageButton) view.findViewById(R.id.callForwardMain);
+        Callbarring = (ImageButton)view.findViewById(R.id.CallBarring);
+        CallScreening = (ImageButton)view.findViewById(R.id.CallScreening);
+        ClirSoclir = (ImageButton)view.findViewById(R.id.ClirAndSoclir);
         ClirSoclir.setOnClickListener(this);
         CallScreening.setOnClickListener(this);
         CallForwarding.setOnClickListener(this);

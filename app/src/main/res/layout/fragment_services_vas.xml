@@ -12,144 +12,136 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayout5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:id="@+id/callForwardMain"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
             android:layout_marginBottom="32dp"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1.07"
+            android:background="@drawable/round_button"
+            android:contentDescription="TODO"
+            android:src="@drawable/call_forward"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.254">
+            app:layout_constraintVertical_bias="0.243"
+            tools:ignore="ContentDescription"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="8dp" />
 
-            <LinearLayout
-                android:id="@+id/callForwardMain"
-                android:layout_width="wrap_content"
-                android:layout_height="158dp"
-                android:layout_margin="4dp"
-                android:layout_weight="0.84"
-                android:orientation="vertical"
-                android:weightSum="1">
+        <ImageButton
+            android:id="@+id/CallBarring"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_button"
+            android:contentDescription="TODO"
+            android:src="@drawable/call_barring"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.874"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.231"
+            tools:ignore="ContentDescription" />
 
-                <ImageView
-                    android:id="@+id/callForward"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.07"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="TODO"
-                    app:srcCompat="@drawable/call_forward" />
-
-                <Button
-                    android:id="@+id/callForwardBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="24dp"
-                    android:background="@android:color/white"
-                    android:text="@string/callForwarding"
-                    android:textColor="@android:color/black"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/CallBarring"
-                android:layout_width="wrap_content"
-                android:layout_height="158dp"
-                android:layout_margin="4dp"
-                android:layout_weight="1.11"
-                android:orientation="vertical"
-                android:weightSum="1">
-
-                <ImageView
-                    android:id="@+id/CallBarringPhoto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.10"
-                    android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/call_barring" />
-
-                <Button
-                    android:id="@+id/callBarringBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="24dp"
-                    android:background="@android:color/white"
-                    android:text="call Barring"
-                    android:textColor="@android:color/black"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:id="@+id/CallScreening"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="32dp"
             android:layout_marginTop="32dp"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
+            android:background="@drawable/round_button"
+            android:contentDescription="TODO"
+            android:src="@drawable/call_screening"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.192"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.718">
+            app:layout_constraintVertical_bias="0.706"
+            tools:ignore="ContentDescription" />
 
-            <LinearLayout
-                android:id="@+id/CallScreening"
-                android:layout_width="wrap_content"
-                android:layout_height="158dp"
-                android:layout_margin="4dp"
-                android:layout_weight="0.84"
-                android:orientation="vertical"
-                android:weightSum="1">
+        <ImageButton
+            android:id="@+id/ClirAndSoclir"
+            android:layout_width="125dp"
+            android:layout_height="124dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_button"
+            android:contentDescription="TODO"
+            android:src="@drawable/gizletcell"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.898"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.72"
+            tools:ignore="ContentDescription"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp" />
 
-                <ImageView
-                    android:id="@+id/callScreeningPhoto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.07"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="TODO"
-                    app:srcCompat="@drawable/call_screening" />
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/callForwarding"
+            app:layout_constraintEnd_toEndOf="@+id/callForwardMain"
+            app:layout_constraintStart_toStartOf="@+id/callForwardMain"
+            app:layout_constraintTop_toBottomOf="@+id/callForwardMain" />
 
-                <Button
-                    android:id="@+id/callScreeningBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="24dp"
-                    android:background="@android:color/white"
-                    android:text="@string/callScreening"
-                    android:textColor="@android:color/black"
-                    android:textSize="12sp" />
-            </LinearLayout>
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/CallBarring"
+            app:layout_constraintEnd_toEndOf="@+id/CallBarring"
+            app:layout_constraintStart_toStartOf="@+id/CallBarring"
+            app:layout_constraintTop_toBottomOf="@+id/CallBarring" />
 
-            <LinearLayout
-                android:id="@+id/ClirAndSoclir"
-                android:layout_width="wrap_content"
-                android:layout_height="158dp"
-                android:layout_margin="4dp"
-                android:layout_weight="1.11"
-                android:orientation="vertical"
-                android:weightSum="1">
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/callScreening"
+            app:layout_constraintEnd_toEndOf="@+id/CallScreening"
+            app:layout_constraintStart_toStartOf="@+id/CallScreening"
+            app:layout_constraintTop_toBottomOf="@+id/CallScreening" />
 
-                <ImageView
-                    android:id="@+id/ClirAndSoclirImg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.10"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="TODO"
-                    app:srcCompat="@drawable/call_screeningplus" />
-
-                <Button
-                    android:id="@+id/ClirAndSoclirBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="24dp"
-                    android:background="@android:color/white"
-                    android:text="@string/gizlicellGizletcell"
-                    android:textColor="@android:color/black"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/gizlicellGizletcell"
+            app:layout_constraintEnd_toEndOf="@+id/ClirAndSoclir"
+            app:layout_constraintStart_toStartOf="@+id/ClirAndSoclir"
+            app:layout_constraintTop_toBottomOf="@+id/ClirAndSoclir" />
 
     </android.support.constraint.ConstraintLayout>
 

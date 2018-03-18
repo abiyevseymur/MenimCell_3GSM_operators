@@ -2,6 +2,7 @@ package com.example.seymur.azercell2.fragments;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -65,7 +66,9 @@ public class Ayar extends Fragment implements View.OnClickListener {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         inetConfig = new InternetSettings();
-        fMBUsage = new DataUsage();
+
+            fMBUsage = new DataUsage();
+
         Roaming = new Roaming();
     }
 

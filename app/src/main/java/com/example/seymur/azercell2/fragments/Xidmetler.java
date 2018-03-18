@@ -59,15 +59,7 @@ public class Xidmetler extends Fragment implements View.OnClickListener {
         fragment.setArguments(args);
         return fragment;
     }
-    Button tarif1;
-    Button tarif2;
-    Button tarif3;
-    Button tarif4;
-    Button tarif5;
-    Button tarif6;
-    Button mipAyAction;
-    Button mipGunAction;
-    Button mipDigerAction;
+
 
     Tarif ftarif;
     TariffDouble ftarifdouble;

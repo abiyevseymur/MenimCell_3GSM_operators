@@ -6,30 +6,40 @@ import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.media.Image;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.TrafficStats;
 import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowInsets;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridLayout;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.seymur.azercell2.BalanceMenu;
 import com.example.seymur.azercell2.R;
+
+import org.w3c.dom.Text;
 
 import java.lang.invoke.MethodHandle;
 import java.util.ArrayList;
@@ -43,6 +53,7 @@ import java.util.List;
  * Use the {@link DataUsage#newInstance} factory method to
  * create an instance of this fragment.
  */
+@RequiresApi(api = Build.VERSION_CODES.KITKAT_WATCH)
 public class DataUsage extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -105,6 +116,11 @@ public class DataUsage extends Fragment implements View.OnClickListener {
     private long mStartTX = 0;
     boolean isWifiConn;
     boolean isMobileConn;
+    EditText editTextInput;
+    TextView textViewOutput;
+    TextView enterPckg;
+    ImageButton dataUsageDone;
+    ImageButton dataUsageEdit;
     private Context context ;
     Integer rxMB=10;
     Double RXmbD ;
@@ -117,9 +133,15 @@ public class DataUsage extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_xercler, container, false);
-        view.findViewById(R.id.dataUsage50MB).setOnClickListener(this);
-        view.findViewById(R.id.dataUsage500Mb).setOnClickListener(this);
-        view.findViewById(R.id.dataUsage1GB).setOnClickListener(this);
+        enterPckg =  (TextView)view.findViewById(R.id.enterPackage);
+
+        textViewOutput = (TextView)view.findViewById(R.id.textViewOutput);
+        editTextInput = (EditText)view.findViewById(R.id.edittextInput);
+        dataUsageDone = (ImageButton)view.findViewById(R.id.DataUsageDone);
+        dataUsageDone.setOnClickListener(this);
+        dataUsageEdit = (ImageButton)view.findViewById(R.id.DataUsageEdit);
+        dataUsageEdit.setOnClickListener(this);
+        view.findViewById(R.id.textViewOutput);
         if (((BalanceMenu)getActivity()) != null) {
             ((BalanceMenu)getActivity()).showUpButton();
         }
@@ -214,26 +236,24 @@ public class DataUsage extends Fragment implements View.OnClickListener {
         mListener = null;
     }
 
-    @SuppressLint("ResourceType")
+    @SuppressLint("ResourceAsColor")
     @Override
-    public void onClick(View view) {
-        if(view.getId()==R.id.dataUsage50MB) {
-            if(ProgressTittle.getText() != getResources().getString(R.string.fiftyMB)) {
-                mprogressBar.setMax(50);
-                ProgressTittle.setText(getResources().getString(R.string.fiftyMB));
-            }
+    public void onClick(View v) {
+        if (v.getId() == R.id.DataUsageDone) {
+            textViewOutput.setText(editTextInput.getText().toString());
+            editTextInput.setVisibility(View.GONE);
+            textViewOutput.setVisibility(View.VISIBLE);
+            dataUsageDone.setVisibility(View.GONE);
+            dataUsageEdit.setVisibility(View.VISIBLE);
+            enterPckg.setText(R.string.yourPackageIsNow);
+            mprogressBar.setMax(Integer.parseInt(textViewOutput.getText().toString()));
         }
-        else if(view.getId() == R.id.dataUsage500Mb){
-            if(ProgressTittle.getText() != getResources().getString(R.string.fivehundredMB)){
-                mprogressBar.setMax(500);
-                ProgressTittle.setText(getResources().getString(R.string.fivehundredMB));
-            }
-        }
-        else if (view.getId()==R.id.dataUsage1GB){
-            if(ProgressTittle.getText() !=  getResources().getString(R.string.OneGB)){
-                mprogressBar.setMax(1000);
-                ProgressTittle.setText(getResources().getString(R.string.OneGB));
-            }
+        if (v.getId() == R.id.DataUsageEdit) {
+            editTextInput.setVisibility(View.VISIBLE);
+            textViewOutput.setVisibility(View.GONE);
+            dataUsageDone.setVisibility(View.VISIBLE);
+            dataUsageEdit.setVisibility(View.GONE);
+            enterPckg.setText(R.string.yourPackageIs);
         }
     }
 

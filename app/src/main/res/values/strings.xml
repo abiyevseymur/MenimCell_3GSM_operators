@@ -10,8 +10,8 @@
     <string name="daxil">Davam et</string>
     <string name="title_activity_balance_menu">MenimCell</string>
     <string name="title_home">Home</string>
-    <string name="title_Xercler">Costs</string>
-    <string name="title_Xidmetler">Services</string>
+    <string name="title_Xercler">Services</string>
+    <string name="title_Xidmetler">Store</string>
     <string name="title_Servis">Contacts</string>
     <string name="title_Ayar">More</string>
     <string name="balans_artirma">Refill</string>
@@ -40,7 +40,7 @@
     <string name="limitsizMip">Unlimited Packages</string>
     <string name="yenichat">Online Chat</string>
     <string name="servisecDes">The service allows you to use a range of services on your number online. Online self-service enables you to use many services independently.</string>
-    <string name="onlineservices">Online Services</string>
+    <string name="Roaming">Roaming</string>
 
     <!-- -->
     <string name="Umelumat">INFORMATION</string>
@@ -89,7 +89,7 @@
     <string name="nonSIMSIMnumb">This is not SimSim number</string>
     <string name="noAnyNumb">No any Number</string>
     <string name="connect">Connet</string>
-    <string name="simsim">SimSim</string>
+    <string name="internetSettings">Internet Settings</string>
     <string name="nearestoficces">Nearest Offices</string>
     <string name="trafficUsage">Traffic Usage</string>
     <string name="all">All</string>
@@ -110,9 +110,9 @@
     <string name="MeneZengEt">Call Me</string>
     <string name="gizlicellGizletcell">Gizlicell and Gizletcell</string>
     <string name="callScreeningPlus">call Screening +</string>
-    <string name="callScreening">call Screening</string>
+    <string name="callScreening">Call Screening</string>
     <string name="duetCard">Duet Card</string>
-    <string name="callForwarding">Call forwarding</string>
+    <string name="callForwarding">Call Forwarding</string>
     <string name="voiceMail">Voicemail</string>
     <string name="send">Send</string>
     <string name="paycell">PAYCELL</string>
@@ -168,7 +168,7 @@
     <string name="get">get</string>
     <string name="credit">Credit</string>
     <string name="fee">fee</string>
-    <string name="CallBarring">CALL BARRING</string>
+    <string name="CallBarring">Call Barring</string>
     <string name="CallBarringDesc">Depending on your choice, you can use the following options to block calls:</string>
     <string name="AllIncoming">All Incoming</string>
     <string name="AllOutgoing">All Outgoing</string>
@@ -195,7 +195,8 @@
     <string name="OneGB">1000 MB</string>
     <string name="fivehundredMB">500 Mb</string>
     <string name="fiftyMB">50 MB</string>
-    <string name="yourPackageIs">Your Package is</string>
+    <string name="yourPackageIs">Enter Your Package: </string>
+    <string name="yourPackageIsNow">Current Package is </string>
     <string name="roaming">Roaming</string>
     <string name="activateRoamingUSSD">*135*1</string>
     <string name="activateRoaming">Activate Roaming</string>
@@ -214,5 +215,6 @@
     <string name="youWill">You will</string>
     <string name="subscribeFor">Subscribe for</string>
     <string name="ClirStatus">CLIR Status</string>
+    <string name="CantFindNearestWay">Can not find the nearest way!</string>
 
 </resources>

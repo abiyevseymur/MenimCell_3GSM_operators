@@ -18,7 +18,7 @@
         app:showAsAction="ifRoom|withText" />
     <item
         android:id="@+id/navigation_xercler"
-        android:icon="@drawable/expences"
+        android:icon="@drawable/simsim"
         android:title="@string/title_Xercler"
         app:showAsAction="ifRoom|withText" />
     <item

@@ -41,7 +41,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/onlineservices"
+        android:text="@string/internetSettings"
         android:textSize="24sp"
         android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="parent"
