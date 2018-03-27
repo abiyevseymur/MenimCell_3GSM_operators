@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -58,6 +59,7 @@ public class Ayar extends Fragment implements View.OnClickListener {
     }
     DataUsage fMBUsage ;
     Roaming Roaming;
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT_WATCH)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,13 +69,14 @@ public class Ayar extends Fragment implements View.OnClickListener {
         }
         inetConfig = new InternetSettings();
 
+
             fMBUsage = new DataUsage();
+
 
         Roaming = new Roaming();
     }
 
     InternetSettings inetConfig;
-    int SettingLogo = R.drawable.settings;
     int AppLogo = R.drawable.ic_action_bar_logo;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

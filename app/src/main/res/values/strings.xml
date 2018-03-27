@@ -216,5 +216,6 @@
     <string name="subscribeFor">Subscribe for</string>
     <string name="ClirStatus">CLIR Status</string>
     <string name="CantFindNearestWay">Can not find the nearest way!</string>
-
+    <string name="YouWill">You will</string>
+    <!-- 19.03.2018 -->
 </resources>

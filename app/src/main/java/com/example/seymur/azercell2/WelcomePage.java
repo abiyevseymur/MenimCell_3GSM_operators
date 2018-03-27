@@ -14,11 +14,11 @@ public class WelcomePage extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_welcome_page);
         //welcomepage
-        int SPLASH_TIME_OUT = 2000;
+        int SPLASH_TIME_OUT = 800;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(WelcomePage.this,Login.class);
+                Intent intent = new Intent(WelcomePage.this,BalanceMenu.class);
                 startActivity(intent);
                 finish();
             }

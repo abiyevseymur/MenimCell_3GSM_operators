@@ -44,6 +44,7 @@ import org.w3c.dom.Text;
 import java.lang.invoke.MethodHandle;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -147,7 +148,7 @@ public class DataUsage extends Fragment implements View.OnClickListener {
         }
         mprogressBar = (ProgressBar) view.findViewById(R.id.progressBar);
         tv = (TextView) view.findViewById(R.id.percentage);
-        ProgressTittle = (TextView) view.findViewById(R.id.dataUsageTittle);
+//        ProgressTittle = (TextView) view.findViewById(R.id.Data/**/);
         context = getContext();
 //        getProgressNumb(Integer.parseInt((String) tv.getText()));
 //        getProgressNumb(Integer.parseInt((String) tv.getText()));
@@ -240,20 +241,26 @@ public class DataUsage extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.DataUsageDone) {
+            if(!Objects.equals(editTextInput.getText().toString(), ""))
             textViewOutput.setText(editTextInput.getText().toString());
             editTextInput.setVisibility(View.GONE);
             textViewOutput.setVisibility(View.VISIBLE);
             dataUsageDone.setVisibility(View.GONE);
             dataUsageEdit.setVisibility(View.VISIBLE);
             enterPckg.setText(R.string.yourPackageIsNow);
-            mprogressBar.setMax(Integer.parseInt(textViewOutput.getText().toString()));
+
+                mprogressBar.setMax(Integer.parseInt(textViewOutput.getText().toString()));
+
         }
         if (v.getId() == R.id.DataUsageEdit) {
+            if(!Objects.equals(editTextInput.getText().toString(), ""))
             editTextInput.setVisibility(View.VISIBLE);
             textViewOutput.setVisibility(View.GONE);
             dataUsageDone.setVisibility(View.VISIBLE);
             dataUsageEdit.setVisibility(View.GONE);
             enterPckg.setText(R.string.yourPackageIs);
+
+
         }
     }
 
