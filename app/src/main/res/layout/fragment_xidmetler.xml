@@ -11,184 +11,37 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView8"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="0.08"
-            android:text="@string/MIP"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/gridLayout"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
-
-        <GridLayout
-            android:id="@+id/gridLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="8dp">
-
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="6"
-                android:layout_row="6"
-                android:scrollbars="none">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <GridLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="183dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
-                        android:padding="30dp">
-
-                        <Button
-                            android:id="@+id/mipAyAction"
-                            android:layout_width="180dp"
-                            android:layout_height="38dp"
-                            android:layout_column="0"
-                            android:layout_marginEnd="15dp"
-                            android:layout_marginStart="15dp"
-                            android:layout_row="3"
-                            android:background="@drawable/buttonpink"
-                            android:fadeScrollbars="false"
-                            android:text="@string/etrafli"
-                            android:textAlignment="center"
-                            android:textColor="@color/white" />
-
-                        <TextView
-                            android:layout_width="210dp"
-                            android:layout_height="wrap_content"
-                            android:layout_column="0"
-                            android:layout_row="1"
-                            android:paddingEnd="10dp"
-                            android:paddingStart="10dp"
-                            android:text="@string/ayliqMip"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
-
-                    </GridLayout>
-
-                    <GridLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="183dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
-                        android:padding="30dp">
-
-                        <TextView
-                            android:layout_width="210dp"
-                            android:layout_height="wrap_content"
-                            android:paddingEnd="10dp"
-                            android:paddingStart="10dp"
-                            android:text="@string/gundelikMip"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
-
-
-                        <Button
-                            android:id="@+id/mipGunAction"
-                            android:layout_width="180dp"
-                            android:layout_height="38dp"
-                            android:layout_column="0"
-                            android:layout_marginEnd="15dp"
-                            android:layout_marginStart="15dp"
-                            android:layout_row="3"
-                            android:background="@drawable/buttonpink"
-                            android:fadeScrollbars="false"
-                            android:text="@string/etrafli"
-                            android:textAlignment="center"
-                            android:textColor="@color/white" />
-
-                    </GridLayout>
-
-                    <GridLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="183dp"
-                        android:layout_marginEnd="40dp"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
-                        android:padding="30dp">
-
-                        <TextView
-                            android:layout_width="210dp"
-                            android:layout_height="wrap_content"
-                            android:paddingEnd="10dp"
-                            android:paddingStart="10dp"
-                            android:text="@string/limitsizMip"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
-
-                        <Button
-                            android:id="@+id/mipDigerAction"
-                            android:layout_width="180dp"
-                            android:layout_height="38dp"
-                            android:layout_column="0"
-                            android:layout_marginEnd="15dp"
-                            android:layout_marginStart="15dp"
-                            android:layout_row="3"
-                            android:background="@drawable/buttonpink"
-                            android:fadeScrollbars="false"
-                            android:text="@string/etrafli"
-                            android:textAlignment="center"
-                            android:textColor="@color/white" />
-
-                    </GridLayout>
-                </LinearLayout>
-            </HorizontalScrollView>
-        </GridLayout>
-
-        <TextView
             android:id="@+id/textView"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="0.08"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
             android:text="@string/tarifler"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <GridLayout
             android:id="@+id/gridLayout2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView8"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="8dp">
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_above="@+id/textView8"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -501,6 +354,167 @@
                 </LinearLayout>
             </HorizontalScrollView>
         </GridLayout>
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="6"
+                android:layout_row="6"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="183dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="40dp"
+                        android:background="@drawable/windowtarif"
+                        android:padding="30dp">
+
+                        <Button
+                            android:id="@+id/mipAyAction"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/buttonpink"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="1"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/ayliqMip"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="183dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="40dp"
+                        android:background="@drawable/windowtarif"
+                        android:padding="30dp">
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/gundelikMip"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+
+                        <Button
+                            android:id="@+id/mipGunAction"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/buttonpink"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="183dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="40dp"
+                        android:background="@drawable/windowtarif"
+                        android:padding="30dp">
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/limitsizMip"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/mipDigerAction"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/buttonpink"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                    </GridLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="@string/MIP"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout2"
+            app:layout_constraintVertical_bias="1.0" />
     </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>

@@ -1,6 +1,7 @@
 package com.example.seymur.azercell2;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -8,9 +9,15 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.mixpanel.android.mpmetrics.MixpanelAPI;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by Seymur on 17/12/23.
@@ -26,11 +33,13 @@ public class sendUSSDcode extends AppCompatActivity implements View.OnClickListe
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 0;
 
     private boolean clicked ;
-
+    Context context;
+    String MIXPANEL_TOKEN = "5908ccdb281d509b82825cb12f81f7a8";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_smstariff);
+        context = getApplicationContext();
         bundle = getIntent().getExtras();
         assert bundle != null;
         ussdCode = bundle.getString("first");
@@ -71,6 +80,21 @@ public class sendUSSDcode extends AppCompatActivity implements View.OnClickListe
         Intent my_callIntent;
         my_callIntent = new Intent(Intent.ACTION_CALL);
         my_callIntent.setData(Uri.parse("tel:" + ussdCode.trim() + Uri.encode("#")));
+
+        //MixPanelCode
+        MixpanelAPI mixpanel =
+                MixpanelAPI.getInstance(context, MIXPANEL_TOKEN);
+        try {
+            JSONObject props = new JSONObject();
+            props.put("USSDCode", (ussdCode.trim() + "#"));
+
+            mixpanel.track("USSD Sended", props);
+        }
+        catch (JSONException e) {
+            Log.e("MYAPP", "Unable to add properties to JSONObject", e);
+        }
+        //
+
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -79,6 +103,7 @@ public class sendUSSDcode extends AppCompatActivity implements View.OnClickListe
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
+
             return;
         }
         startActivity(my_callIntent);

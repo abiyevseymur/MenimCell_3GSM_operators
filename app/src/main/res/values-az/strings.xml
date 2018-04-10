@@ -61,7 +61,7 @@
     <string name="gb">GB</string>
     <string name="tarifdaxilizengleristifadensonra">* Gencol-un arasında zenglər: 1 min. 0.02 AZN</string>
     <string name="interval1deq">Zəng üçün hesablama intervalı 1 dəqiqədir</string>
-    <string name="GencOlWebDes">İnternetsiz sizin həyatınızı təsəvvür edə bilməsiniz? Genç ol tarfinə qosul basqa qencler kimi </string>
+    <string name="GencOlWebDes">İnternetsiz sizin həyatınızı təsəvvür edə bilməsiniz? Genc ol tarfinə qosul basqa qencler kimi </string>
     <string name="sebekeDaxilZengSayi">Şəbəkədaxili dəqiqə</string>
     <string name="limitsiz">Limitsiz</string>
     <string name="komboTarifDesWeb">Kombo tarifine qosul və telefon hesablarına qənaət edin.Bütün dəqiqə, İnternet trafiki və limitsiz SMS - bir kombo tarifində bağlanıb!</string>
@@ -83,7 +83,7 @@
     <string name="recieve9595">Ayarlar əldə etmək</string>
     <string name="PleaseEnteryourN">Please, Enter Your Number!</string>
     <string name="nonSIMSIMnumb">Bu Simsim nömrəsi deyil</string>
-    <string name="noAnyNumb">Heç bir Nömrə daxil edilməyib</string>
+    <string name="noAnyNumb">Nömrə daxil edilməyib</string>
     <string name="connect">Qoşulmaq</string>
     <string name="internetSettings">İnternet Ayarları</string>
     <string name="nearestoficces">Ən yaxın müştəri xidməti</string>
@@ -194,9 +194,9 @@
     <string name="CFbussyUSSD">**67*</string>
     <string name="CFNoAnswUSSD">**61*</string>
     <string name="CFoffUSSD">**62*</string>
-    <string name="toAddOneNtoBL">Bir nömrəni Qara Siyahıya əlavə etmək üçün</string>
+    <string name="toAddOneNtoBL">Bir nömrəni Qara Siyahıya əlavə etmək</string>
     <string name="toRmvOrChNFromBL">Qara siyahıdan nömrələri aradan qaldırılması və ya yoxlanması</string>
-    <string name="willstored30days">Nömrə 30 gün ərzində Qara siyahısında saxlanılacaq.</string>
+    <string name="willstored30days">Nömrə 30 gün ərzində Qara siyahıda saxlanılacaq.</string>
     <string name="mayAddmax3N">Siz Qara siyahıya maksimum 3 nömrə əlavə edə bilərsiniz.</string>
     <string name="BlackListDesc">Əgər sizi hər hansı bir nömrə narahat eliyir siz nömrəni Qara siyahıya əlavə edə bilərsiz və bu nömrədən zənglər bağlanır.</string>
     <string name="youWill"> </string>
@@ -204,4 +204,8 @@
     <string name="ClirStatus">CLIR Status</string>
     <string name="CantFindNearestWay">Ən yaxın yol tapmaq olmur!</string>
     <!-- 19.03.2018 -->
+    <string name="unlimFortyQ">0.4 AZN</string>
+
+
+
 </resources>

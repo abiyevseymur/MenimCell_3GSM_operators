@@ -171,7 +171,7 @@ public class SendSMSTariff extends AppCompatActivity {
                     mixpanel.getPeople().identify(phone);
                     mixpanel.identify(phone);
 
-                        try {
+                                try {
                         JSONObject props = new JSONObject();
                         props.put("SendSmsTo", Numb);
                         props.put("SMStext", TextSMS);

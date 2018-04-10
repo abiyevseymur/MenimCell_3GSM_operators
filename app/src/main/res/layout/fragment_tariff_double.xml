@@ -202,7 +202,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
-                            android:text="Internet Package"
+                            android:text="@string/internetPackage"
                             android:textColor="@color/colorPrimary"
                             android:textSize="16sp" />
 
@@ -285,7 +285,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
-                            android:text="Off-Net SMS"
+                            android:text="@string/offNetSMS"
                             android:textColor="@color/colorPrimary"
                             android:textSize="16sp" />
 
@@ -523,7 +523,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
-                            android:text="Internet Package"
+                            android:text="@string/internetPackage"
                             android:textColor="@color/colorPrimary"
                             android:textSize="16sp" />
 
@@ -606,7 +606,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
-                            android:text="Off-Net SMS"
+                            android:text="@string/offNetSMS"
                             android:textColor="@color/colorPrimary"
                             android:textSize="16sp" />
 

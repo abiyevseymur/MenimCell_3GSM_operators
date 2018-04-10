@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,15 +10,16 @@
 
     tools:context="com.example.seymur.azercell2.BalanceMenu"
     android:weightSum="1">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:paddingLeft="5dp"
-        android:paddingStart="5dp"
-        android:paddingRight="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
         android:paddingEnd="0dp"
-        android:background="?attr/colorPrimary"
+        android:paddingLeft="5dp"
+        android:paddingRight="0dp"
+        android:paddingStart="5dp"
 
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
@@ -51,6 +52,16 @@
         app:itemIconTint="@color/white"
         app:menu="@menu/navigation" />
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        tools:ignore="ObsoleteLayoutParam">
+    </com.google.android.gms.ads.AdView>
 </LinearLayout>
 
 

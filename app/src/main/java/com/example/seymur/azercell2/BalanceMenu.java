@@ -6,6 +6,9 @@ import android.annotation.TargetApi;
 
 import com.example.seymur.azercell2.Helper.LocaleHelper;
 import com.example.seymur.azercell2.map.MapsActivity;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
 import android.app.usage.NetworkStats;
@@ -130,13 +133,26 @@ public class BalanceMenu extends AppCompatActivity {
     String NetworkCarrierName = "None";
     static String phoneNumber;
     private Context mContext;
+
+    private AdView mAdView;
     @SuppressLint("HardwareIds")
     @TargetApi(Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_balance_menu);
+        mContext = getApplicationContext();
 
+        //Google ADS
+        MobileAds.initialize(mContext, "ca-app-pub-3940256099942544/6300978111");
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("34807B4D4FB6E3663C310659FF76B41D")
+                .build();
+        mAdView.loadAd(adRequest);
+        // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
+        //
         // Create Frist fragment here:
         // In case this activity was started with special instructions from an Intent,
         // pass the Intent's extras to the fragment as arguments
@@ -274,7 +290,9 @@ public class BalanceMenu extends AppCompatActivity {
 
     @Override
     protected void onResume() {
+        mAdView.resume();
         super.onResume();
+
         Log.d(TAG, "BottomMenu onResume");
     }
 
@@ -286,18 +304,22 @@ public class BalanceMenu extends AppCompatActivity {
 
     @Override
     protected void onPause() {
+        mAdView.pause();
         super.onPause();
+
         Log.d(TAG, "BottomMenu onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+
         Log.d(TAG, "BottomMenu onStop");
     }
 
     @Override
     protected void onDestroy() {
+        mAdView.destroy();
         super.onDestroy();
         Log.d(TAG, "BottomMenu onDestroy");
     }

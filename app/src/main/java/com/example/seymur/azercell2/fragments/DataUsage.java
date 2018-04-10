@@ -6,6 +6,7 @@ import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -35,6 +36,7 @@ import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.seymur.azercell2.BalanceMenu;
 import com.example.seymur.azercell2.R;
@@ -117,6 +119,8 @@ public class DataUsage extends Fragment implements View.OnClickListener {
     private long mStartTX = 0;
     boolean isWifiConn;
     boolean isMobileConn;
+    ImageButton fbButton;
+    ImageButton InstaButton;
     EditText editTextInput;
     TextView textViewOutput;
     TextView enterPckg;
@@ -135,7 +139,10 @@ public class DataUsage extends Fragment implements View.OnClickListener {
 
         View view = inflater.inflate(R.layout.fragment_xercler, container, false);
         enterPckg =  (TextView)view.findViewById(R.id.enterPackage);
-
+        fbButton = (ImageButton)view.findViewById(R.id.fbButton);
+        fbButton.setOnClickListener(this);
+        InstaButton = (ImageButton)view.findViewById(R.id.instaButton);
+        InstaButton.setOnClickListener(this);
         textViewOutput = (TextView)view.findViewById(R.id.textViewOutput);
         editTextInput = (EditText)view.findViewById(R.id.edittextInput);
         dataUsageDone = (ImageButton)view.findViewById(R.id.DataUsageDone);
@@ -205,19 +212,7 @@ public class DataUsage extends Fragment implements View.OnClickListener {
         }
 
     });
-    public void checkWiifiConn(){
-        ConnectivityManager connMgr = (ConnectivityManager)
-                context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        assert connMgr != null;
-        NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-        isWifiConn = networkInfo.isConnected();
-        networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-        isMobileConn = networkInfo.isConnected();
 
-        Log.d(DEBUG_TAG, "Wifi connected: " + isWifiConn);
-        Log.d(DEBUG_TAG, "Mobile connected: " + isMobileConn);
-
-    }
     public void getProgressNumb(int ProgressNumb){
 
         ObjectAnimator anim = ObjectAnimator.ofInt(mprogressBar, "progress", rxMB/10, ProgressNumb);
@@ -259,8 +254,14 @@ public class DataUsage extends Fragment implements View.OnClickListener {
             dataUsageDone.setVisibility(View.VISIBLE);
             dataUsageEdit.setVisibility(View.GONE);
             enterPckg.setText(R.string.yourPackageIs);
-
-
+        }
+        if (v.getId() == R.id.fbButton) {
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse("https://bit.ly/2G5Xana"));
+            Objects.requireNonNull(getActivity()).startActivity(i);
+        }
+        if (v.getId() == R.id.instaButton) {
+            Toast.makeText(context, R.string.notReady,Toast.LENGTH_SHORT).show();
         }
     }
 

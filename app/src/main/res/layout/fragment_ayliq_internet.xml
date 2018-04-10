@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
+    android:background="@drawable/background"
     tools:context="com.example.seymur.azercell2.fragments.ayliqInternet">
 
     <!-- TODO: Update blank fragment layout -->
@@ -41,8 +41,7 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="10dp"
                         android:layout_marginTop="20dp"
-                        android:background="@drawable/button"
-                        android:elevation="0dp">
+                        android:background="@drawable/button">
 
                         <Button
                             android:id="@+id/mip50"

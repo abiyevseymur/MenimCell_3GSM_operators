@@ -185,7 +185,7 @@
                 android:background="@drawable/buttonpink"
                 android:paddingEnd="5dp"
                 android:paddingStart="5dp"
-                android:text="apply to Customer Service or Azercell Ekspres offices with your student and personal ID cards." />
+                android:text="@string/telebeBtnDes" />
 
         </LinearLayout>
     </GridLayout>

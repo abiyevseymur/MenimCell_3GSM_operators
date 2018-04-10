@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "767485387864-eov08q01cp8egn74hqjgpnd24kj7bn59.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.seymur.azercell2",
+            "certificate_hash": "275a2145171213277f1c70a0364ac23caaca9a7d"
+          }
+        },
+        {
           "client_id": "767485387864-939sb62dmkaepckbd1o0m14el3g3eh1v.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767485387864-939sb62dmkaepckbd1o0m14el3g3eh1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

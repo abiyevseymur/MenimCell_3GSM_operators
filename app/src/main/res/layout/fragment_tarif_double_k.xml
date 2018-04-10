@@ -283,7 +283,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
-                            android:text="Off-Net SMS"
+                            android:text="@string/offNetSMS"
                             android:textColor="@color/colorPrimary"
                             android:textSize="16sp" />
 
@@ -563,7 +563,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
-                            android:text="Off-Net SMS"
+                            android:text="@string/offNetSMS"
                             android:textColor="@color/colorPrimary"
                             android:textSize="16sp" />
 
@@ -613,7 +613,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="* Countrywide calls (1 min.): 0.05 AZN" />
+                        android:text="@string/CountryWideMin" />
                 </LinearLayout>
 
             </LinearLayout>

@@ -1,14 +1,19 @@
 package com.example.seymur.azercell2.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.seymur.azercell2.BalanceMenu;
+import com.example.seymur.azercell2.ObjectClasses.USSDcodes;
 import com.example.seymur.azercell2.R;
+import com.example.seymur.azercell2.SendSMSTariff;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,7 +23,7 @@ import com.example.seymur.azercell2.R;
  * Use the {@link DigerMIP#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DigerMIP extends Fragment {
+public class DigerMIP extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -60,12 +65,28 @@ public class DigerMIP extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    Context context;
+    TextView Unlim1H;
+    TextView Unlim3H;
+    TextView UnlimNight;
+    TextView Unlim1Week;
+    String numb = "2525";
+    String textSMS = "Gece";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_diger_mi, container, false);
+        View view =  inflater.inflate(R.layout.fragment_diger_mi, container, false);
+        context = getContext();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
+        view.findViewById(R.id.unlimitedOneHour).setOnClickListener(this);
+        view.findViewById(R.id.unlimitedThreeHour).setOnClickListener(this);
+        view.findViewById(R.id.unlimitedWeekend).setOnClickListener(this);
+        view.findViewById(R.id.unlimitedNight).setOnClickListener(this);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -80,6 +101,36 @@ public class DigerMIP extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+
+            if (v.getId() == R.id.unlimitedOneHour) {
+                USSDcodes s = new USSDcodes();
+                Intent intent = s.sendUssdCode(getString(R.string.UssdCodeOneH),  getString(R.string.get), getString(R.string.unlimOneH), getString(R.string.unlimfortyQ), context);
+                startActivity(intent);
+            }
+            else if(v.getId() == R.id.unlimitedThreeHour){
+                USSDcodes s = new USSDcodes();
+                Intent intent  = s.sendUssdCode(getString(R.string.UssdCodethreeH) , getString(R.string.get),getString(R.string.unlimThreeH),getString(R.string.unlimOneAzn),context);
+                startActivity(intent);
+            }
+            else if(v.getId() == R.id.unlimitedWeekend) {
+                USSDcodes s = new USSDcodes();
+                Intent intent  = s.sendUssdCode(getString(R.string.UssdCodeWeekend) ,getString(R.string.get),getString(R.string.UnlimWeekend), getString(R.string.unlimOneTwoAzn),getString(R.string.fromFriday),getString(R.string.tillSunday),getString(R.string.maxSpeed),context);
+                startActivity(intent);
+            }
+            else if(v.getId() == R.id.unlimitedNight) {
+                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+                Bundle b = new Bundle();
+                //Add your data to bundle
+                b.putString("first", numb);
+                b.putString("second",textSMS);
+                b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.unlimNight) + " - "+getString(R.string.unlimNintyNineAzn) + ", "+ getString(R.string.fromZerotillEight));
+                intent.putExtras(b);
+                startActivity(intent);
+            }
     }
 
     /**

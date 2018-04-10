@@ -43,7 +43,7 @@
             android:layout_below="@+id/numberBlackList"
             android:layout_marginTop="18dp"
             android:background="@drawable/button"
-            android:text="Add" />
+            android:text="@string/add" />
 
         <Button
             android:id="@+id/RemoveBL"
@@ -53,7 +53,7 @@
             android:layout_alignRight="@+id/numberBlackList"
             android:layout_alignTop="@+id/AddBL"
             android:background="@drawable/button"
-            android:text="Remove" />
+            android:text="@string/remove" />
 
         <TextView
             android:id="@+id/textView30"
@@ -71,7 +71,7 @@
 
         <TextView
             android:id="@+id/textView33"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -86,7 +86,7 @@
 
         <TextView
             android:id="@+id/textView35"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
@@ -113,12 +113,12 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/textView30"
             android:layout_marginTop="16dp"
-            android:layout_toLeftOf="@+id/RemoveBL"
-            android:layout_toStartOf="@+id/RemoveBL"
             android:paddingEnd="20dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
@@ -127,7 +127,7 @@
 
         <TextView
             android:id="@+id/priceOifBL"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView6"
             android:layout_alignBottom="@+id/textView6"
@@ -139,7 +139,7 @@
 
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/priceOifBL"
             android:layout_alignEnd="@+id/checkTheNumbersBL"
@@ -162,7 +162,7 @@
 
         <TextView
             android:id="@+id/textView37"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/priceOifBL"
             android:layout_alignStart="@+id/priceOifBL"
@@ -173,7 +173,7 @@
 
         <TextView
             android:id="@+id/textView39"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView18"
             android:layout_alignStart="@+id/textView18"

@@ -218,4 +218,47 @@
     <string name="CantFindNearestWay">Can not find the nearest way!</string>
     <string name="YouWill">You will</string>
     <!-- 19.03.2018 -->
+    <string name="unlimOneH">UNLIMITED HOUR PACKS</string>
+    <string name="unlimThreeH">UNLIMITED THREE PACKS</string>
+    <string name="unlimNight">UNLIMITED NIGHT PACK</string>
+    <string name="UnlimWeekend">UNLIMITED WEEKEND PACK</string>
+    <string name="unlimFortyQ">0.4 AZN</string>
+    <string name="unlimOneAzn">1 AZN</string>
+    <string name="unlimNintyNineAzn">0.99 AZN</string>
+    <string name="unlimOneTwoAzn">1.2 AZN</string>
+    <string name="UssdCodeOneH">*100*60</string>
+    <string name="UssdCodethreeH">*100*180</string>
+    <string name="fromFriday">From Friday - 00:00,</string>
+    <string name="tillSunday">till Sunday - 23:59:59,</string>
+    <string name="maxSpeed">Max Speed - 512kb/s</string>
+    <string name="fromZerotillEight">from 00:00 - till 08:00</string>
+    <string name="UssdCodeWeekend">*100*67</string>
+    <string name="DailyFiftyMbA">50 MB - 0.25 AZN</string>
+    <string name="DailyFifeHundredMB">500 MB - 1.20 AZN</string>
+    <string name="UssdCodeDailyFiftyMB">*100*50+</string>
+    <string name="OneTimeMB">One Time internet Package</string>
+    <string name="gizletCelllDes">With Gizlətcell (SOCLIR) option you can withhold your number on your request.</string>
+    <string name="gizletCellDesX">To use this function you only need to dial #31# before the number you are calling to.</string>
+    <string name="gizletcellOnedayPrice">1 day - 0.2 AZN</string>
+    <string name="gizletcellSevenDayPrice">7 days - 1.18 AZN</string>
+    <string name="gizletcellthirtydayPrice">30 days - 4.13 AZN</string>
+    <string name="gizletcelldesCLIR">With Gizlicell (CLIR) option you can permanently withhold your number.</string>
+    <string name="CLIRPrice">CLIR - 11.80 AZN</string>
+    <string name="ClirSubscription">For SUBSCRIPTION Apply to Customer Care or Azercell Express offices</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
+    <string name="telebeBtnDes">apply to Customer Service or Azercell Ekspres offices with your student and personal ID cards.</string>
+    <string name="offNetSMS">Off-Net SMS</string>
+    <string name="internetPackage">Internet Package</string>
+    <string name="CountryWideMin">* Countrywide calls (1 min.): 0.05 AZN</string>
+    <string name="currentUsage">Current Usage</string>
+    <string name="theNearestOfficeIs">The nearest Office is</string>
+    <string name="distance">Distance:</string>
+    <string name="notReady">Not Ready..</string>
+
+
+    <!--DO not Touch!!!-->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <!--DO not Touch!!!-->
+
 </resources>

@@ -1,6 +1,7 @@
 package com.example.seymur.azercell2.map;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -99,10 +100,12 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
         mapFragment.getMapAsync(this);
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCAION);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            buildAlertMessageNoGps();
-        }else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
-            getLocation();
+        if (locationManager != null) {
+            if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                buildAlertMessageNoGps();
+            }else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+                getLocation();
+            }
         }
     }
     @Override
@@ -202,6 +205,7 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
 
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onClick(View view) {
         LatLong = (TextView) findViewById(R.id.LatLong);
@@ -214,10 +218,10 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
             checkNearestDistance();
             showNearestOffice();
         }
-        LatLong.setText("The nearest Office is "+keyDist+"\n Distance: " + valueDist + "m ");
+        LatLong.setText(getString(R.string.theNearestOfficeIs)+" "+keyDist+" "+getString(R.string.distance) +" "+ valueDist + "m ");
     }
     Integer min;
-    public String checkNearestDistance(){
+    public void checkNearestDistance(){
         Map<Integer,  String> hmap = new HashMap<>();
 
         for (int i = 0; i < ListLat.length;i++){
@@ -228,7 +232,6 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
         min = Collections.min(hmap.keySet());
         valueDist = String.valueOf(min);
         keyDist = hmap.get(min);
-        return valueDist;
     }
 
 

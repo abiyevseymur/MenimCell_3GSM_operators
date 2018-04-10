@@ -1,6 +1,7 @@
 package com.example.seymur.azercell2.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,7 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.seymur.azercell2.BalanceMenu;
+import com.example.seymur.azercell2.ObjectClasses.USSDcodes;
 import com.example.seymur.azercell2.R;
+import com.example.seymur.azercell2.SendSMSTariff;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,7 +22,7 @@ import com.example.seymur.azercell2.R;
  * Use the {@link GundelikMIP#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class GundelikMIP extends Fragment {
+public class GundelikMIP extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -61,13 +64,22 @@ public class GundelikMIP extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    Context context;
+    String numb = "2525";
+    String textSMS ;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_gundelik_mi, container, false);
-        ((BalanceMenu)getActivity()).showUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
+        context = getContext();
+        view.findViewById(R.id.daily50mb).setOnClickListener(this);
+        view.findViewById(R.id.daily500mbAuto).setOnClickListener(this);
+        view.findViewById(R.id.Daily500mbManual).setOnClickListener(this);
         return view;
     }
 
@@ -82,6 +94,38 @@ public class GundelikMIP extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.daily50mb){
+            USSDcodes s = new USSDcodes();
+            Intent intent = s.sendUssdCode(getString(R.string.UssdCodeDailyFiftyMB),getString(R.string.get),getString(R.string.DailyFiftyMbA), context);
+            startActivity(intent);
+        }
+        else if(v.getId() == R.id.daily500mbAuto){
+            Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+            Bundle b = new Bundle();
+            textSMS = "Gun+";
+            //Add your data to bundle
+            b.putString("first", numb);
+            b.putString("second",textSMS);
+            b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.DailyFifeHundredMB) +", " +getString(R.string.autoyeniletme) );
+            intent.putExtras(b);
+            startActivity(intent);
+        }
+        else if(v.getId() == R.id.Daily500mbManual){
+            Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+            Bundle b = new Bundle();
+            //Add your data to bundle
+            textSMS = "Gun";
+            b.putString("first", numb);
+            b.putString("second",textSMS);
+            b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.DailyFifeHundredMB) + ", "+getString(R.string.OneTimeMB));
+            intent.putExtras(b);
+            startActivity(intent);
+        }
+
     }
 
     /**
