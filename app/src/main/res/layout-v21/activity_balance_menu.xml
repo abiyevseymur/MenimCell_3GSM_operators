@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context="com.example.seymur.azercell2.BalanceMenu"
+    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.BalanceMenu"
     android:weightSum="1">
 
     <android.support.v7.widget.Toolbar

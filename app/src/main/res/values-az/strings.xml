@@ -204,7 +204,46 @@
     <string name="ClirStatus">CLIR Status</string>
     <string name="CantFindNearestWay">Ən yaxın yol tapmaq olmur!</string>
     <!-- 19.03.2018 -->
+    ﻿<string name="unlimOneH">Limitsiz saat paketləri</string>
+    <string name="unlimThreeH">Limitsiz 3 saat</string>
+    <string name="unlimNight">Limitsiz gecə paketi</string>
+    <string name="UnlimWeekend">Limitsiz heftəsonu paketi</string>
+    <string name="unlimfortyQ" />
     <string name="unlimFortyQ">0.4 AZN</string>
+    <string name="unlimOneAzn">1 AZN</string>
+    <string name="unlimNintyNineAzn">0.99 AZN</string>
+    <string name="unlimOneTwoAzn">1.2 AZN</string>
+    <string name="UssdCodeOneH">*100*60</string>
+    <string name="UssdCodethreeH">*100*180</string>
+    <string name="fromFriday">Cümə günündən - 00:00,</string>
+    <string name="tillSunday">Bazar Gününə qədər - 23:59:59,</string>
+    <string name="maxSpeed">Maksimal sürət - 512kb/s</string>
+    <string name="fromZerotillEight">00:00– 08:00-a qədər</string>
+    <string name="UssdCodeWeekend">*100*67</string>
+    <string name="DailyFiftyMbA">50 MB - 0.25 AZN</string>
+    <string name="DailyFifeHundredMB">500 MB - 1.20 AZN</string>
+    <string name="UssdCodeDailyFiftyMB">*100*50+</string>
+    <string name="OneTimeMB">Birdəfəlik internet paketı</string>
+    <string name="gizletCelllDes">Nömrənizi istəyinizə görə gizlətmək üçün Gizlətcell xidmətindən yararlana bilərsiniz.</string>
+    <string name="gizletCellDesX"> Bunun üçün zəng vurduğunuz abunəçinin nömrəsindən əvvəl #31# işarələrini yığın.</string>
+    <string name="gizletcellOnedayPrice">1 gün- 0.2 AZN</string>
+    <string name="gizletcellSevenDayPrice">7 gün- 1.18 AZN</string>
+    <string name="gizletcellthirtydayPrice">30 gün- 4.13 AZN</string>
+    <string name="gizletcelldesCLIR">Gizlicell  nömrənizi daima gizlətməyə imkan yaradır.</string>
+    <string name="CLIRPrice">CLIR - 11.80 AZN</string>
+    <string name="ClirSubscription">Qoşulmaq ucun Müştəri Xidmətləri və ya Azercell Ekspress ofislərinə müraciət edin</string>
+    <string name="add">Add</string>
+    <string name="remove">Sil</string>
+    <string name="telebeBtnDes">Tələbə bileti və şəxsiyyət vəsiqənlə Azercell Ekspres ofislərinə yaxınlaş.</string>
+    <string name="offNetSMS">Şəbəkəxarici SMS</string>
+    <string name="internetPackage">İnternet Paketi</string>
+    <string name="CountryWideMin">* Ölkədaxili zenglər(1 dəq): 0.05 AZN</string>
+    <string name="currentUsage">Hazırkı İstifadə</string>
+    <string name="theNearestOfficeIs">Ən yaxın Ofis</string>
+    <string name="distance">Məsafə:</string>
+    <string name="notReady">Hazır deyil..</string>
+
+
 
 
 

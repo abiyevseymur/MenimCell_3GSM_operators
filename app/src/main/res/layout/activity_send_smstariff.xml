@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/gray"
-    tools:context="com.example.seymur.azercell2.SendSMSTariff"
+    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.SendSMSTariff"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="25dp">
 

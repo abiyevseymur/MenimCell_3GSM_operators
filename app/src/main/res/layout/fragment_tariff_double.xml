@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient"
-    tools:context="com.example.seymur.azercell2.fragments.Tariffs.TariffDouble">
+    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.fragments.Tariffs.TariffDouble">
 
     <!-- TODO: Update blank fragment layout -->
 

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.seymur.azercell2.fragments.InternetSettings">
+    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.fragments.InternetSettings">
 
     <!-- TODO: Update blank fragment layout -->
 
