@@ -3,7 +3,9 @@ package pack.menimcellApp.seymur.azercell2.fragments;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,13 +74,16 @@ public class Transfer extends Fragment implements View.OnClickListener {
     RadioButton check50q;
     RadioButton check1azn;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         View view =  inflater.inflate(R.layout.fragment_transfer, container, false);
-        ((BalanceMenu)getActivity()).showUpButton();
+        if (((BalanceMenu)getActivity()) != null) {
+            ((BalanceMenu)getActivity()).showUpButton();
+        }
         nomrePaycell = (EditText)view.findViewById(R.id.transferPhoneNumb);
+        nomrePaycell.setInputType(InputType.TYPE_CLASS_PHONE);
         check20q = (RadioButton) view.findViewById(R.id.send20q);
         check50q = (RadioButton) view.findViewById(R.id.send50q);
         check1azn = (RadioButton) view.findViewById(R.id.send1azn);
@@ -138,7 +143,7 @@ public class Transfer extends Fragment implements View.OnClickListener {
         Bundle b = new Bundle();
         b.putString("first", amount);
         b.putString("second",nomrePaycell.getText().toString());
-        b.putString("messageTittle","The amount "+ textMessage + "fee, will be send to " + nomrePaycell.getText().toString() + " Number" );
+        b.putString("messageTittle",getString(R.string.amount)+ textMessage + getString(R.string.willbesent) + nomrePaycell.getText().toString() + getString(R.string.numb) );
         intent.putExtras(b);
 
         startActivity(intent);

@@ -158,6 +158,7 @@
                     android:ems="10"
                     android:gravity="center"
                     android:hint="050/051 ******"
+                    android:imeOptions="actionDone"
                     android:inputType="phone"
                     android:maxLength="10"
                     android:textColor="@color/colorAccent" />

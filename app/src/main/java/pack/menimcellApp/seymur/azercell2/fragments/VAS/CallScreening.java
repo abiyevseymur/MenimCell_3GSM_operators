@@ -3,7 +3,9 @@ package pack.menimcellApp.seymur.azercell2.fragments.VAS;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,7 +73,7 @@ public class CallScreening extends Fragment implements View.OnClickListener {
     TextView checkTheNumbersBL;
     EditText numberToBlackList;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_call_screening, container, false);
@@ -82,6 +84,7 @@ public class CallScreening extends Fragment implements View.OnClickListener {
         RemoveBlackList = (Button)view.findViewById(R.id.RemoveBL);
         checkTheNumbersBL = (TextView)view.findViewById(R.id.checkTheNumbersBL);
         numberToBlackList = (EditText)view.findViewById(R.id.numberBlackList);
+        numberToBlackList.setInputType(InputType.TYPE_CLASS_PHONE);
         AddBlackList.setOnClickListener(this);
         RemoveBlackList.setOnClickListener(this);
         checkTheNumbersBL.setOnClickListener(this);

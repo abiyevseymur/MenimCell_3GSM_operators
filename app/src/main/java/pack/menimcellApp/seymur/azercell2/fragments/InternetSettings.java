@@ -1,8 +1,10 @@
 package pack.menimcellApp.seymur.azercell2.fragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,16 +70,17 @@ public class InternetSettings extends Fragment {
     String numb = "9595";
     String textSMS = " ";
     //
-
+    Context context;
     Button settingConfig;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_internet_settings, container, false);
         if (((BalanceMenu)getActivity()) != null) {
             ((BalanceMenu)getActivity()).showUpButton();
         }
+        context = getContext();
         settingConfig = (Button) view.findViewById(R.id.settings9595);
         settingConfig.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +91,7 @@ public class InternetSettings extends Fragment {
 
                 b.putString("first", numb);
                 b.putString("second",textSMS);
+                b.putString("messageTittle",getString(R.string.getautomatiInternetSettings) );
                 intent.putExtras(b);
                 startActivity(intent);
             }

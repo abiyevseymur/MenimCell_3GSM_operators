@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:767485387864:android:30415336d374b99f",
         "android_client_info": {
-          "package_name": "com.example.seymur.azercell2"
+          "package_name": "pack.menimcellApp.seymur.azercell2"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "767485387864-eov08q01cp8egn74hqjgpnd24kj7bn59.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.seymur.azercell2",
+            "package_name": "pack.menimcellApp.seymur.azercell2",
             "certificate_hash": "275a2145171213277f1c70a0364ac23caaca9a7d"
           }
         },
@@ -44,6 +44,37 @@
               "client_type": 3
             }
           ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767485387864:android:3500288007a081ea",
+        "android_client_info": {
+          "package_name": "pack.menimcellApp.seymur.azercell2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767485387864-939sb62dmkaepckbd1o0m14el3g3eh1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdliMlDIjOwSLo8v0UWxq6da05P1rePGI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

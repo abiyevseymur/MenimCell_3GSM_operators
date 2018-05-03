@@ -2,6 +2,7 @@ package pack.menimcellApp.seymur.azercell2.fragments;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -89,7 +90,7 @@ public class Xidmetler extends Fragment implements View.OnClickListener {
 
 //    private ShowNextFragment showNextFragment;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_xidmetler, container, false);

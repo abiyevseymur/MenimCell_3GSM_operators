@@ -66,9 +66,9 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="65dp"
-            android:layout_weight="0.02"
             android:orientation="vertical"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:layout_alignParentLeft="true">
 
             <Button
                 android:id="@+id/settings9595"
@@ -90,7 +90,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button"
-                android:text="Did Not Get the Settings?"
+                android:text="@string/didNotGetSettings"
                 android:textSize="20sp" />
         </LinearLayout>
     </RelativeLayout>

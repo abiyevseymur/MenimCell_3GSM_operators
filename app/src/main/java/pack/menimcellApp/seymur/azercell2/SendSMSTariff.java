@@ -1,5 +1,6 @@
 package pack.menimcellApp.seymur.azercell2;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -44,12 +45,12 @@ public class SendSMSTariff extends AppCompatActivity {
     TextView messageTittle;
     String messageBundle;
     String MIXPANEL_TOKEN = "5908ccdb281d509b82825cb12f81f7a8";
-    private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS=0;
+    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_smstariff);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         send_pi = PendingIntent.getBroadcast(SendSMSTariff.this,0,send_intent,0);
         deliver_pi = PendingIntent.getBroadcast(SendSMSTariff.this,0,send_intent,0);
 
@@ -76,11 +77,12 @@ public class SendSMSTariff extends AppCompatActivity {
 
                     if (ActivityCompat.shouldShowRequestPermissionRationale(SendSMSTariff.this,
                             android.Manifest.permission.SEND_SMS)) {
-                     return;
+
+                     startSMS();
                     } else {
                         ActivityCompat.requestPermissions(SendSMSTariff.this,
                                 new String[]{android.Manifest.permission.CALL_PHONE},
-                                MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+                                MY_PERMISSIONS_REQUEST_SEND_SMS);
                     }
 
                 }else{
@@ -92,6 +94,8 @@ public class SendSMSTariff extends AppCompatActivity {
                     }
                 }
 
+//           Should be tested!
+//                sendSMSMessage();
 
             }
         });
@@ -107,8 +111,9 @@ public class SendSMSTariff extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode,
                                            @NonNull String permissions[], @NonNull int[] grantResults) {
         switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_READ_CONTACTS: {
+            case MY_PERMISSIONS_REQUEST_SEND_SMS: {
                 // If request is cancelled, the result arrays are empty.
+
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
@@ -116,7 +121,7 @@ public class SendSMSTariff extends AppCompatActivity {
                     // contacts-related task you need to do.
                     startSMS();
                 } else {
-
+                    ActivityCompat.requestPermissions( this,new String[]{Manifest.permission.SEND_SMS},MY_PERMISSIONS_REQUEST_SEND_SMS);
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
                 }
@@ -129,7 +134,7 @@ public class SendSMSTariff extends AppCompatActivity {
     }
     private void startSMS(){
         SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage(Numb,null,TextSMS,send_pi,deliver_pi);
+        smsManager.sendTextMessage(Numb,null,TextSMS,null,null);
         Toast.makeText(getApplicationContext(), R.string.accepted,Toast.LENGTH_SHORT).show();
         finish();
     }
@@ -137,19 +142,54 @@ public class SendSMSTariff extends AppCompatActivity {
         Numb.setText(number);
         TextSMS.setText(message);
     }*/
+  /*  SHOULD BE TESTED!! */
+ /*   protected void sendSMSMessage() {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.SEND_SMS)
+                != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.SEND_SMS)) {
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.SEND_SMS},
+                        MY_PERMISSIONS_REQUEST_SEND_SMS);
+            }
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_SEND_SMS: {
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage(Numb, null, TextSMS, null, null);
+                    Toast.makeText(getApplicationContext(), "SMS sent.",
+                            Toast.LENGTH_LONG).show();
+                    finish();
+                } else {
+                    Toast.makeText(getApplicationContext(),
+                            "SMS faild, please try again.", Toast.LENGTH_LONG).show();
+                    return;
+                }
+            }
+        }
+
+    }*/
+
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(sentReciever,new IntentFilter(Send_SMS));
-        registerReceiver(deliverReciever,new IntentFilter(Deliver_SMS));
+//        registerReceiver(sentReciever,new IntentFilter(Send_SMS));
+//        registerReceiver(deliverReciever,new IntentFilter(Deliver_SMS));
         Log.d(TAG, "smsDialog onResume");
     };
 
     @Override
     protected void onStop() {
         super.onStop();
-        unregisterReceiver(sentReciever);
-        unregisterReceiver(deliverReciever);
+//        unregisterReceiver(sentReciever);
+//        unregisterReceiver(deliverReciever);
         Log.d(TAG, "smsDialog onStop");
     }
     BroadcastReceiver sentReciever = new BroadcastReceiver() {

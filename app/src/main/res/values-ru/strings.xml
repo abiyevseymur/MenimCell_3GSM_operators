@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">Menimcell</string>
@@ -11,7 +10,7 @@
     <string name="code">введите код</string>
     <string name="daxil">продолжить</string>
     <string name="title_activity_balance_menu">MenimCell</string>
-    <string name="title_home">Главная страница</string>
+    <string name="title_home">Главная</string>
     <string name="title_Xercler">Сервисы</string>
     <string name="title_Xidmetler">магазин</string>
     <string name="title_Servis">контакты</string>
@@ -39,17 +38,17 @@
     <string name="MIP">Интернет-пакеты</string>
     <string name="ayliqMip">Ежемесячные пакеты</string>
     <string name="gundelikMip">Ежедневные пакеты</string>
-    <string name="limitsizMip">Неограниченные пакеты</string>
+    <string name="limitsizMip">Безлимитные пакеты</string>
     <string name="yenichat">Онлайн чат</string>
     <string name="servisecDes">Услуга позволяет вам использовать целый ряд услуг на вашем номере Онлайн. Онлайн-самообслуживание позволяет использовать многие службы самостоятельно.</string>
     <string name="Roaming">Роуминг</string>
 
     <!-- -->
     <string name="Umelumat">ИНФОРМАЦИЯ</string>
-    <string name="sebekeDaxiliZengler">Локальные звонки внутри сети (1 мин.)</string>
+    <string name="sebekeDaxiliZengler">Внутри сети (1 мин.)</string>
     <string name="qepik">АЗН</string>
-    <string name="sebekeXaric">Локальные звонки вне сети (1 min.)</string>
-    <string name="derhalQosulma">Подключиться немедленно</string>
+    <string name="sebekeXaric">Вне сети (1 мин.)</string>
+    <string name="derhalQosulma">Подключиться</string>
     <string name="azercelimInterval">* Интервал для звонков - 1 минута, для Интернета - 51 КБ</string>
     <string name="azercelimTarifQiymeti">Цена изменения тарифа по SMS составляет 1 AZN. </string>
     <string name="zengler">Звонки</string>
@@ -66,7 +65,7 @@
     <string name="autoyeniletme">с автоматическим обновлением</string>
     <string name="paketPrice">Абонентская плата</string>
     <string name="olkedaxili">Местные звонки</string>
-    <string name="gencolarasi">Звонки между абонентами Gencl ol.</string>
+    <string name="gencolarasi">Звонки между Gencl ol.</string>
     <string name="tarifdaxilisms">внутрисетевые SMS-сообщения</string>
     <string name="min">Мин</string>
     <string name="gb">ГБ</string>
@@ -87,7 +86,7 @@
     <string name="telebeMip20percent">Плюс, предлагается 20% скидка на пакеты Мобильного Интернета</string>
 
     <!---->
-
+    <string name="hello_blank_fragment">Привет, бланк фрагмент</string>
     <string name="rules9595">Сразу после того, как SIM-карта будет на вашем телефоне, на ваш телефон будет отправлено SMS с соответствующими настройками. Полученные настройки должны быть сохранены в памяти телефона.</string>
     <string name="firstly9595">* Прежде всего придет сообщение информативного характера (сообщение может быть удалено). В течении 20 минут на телефон придут интернет/ММС настройки.</string>
     <string name="secondly9595">* Перезагрузить телефон</string>
@@ -115,11 +114,11 @@
     <string name="callSignature">Подпись звонка</string>
     <string name="secondLine">вторая линия</string>
     <string name="MeneZengEt">Позвони мне</string>
-    <string name="gizlicellGizletcell">Gizlicell and Gizletcell</string>
+    <string name="gizlicellGizletcell">Gizlicell &amp; Gizletcell</string>
     <string name="callScreeningPlus">Фильтр звонков+</string>
     <string name="callScreening">Фильтр звонков</string>
     <string name="duetCard">Дуэт-карта</string>
-    <string name="callForwarding">переадресация звонков</string>
+    <string name="callForwarding">Переадресация </string>
     <string name="voiceMail">голосовая почта</string>
     <string name="send">послать</string>
     <string name="paycell">PAYCELL</string>
@@ -161,14 +160,14 @@
     <string name="ussdCodeOneEightyAzn">*290</string>
     <string name="ussdCodeTwoAzn">*155</string>
     <string name="attention">Внимание!</string>
-    <string name="learnMyDebts">Узнать мои долги для</string>
+    <string name="learnMyDebts">Узнать мой долг для</string>
     <string name="accepted">Принято</string>
     <string name="title_activity_all_codes">Все коды</string>
     <string name="forward">Вперед</string>
     <string name="toThis">к этому:</string>
     <string name="number">номер</string>
     <string name="switchtypeofForwarding">Выбурите, пожалуйста, тип переадресации</string>
-    <string name="deaktive">дезактивировать</string>
+    <string name="deaktive">деактивировать</string>
     <string name="allTypesofCF">Все типы переадресации</string>
     <string name="inYour">в вашей</string>
     <string name="operatorCodeNumber"><font size="15">+994 код оператора, номер</font></string>
@@ -184,7 +183,7 @@
     <string name="setYourBarringCode">Установите код запрета:</string>
     <string name="Activate">активировать</string>
     <string name="CallForwardingDesc">В случае переадресации входящий звонок платный и тарифицируется согласно стоимости стандартного звонка в используемом тарифе.</string>
-    <string name="CallForwarding">Переадресация звонков</string>
+    <string name="CallForwarding">Переадресация</string>
     <string name="allCalls">Все звонки</string>
     <string name="Whenbusy">Когда телефон занят</string>
     <string name="WhenNotAnswered">Когда телефон не отвечает</string>
@@ -192,8 +191,8 @@
     <string name="ForwardTo">переслать</string>
     <string name="barringTo">Запрет на</string>
     <string name="CallScreening">Фильтр звонков</string>
-    <string name="CheckTheNumberBlackList"><u>Проверьте список номеров в черном списке</u></string>
-    <string name="AddThis">Добавь это</string>
+    <string name="CheckTheNumberBlackList"><u>Проверить список номеров</u></string>
+    <string name="AddThis">Добавить</string>
     <string name="numberToBL">Номер в черный список</string>
     <string name="removeThis">Удалить это:</string>
     <string name="numberFromBL">Номер из черного списка</string>
@@ -214,15 +213,59 @@
     <string name="CFbussyUSSD">**67*</string>
     <string name="CFNoAnswUSSD">**61*</string>
     <string name="CFoffUSSD">**62*</string>
-    <string name="toAddOneNtoBL">Чтобы добавить один номер в черный список</string>
-    <string name="toRmvOrChNFromBL">Чтобы удалить или проверить номера из черного списка</string>
-    <string name="willstored30days">Номерa будут храниться в черном списке в течение 30 дней.</string>
+    <string name="toAddOneNtoBL">Добавить один номер в черный список</string>
+    <string name="toRmvOrChNFromBL">Удалить или проверить номера из списка</string>
+    <string name="willstored30days">Номерa будут храниться списке в течение 30 дней.</string>
     <string name="mayAddmax3N">Вы можете добавить максимум 3 номера в черный список.</string>
     <string name="BlackListDesc">Если вас беспокоит любой номер, вы можете заблокировать вызовы с этого номера, добавив его в черный список.</string>
-    <string name="youWill">Ты будешь</string>
+    <string name="YouWill"> </string>
     <string name="subscribeFor">подписаться на</string>
     <string name="ClirStatus">Статус CLIR</string>
     <string name="CantFindNearestWay">Невозможно найти ближайший путь!</string>
     <!-- 19.03.2018 -->
+    <string name="unlimOneH">Безлимитный 1 час</string>
+    <string name="unlimThreeH">Безлимитный 3 часа</string>
+    <string name="unlimNight">Безлимитный ночной пакет</string>
+    <string name="UnlimWeekend">Безлимитный уикенд пакет</string>
+    <string name="unlimfortyQ" />
+    <string name="unlimFortyQ">0.4 АЗН</string>
+    <string name="unlimOneAzn">1 АЗН</string>
+    <string name="unlimNintyNineAzn">0.99 АЗН</string>
+    <string name="unlimOneTwoAzn">1.2 АЗН</string>
+    <string name="UssdCodeOneH">*100*60</string>
+    <string name="UssdCodethreeH">*100*180</string>
+    <string name="fromFriday">с Пятницы - 00:00,</string>
+    <string name="tillSunday">до Воскресения - 23:59:59,</string>
+    <string name="maxSpeed">Макс скорость - 512kb/s</string>
+    <string name="fromZerotillEight">от 00:00 - до 08:00</string>
+    <string name="UssdCodeWeekend">*100*67</string>
+    <string name="DailyFiftyMbA">50 МБ - 0.25 АЗН</string>
+    <string name="DailyFifeHundredMB">500 МБ - 1.20 АЗН</string>
+    <string name="UssdCodeDailyFiftyMB">*100*50+</string>
+    <string name="OneTimeMB">Одноразовый интернет-пакет</string>
+    <string name="gizletCelllDes">С Gizlətcell вы можете скрыть номер по своему желанию.</string>
+    <string name="gizletCellDesX">Для этого достаточно набрать код #31#перед номером абонента, которому вы звоните.</string>
+    <string name="gizletcellOnedayPrice">1 день- 0.2 АЗН</string>
+    <string name="gizletcellSevenDayPrice">7 дней- 1.18 АЗН</string>
+    <string name="gizletcellthirtydayPrice">30 дней- 4.13 АЗН</string>
+    <string name="gizletcelldesCLIR">Gizlicell позволяет вам постоянно скрывать свой номер во время звонка.</string>
+    <string name="CLIRPrice">CLIR - 11.80 АЗН</string>
+    <string name="ClirSubscription">Для подключкние обратитесь в службу поддержки клиентов или офисы Azercell Express</string>
+    <string name="add">Добавить</string>
+    <string name="remove">Удалить</string>
+    <string name="telebeBtnDes">подойди со студенческим билетом и удостоверением личности в офисы обслуживания клиентов или Azercell Ekspres.</string>
+    <string name="offNetSMS">Вне-сетевые SMS</string>
+    <string name="internetPackage">Мобильный пакет</string>
+    <string name="CountryWideMin">* Звонки внутри страны (1 мин.): 0.05 АЗН</string>
+    <string name="currentUsage">Использование</string>
+    <string name="theNearestOfficeIs">Ближайший офис</string>
+    <string name="distance">Расстояние:</string>
+    <string name="notReady">Не готово..</string>
+    <!--Elaveler by Murad-->
+    <string name="getbalance">Узнать баланс</string>
+    <string name="refillOnline">Пополнить баланс</string>
+    <string name="transferDesc">Абоненты Azercell могут делиться своим балансом с любым абонентом SimSim.</string>
+    <string name="didNotGetSettings">Не получили настройки?</string>
+    <!--Elaveler by Murad-->
 
 </resources>

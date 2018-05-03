@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.BalanceMenu"
+    tools:context="pack.menimcellApp.seymur.azercell2.BalanceMenu"
     android:weightSum="1">
 
     <android.support.v7.widget.Toolbar
@@ -20,8 +20,9 @@
         android:paddingLeft="5dp"
         android:paddingRight="0dp"
         android:paddingStart="5dp"
-
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:visibility="visible"
+        ads:logo="@drawable/ic_action_bar_logo"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         <!--       <ImageView

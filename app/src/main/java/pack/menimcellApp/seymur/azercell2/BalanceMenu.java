@@ -201,20 +201,17 @@ public class BalanceMenu extends AppCompatActivity {
 /*        logoSettings = (ImageView)findViewById(R.id.logoSettings);
         logoSettings.setOnClickListener(this);*/
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
         if(getSupportActionBar() != null)
         mainLogo = R.drawable.ic_action_bar_logo;
         AppLogo(mainLogo);
-
+        setSupportActionBar(myToolbar);
 
         //Azercell
         if(Objects.equals(carrierName, "40001")&& phoneNumber!=null){
-            if(getSupportActionBar() != null)
-
-                getSupportActionBar().setTitle("  " + phoneNumber);
-            NetworkCarrierName = "Azercell";
+                if(getSupportActionBar() != null)
+                    getSupportActionBar().setTitle("  " + phoneNumber);
+                NetworkCarrierName = "Azercell";
         }
-
         //Bakcell
         else if(Objects.equals(carrierName, "40002") && phoneNumber!=null){
             if(getSupportActionBar() != null)
@@ -232,6 +229,7 @@ public class BalanceMenu extends AppCompatActivity {
         //other
         else {
             if(getSupportActionBar() != null)
+                getSupportActionBar().setDisplayShowTitleEnabled(true);
 
                 getSupportActionBar().setTitle("  " +  getString(R.string.noAnyNumb)  );
         }
@@ -256,9 +254,9 @@ public class BalanceMenu extends AppCompatActivity {
 
 
     public void AppLogo(int logo) {
-        if(getSupportActionBar() != null)
-
+        if(getSupportActionBar() != null){
             getSupportActionBar().setLogo(logo);
+        }
     }
 
 

@@ -44,7 +44,7 @@
                         android:layout_row="3"
                         android:background="@drawable/buttonpink"
                         android:text="@string/derhalQosulma"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/unlimOneHDes"
@@ -88,7 +88,7 @@
                         android:layout_row="3"
                         android:background="@drawable/buttonpink"
                         android:text="@string/derhalQosulma"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/unlimThreeHDes"
@@ -133,7 +133,7 @@
                         android:layout_row="3"
                         android:background="@drawable/buttonpink"
                         android:text="@string/derhalQosulma"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/unlimNightDes"
@@ -191,7 +191,7 @@
                         android:layout_row="3"
                         android:background="@drawable/buttonpink"
                         android:text="@string/derhalQosulma"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView48"

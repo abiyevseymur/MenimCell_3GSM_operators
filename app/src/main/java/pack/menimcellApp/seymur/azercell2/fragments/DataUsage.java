@@ -5,13 +5,16 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.TrafficStats;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,7 +87,6 @@ public class DataUsage extends Fragment implements View.OnClickListener {
 
 
     /////-----------------//////
-//    int progresBarPercent = Integer.parseInt(getString(R.string.AllProgressNumb));
     int CallsProgressNumb = 54;
     int InternetProgressNumb = 73;
     int CreditsProgressNumb = 21;
@@ -111,7 +113,7 @@ public class DataUsage extends Fragment implements View.OnClickListener {
     long mobilenetworkbyte;
     private static final String DEBUG_TAG = "NetworkStatusExample";
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment

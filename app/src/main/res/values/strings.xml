@@ -108,7 +108,7 @@
     <string name="callSignature">Call Signature</string>
     <string name="secondLine">second line</string>
     <string name="MeneZengEt">Call Me</string>
-    <string name="gizlicellGizletcell">Gizlicell and Gizletcell</string>
+    <string name="gizlicellGizletcell">Gizlicell &amp; Gizletcell</string>
     <string name="callScreeningPlus">call Screening +</string>
     <string name="callScreening">Call Screening</string>
     <string name="duetCard">Duet Card</string>
@@ -255,10 +255,20 @@
     <string name="theNearestOfficeIs">The nearest Office is</string>
     <string name="distance">Distance:</string>
     <string name="notReady">Not Ready..</string>
-
+    <!--Elaveler by Murad-->
+    <string name="getbalance">Get Balance</string>
+    <string name="refillOnline">Refill Online</string>
+    <string name="transferDesc">Azercell subscribers can share their balance with any SimSim subscriber.</string>
+    <string name="didNotGetSettings">Did Not Get the Settings?</string>
+    <!--Elaveler by Murad-->
 
     <!--DO not Touch!!!-->
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="getautomatiInternetSettings">Get Automatic Internet Settings</string>
+    <string name="amount">The amount</string>
+    <string name="willbesent">fee, will be send to</string>
+    <string name="numb">Number</string>
+
     <!--DO not Touch!!!-->
 
 </resources>

@@ -4,156 +4,194 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.fragments.Ayar">
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.Ayar">
 
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="1">
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="0dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/mapBtn"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="32dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_weight="0.04"
-                android:background="@drawable/round_button"
-                android:contentDescription="TODO"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.098"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.723"
-                app:srcCompat="@drawable/maps" />
-
-            <ImageButton
-                android:id="@+id/RoamingBtn"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:layout_marginBottom="32dp"
-                android:layout_marginRight="32dp"
-                android:layout_marginTop="8dp"
-                android:layout_weight="0.04"
-                android:background="@drawable/round_button"
-                android:contentDescription="TODO"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.202"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.186"
-                app:layout_constraintVertical_chainStyle="spread"
-                app:srcCompat="@drawable/roaming" />
-
-            <TextView
-                android:id="@+id/textView11"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/Roaming"
-                android:textAlignment="center"
-                app:layout_constraintHorizontal_bias="0.509"
-                app:layout_constraintLeft_toLeftOf="@+id/RoamingBtn"
-                app:layout_constraintRight_toRightOf="@+id/RoamingBtn"
-                app:layout_constraintTop_toBottomOf="@+id/RoamingBtn" />
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/simsimBtn"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:layout_marginBottom="32dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.828"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.188"
-                app:srcCompat="@drawable/internet_settings"
-                tools:ignore="ContentDescription" />
+                <ImageButton
+                    android:id="@+id/RoamingBtn"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_button"
+                    android:contentDescription="TODO"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.202"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.186"
+                    app:layout_constraintVertical_chainStyle="spread"
+                    app:srcCompat="@drawable/roaming" />
 
-            <TextView
-                android:id="@+id/textView14"
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="0.04"
+                    android:text="@string/Roaming"
+                    android:textAlignment="center"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintLeft_toLeftOf="@+id/RoamingBtn"
+                    app:layout_constraintRight_toRightOf="@+id/RoamingBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/RoamingBtn" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/internetSettings"
-                android:textAlignment="center"
-                app:layout_constraintHorizontal_bias="0.45"
-                app:layout_constraintLeft_toLeftOf="@+id/simsimBtn"
-                app:layout_constraintRight_toRightOf="@+id/simsimBtn"
-                app:layout_constraintTop_toBottomOf="@+id/simsimBtn" />
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/trafficUsage"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/round_button"
-                android:contentDescription="TODO"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.888"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.744"
-                app:srcCompat="@drawable/speedtest" />
+                <ImageButton
+                    android:id="@+id/simsimBtn"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.828"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.188"
+                    app:srcCompat="@drawable/internet_settings"
+                    tools:ignore="ContentDescription" />
 
-            <TextView
-                android:id="@+id/textView13"
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/internetSettings"
+                    android:textAlignment="center"
+                    app:layout_constraintHorizontal_bias="0.45"
+                    app:layout_constraintLeft_toLeftOf="@+id/simsimBtn"
+                    app:layout_constraintRight_toRightOf="@+id/simsimBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/simsimBtn" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/trafficUsage"
-                android:textAlignment="center"
-                app:layout_constraintHorizontal_bias="0.553"
-                app:layout_constraintLeft_toLeftOf="@+id/trafficUsage"
-                app:layout_constraintRight_toRightOf="@+id/trafficUsage"
-                app:layout_constraintTop_toBottomOf="@+id/trafficUsage" />
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView12"
+                <ImageButton
+                    android:id="@+id/mapBtn"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/round_button"
+                    android:contentDescription="TODO"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.098"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.723"
+                    app:srcCompat="@drawable/maps" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/nearestoficces"
+                    android:textAlignment="center"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintLeft_toLeftOf="@+id/mapBtn"
+                    app:layout_constraintRight_toRightOf="@+id/mapBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/mapBtn" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="@string/nearestoficces"
-                android:textAlignment="center"
-                app:layout_constraintLeft_toLeftOf="@+id/mapBtn"
-                app:layout_constraintRight_toRightOf="@+id/mapBtn"
-                app:layout_constraintHorizontal_bias="0.25"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/mapBtn" />
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
-        </android.support.constraint.ConstraintLayout>
+                <ImageButton
+                    android:id="@+id/trafficUsage"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_button"
+                    android:contentDescription="TODO"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.888"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.744"
+                    app:srcCompat="@drawable/speedtest" />
 
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/trafficUsage"
+                    android:textAlignment="center"
+                    app:layout_constraintHorizontal_bias="0.553"
+                    app:layout_constraintLeft_toLeftOf="@+id/trafficUsage"
+                    app:layout_constraintRight_toRightOf="@+id/trafficUsage"
+                    app:layout_constraintTop_toBottomOf="@+id/trafficUsage" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </FrameLayout>
