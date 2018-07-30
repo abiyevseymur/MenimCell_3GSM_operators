@@ -78,7 +78,7 @@ public class SendSMSTariff extends AppCompatActivity {
                     if (ActivityCompat.shouldShowRequestPermissionRationale(SendSMSTariff.this,
                             android.Manifest.permission.SEND_SMS)) {
 
-                     startSMS();
+                     return;
                     } else {
                         ActivityCompat.requestPermissions(SendSMSTariff.this,
                                 new String[]{android.Manifest.permission.CALL_PHONE},
@@ -119,7 +119,17 @@ public class SendSMSTariff extends AppCompatActivity {
 
                     // permission was granted, yay! Do the
                     // contacts-related task you need to do.
-                    startSMS();
+                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        // Permission is not granted
+                        ActivityCompat.requestPermissions(this,
+                                new String[]{Manifest.permission.SEND_SMS},
+                                MY_PERMISSIONS_REQUEST_SEND_SMS);
+                    }
+                    else{
+                        startSMS();
+                    }
+
                 } else {
                     ActivityCompat.requestPermissions( this,new String[]{Manifest.permission.SEND_SMS},MY_PERMISSIONS_REQUEST_SEND_SMS);
                     // permission denied, boo! Disable the
@@ -134,7 +144,7 @@ public class SendSMSTariff extends AppCompatActivity {
     }
     private void startSMS(){
         SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage(Numb,null,TextSMS,null,null);
+        smsManager.sendTextMessage(Numb,null,TextSMS,send_pi,null);
         Toast.makeText(getApplicationContext(), R.string.accepted,Toast.LENGTH_SHORT).show();
         finish();
     }
@@ -180,7 +190,7 @@ public class SendSMSTariff extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-//        registerReceiver(sentReciever,new IntentFilter(Send_SMS));
+        registerReceiver(sentReciever,new IntentFilter(Send_SMS));
 //        registerReceiver(deliverReciever,new IntentFilter(Deliver_SMS));
         Log.d(TAG, "smsDialog onResume");
     };
@@ -188,7 +198,7 @@ public class SendSMSTariff extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-//        unregisterReceiver(sentReciever);
+        unregisterReceiver(sentReciever);
 //        unregisterReceiver(deliverReciever);
         Log.d(TAG, "smsDialog onStop");
     }

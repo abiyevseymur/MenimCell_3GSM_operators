@@ -97,9 +97,7 @@ public class Credit extends Fragment implements View.OnClickListener {
         checkDebts = view.findViewById(R.id.checkDebts);
         checkDebts.setText(Html.fromHtml(getString(R.string.checkMyDebts)));
 
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).showUpButton();
-        }
+
 
         credit1azn = view.findViewById(R.id.creditOneAzn);
         credit1azn.setOnClickListener(this);

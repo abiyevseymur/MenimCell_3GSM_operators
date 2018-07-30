@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
-    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.fragments.Tariffs.TariffTelebe">
+    android:background="@color/white"
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.Tariffs.TariffTelebe">
 
 
     <GridLayout
@@ -27,11 +27,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="0"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="25dp"
                     android:layout_row="0"
                     android:text="@string/Umelumat"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/gray"
                     android:textSize="24sp" />
 
                 <TextView
@@ -39,9 +40,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
                     android:text="@string/TelebeDesWeb"
                     android:textAlignment="center"
+                    android:textColor="@color/gray"
                     android:textSize="15sp" />
 
                 <LinearLayout
@@ -49,7 +50,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/whitebtn"
                     android:orientation="horizontal"
                     android:padding="5dp"
                     android:paddingEnd="10dp"
@@ -59,7 +59,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/telebeZengler"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
 
                     <TextView
@@ -70,7 +70,7 @@
                         android:elevation="0dp"
                         android:text="0.01"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="20sp" />
 
                     <TextView
@@ -82,7 +82,7 @@
                         android:gravity="center_vertical"
                         android:text="@string/qepik"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -91,7 +91,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/whitebtn"
                     android:orientation="horizontal"
                     android:padding="5dp"
                     android:paddingEnd="10dp"
@@ -101,7 +100,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/olkedaxili"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
 
                     <TextView
@@ -111,7 +110,7 @@
                         android:layout_weight="0.05"
                         android:text="0.05"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="20sp" />
 
                     <TextView
@@ -121,7 +120,7 @@
                         android:layout_marginStart="5dp"
                         android:gravity="center_vertical"
                         android:text="@string/qepik"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -130,7 +129,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/whitebtn"
                     android:orientation="horizontal"
                     android:padding="5dp"
                     android:paddingEnd="10dp"
@@ -140,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1 SMS"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
 
                     <TextView
@@ -150,7 +148,7 @@
                         android:layout_weight="0.05"
                         android:text="0.02"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="20sp" />
 
                     <TextView
@@ -160,7 +158,7 @@
                         android:layout_marginStart="5dp"
                         android:gravity="center_vertical"
                         android:text="@string/qepik"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -168,29 +166,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="2dp"
-                    android:text="@string/intervalBolge" />
+                    android:text="@string/intervalBolge"
+                    android:textColor="@color/gray" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="2dp"
-                    android:text="@string/intervaltelebe" />
+                    android:text="@string/intervaltelebe"
+                    android:textColor="@color/gray" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="2dp"
-                    android:text="@string/telebeMip20percent" />
+                    android:text="@string/telebeMip20percent"
+                    android:textColor="@color/gray" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="25dp"
                     android:layout_weight="0.16"
                     android:background="@drawable/buttonpink"
+                    android:paddingBottom="5dp"
                     android:paddingEnd="5dp"
                     android:paddingStart="5dp"
+                    android:paddingTop="5dp"
                     android:text="@string/telebeBtnDes" />
 
             </LinearLayout>

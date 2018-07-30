@@ -77,9 +77,7 @@ public class InternetSettings extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_internet_settings, container, false);
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).showUpButton();
-        }
+
         context = getContext();
         settingConfig = (Button) view.findViewById(R.id.settings9595);
         settingConfig.setOnClickListener(new View.OnClickListener() {

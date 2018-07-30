@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.fragments.Credit">
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.Credit">
 
     <!-- TODO: Update blank fragment layout -->
 <!--    <android.support.v7.widget.Toolbar
@@ -11,173 +11,233 @@
         android:layout_width="wrap_content"
         android:layout_height="?attr/actionBarSize"
         app:navigationIcon="?attr/homeAsUpIndicator"/>-->
-    <android.support.constraint.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
-        <Button
-            android:id="@+id/creditOneEightyAzn"
-            android:layout_width="150dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/button"
-            android:text="@string/creditOneEightyAzn"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.612"
-            app:layout_constraintHorizontal_bias="0.435" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/creditwoAznBtn"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button"
-            android:text="@string/creditTwoAzn"
-            android:textSize="18sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/creditOneEightyAzn"
-            app:layout_constraintHorizontal_bias="0.435" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/CreditOneForty"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="9dp"
-            android:background="@drawable/button"
-            android:text="@string/creditOneFortyAzn"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/creditOneEightyAzn"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintHorizontal_bias="0.435" />
+                <TextView
+                    android:id="@+id/simcreditTittle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/simCreditTittle"
+                    android:textColor="@color/gray"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/creditOneAzn"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.152" />
 
-        <Button
-            android:id="@+id/creditOneAzn"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/button"
-            android:text="@string/creditOneAzn"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/CreditOneForty"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintHorizontal_bias="0.435" />
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/simCreditDes"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/creditOneAzn"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/simcreditTittle"
+                    app:layout_constraintVertical_bias="0.186" />
 
-        <TextView
-            android:id="@+id/simcreditTittle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center_horizontal"
-            android:text="@string/simCreditTittle"
-            android:textColor="@color/colorPrimary"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/creditOneAzn"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.152" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="@string/simCreditDes"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="0dp"
-            app:layout_constraintTop_toBottomOf="@+id/simcreditTittle"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/creditOneAzn"
-            app:layout_constraintVertical_bias="0.186" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="17dp"
-            android:text="@string/creditOneAznFee"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toRightOf="@+id/creditOneAzn"
-            app:layout_constraintTop_toTopOf="@+id/creditOneAzn"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/creditOneAzn"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintVertical_bias="0.538" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="17dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/creditOneFortyAznFee"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/CreditOneForty"
-            app:layout_constraintLeft_toRightOf="@+id/CreditOneForty"
-            app:layout_constraintTop_toTopOf="@+id/CreditOneForty"
-            app:layout_constraintVertical_bias="0.466" />
+                    <Button
+                        android:id="@+id/creditOneAzn"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button"
+                        android:text="@string/creditOneAzn"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/CreditOneForty"
+                        app:layout_constraintHorizontal_bias="0.435"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
 
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="17dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/creditOneEightyAznFee"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/creditOneEightyAzn"
-            app:layout_constraintLeft_toRightOf="@+id/creditOneEightyAzn"
-            app:layout_constraintTop_toTopOf="@+id/creditOneEightyAzn"
-            app:layout_constraintVertical_bias="0.533" />
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/creditOneAznFee"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/creditOneAzn"
+                        app:layout_constraintLeft_toRightOf="@+id/creditOneAzn"
+                        app:layout_constraintTop_toTopOf="@+id/creditOneAzn"
+                        app:layout_constraintVertical_bias="0.538" />
 
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="17dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/creditTwoAznFee"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/creditwoAznBtn"
-            app:layout_constraintLeft_toRightOf="@+id/creditwoAznBtn"
-            app:layout_constraintTop_toTopOf="@+id/creditwoAznBtn"
-            app:layout_constraintVertical_bias="0.466" />
+                </LinearLayout>
 
-        <TextView
-            android:id="@+id/checkDebts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:paddingEnd="3dp"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
-            android:paddingStart="3dp"
-            android:text="@string/checkMyDebts"
-            android:textColor="@color/pinkAcces"
-            android:textSize="18sp"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/creditwoAznBtn" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-    </android.support.constraint.ConstraintLayout>
+                    <Button
+                        android:id="@+id/CreditOneForty"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button"
+                        android:text="@string/creditOneFortyAzn"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/creditOneEightyAzn"
+                        app:layout_constraintHorizontal_bias="0.435"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/creditOneFortyAznFee"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/CreditOneForty"
+                        app:layout_constraintLeft_toRightOf="@+id/CreditOneForty"
+                        app:layout_constraintTop_toTopOf="@+id/CreditOneForty"
+                        app:layout_constraintVertical_bias="0.466" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/creditOneEightyAzn"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button"
+                        android:text="@string/creditOneEightyAzn"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.435"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.612" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/creditOneEightyAznFee"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/creditOneEightyAzn"
+                        app:layout_constraintLeft_toRightOf="@+id/creditOneEightyAzn"
+                        app:layout_constraintTop_toTopOf="@+id/creditOneEightyAzn"
+                        app:layout_constraintVertical_bias="0.533" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/creditwoAznBtn"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button"
+                        android:text="@string/creditTwoAzn"
+                        android:textSize="18sp"
+                        app:layout_constraintHorizontal_bias="0.435"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/creditOneEightyAzn" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/creditTwoAznFee"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/creditwoAznBtn"
+                        app:layout_constraintLeft_toRightOf="@+id/creditwoAznBtn"
+                        app:layout_constraintTop_toTopOf="@+id/creditwoAznBtn"
+                        app:layout_constraintVertical_bias="0.466" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/checkDebts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:paddingEnd="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingStart="3dp"
+                    android:text="@string/checkMyDebts"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/creditwoAznBtn" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

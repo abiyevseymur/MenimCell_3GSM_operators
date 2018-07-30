@@ -4,14 +4,13 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 
-import pack.menimcellApp.seymur.azercell2.R;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
@@ -19,42 +18,29 @@ import android.util.Log;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.internal.BottomNavigationMenuView;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.telephony.TelephonyManager;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
-import pack.menimcellApp.seymur.azercell2.fragments.*;
-
 import java.util.Date;
-import java.util.Objects;
 
-import pack.menimcellApp.seymur.azercell2.fragments.Ayar;
 import pack.menimcellApp.seymur.azercell2.fragments.BalanceNew;
 import pack.menimcellApp.seymur.azercell2.fragments.ServicesVAS;
 import pack.menimcellApp.seymur.azercell2.fragments.Xidmetler;
 
 
-public class BalanceMenu extends AppCompatActivity {
+public class BalanceMenu extends AppCompatActivity implements View.OnClickListener {
     final String TAG = "cycle";
     ServicesVAS fxercler;
     Xidmetler fxidmetler;
     BalanceNew fbalance;
-    Ayar fayar;
     ImageView logoSettings;
     int mainLogo;
     String projectToken = "5908ccdb281d509b82825cb12f81f7a8"; // e.g.: "1ef7e30d2a58d27f4b90c42e31d6d7ad"
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+  /*  private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
@@ -89,13 +75,13 @@ public class BalanceMenu extends AppCompatActivity {
 
             }
             return false;
-        }
+        }*/
 
-    };
+    
 
 
     //back button
-
+/*
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             // Respond to the action bar's Up/Home button
@@ -104,8 +90,9 @@ public class BalanceMenu extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
+/*
     public void showUpButton() {
         if(getSupportActionBar() != null)
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -115,13 +102,14 @@ public class BalanceMenu extends AppCompatActivity {
         if(getSupportActionBar() != null)
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
     }
+*/
 
     MixpanelAPI mixpanel;
     BalanceNew firstFragment;
     String NetworkCarrierName = "None";
     static String phoneNumber;
     private Context mContext;
-
+    Button AzercellBtn;
     private AdView mAdView;
     @SuppressLint("HardwareIds")
     @TargetApi(Build.VERSION_CODES.M)
@@ -146,25 +134,24 @@ public class BalanceMenu extends AppCompatActivity {
         // pass the Intent's extras to the fragment as arguments
         // Add the fragment to the 'fragment_container' FrameLayout
 
-
+        AzercellBtn = (Button)findViewById(R.id.azercelbtn);
+        AzercellBtn.setOnClickListener(this);
         fxidmetler = new Xidmetler();
         fbalance = new BalanceNew();
         fxercler = new ServicesVAS();
-        fayar = new Ayar();
         mContext = getApplicationContext();
 //        mixpanel.getPeople().identify(trackingDistinctId); //this is the distinct_id
 //        // that will be used for people analytics. You must set this explicitly in order
 //        // to dispatch people data.
 
-        firstFragment = new BalanceNew();
+        /*firstFragment = new BalanceNew();
         firstFragment.setArguments(getIntent().getExtras());
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.fragment_container, firstFragment).commit();
+                .add(R.id.fragment_container, firstFragment).commit();*/
 
 
         //bottom menu size
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+/*        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         BottomNavigationMenuView menuView = (BottomNavigationMenuView) navigation.getChildAt(0);
         for (int i = 0; i < menuView.getChildCount(); i++) {
             final View iconView = menuView.getChildAt(i).findViewById(android.support.design.R.id.icon);
@@ -176,7 +163,7 @@ public class BalanceMenu extends AppCompatActivity {
 
             layoutParams.width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, displayMetrics);
             iconView.setLayoutParams(layoutParams);
-        }
+        }*/
         //
         //Action Toolbar
         TelephonyManager tManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
@@ -199,10 +186,10 @@ public class BalanceMenu extends AppCompatActivity {
         }
         //
 /*        logoSettings = (ImageView)findViewById(R.id.logoSettings);
-        logoSettings.setOnClickListener(this);*/
+
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         if(getSupportActionBar() != null)
-        mainLogo = R.drawable.ic_action_bar_logo;
+       /* mainLogo = R.drawable.ic_action_bar_logo;
         AppLogo(mainLogo);
         setSupportActionBar(myToolbar);
 
@@ -233,7 +220,7 @@ public class BalanceMenu extends AppCompatActivity {
 
                 getSupportActionBar().setTitle("  " +  getString(R.string.noAnyNumb)  );
         }
-        //
+        //*/
         //Mix Panel Token
         //mixpanel.identify(phoneNumber); //this is the distinct_id value that
         // will be sent with events. If you choose not to set this,
@@ -252,12 +239,12 @@ public class BalanceMenu extends AppCompatActivity {
 
     }
 
-
+/*
     public void AppLogo(int logo) {
         if(getSupportActionBar() != null){
             getSupportActionBar().setLogo(logo);
         }
-    }
+    }*/
 
 
     //phone number
@@ -310,4 +297,11 @@ public class BalanceMenu extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.azercelbtn){
+            Intent intent = new Intent(this, MenimAzercell.class);
+            startActivity(intent);
+        }
+    }
 }

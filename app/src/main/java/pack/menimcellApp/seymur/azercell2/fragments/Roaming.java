@@ -74,9 +74,7 @@ public class Roaming extends Fragment {
         SendUssdCode = (Button) view.findViewById(R.id.SendSmstarrif);
         cancelUssdCode = (Button) view.findViewById(R.id.SendSmstarrifCancel);
         context =getContext();
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).showUpButton();
-        }
+
         Roaming = (Switch)view.findViewById(R.id.RoamingSwitchBtn);
         Roaming.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

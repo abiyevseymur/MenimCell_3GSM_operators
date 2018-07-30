@@ -79,9 +79,9 @@ public class Transfer extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
 
         View view =  inflater.inflate(R.layout.fragment_transfer, container, false);
-        if (((BalanceMenu)getActivity()) != null) {
+   /*     if (((BalanceMenu)getActivity()) != null) {
             ((BalanceMenu)getActivity()).showUpButton();
-        }
+        }*/
         nomrePaycell = (EditText)view.findViewById(R.id.transferPhoneNumb);
         nomrePaycell.setInputType(InputType.TYPE_CLASS_PHONE);
         check20q = (RadioButton) view.findViewById(R.id.send20q);

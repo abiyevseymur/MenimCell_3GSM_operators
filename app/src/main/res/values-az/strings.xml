@@ -45,7 +45,7 @@
     <string name="sebekeXaric">şəbəkəxarici zeng(1 dəq)</string>
     <string name="derhalQosulma">Dərhal qoşul</string>
     <string name="azercelimInterval">​* Hesablaşma intervalı: Zənglər üçün - 1 dəqiqə, İnternet - 51 KB</string>
-    <string name="azercelimTarifQiymeti">SMS vasitəsilə tarif dəyişikliyinin qiyməti 1 Azn Təşkil edir. </string>
+    <string name="azercelimTarifQiymeti">Tarif dəyişikliyinin qiyməti - </string>
     <string name="zengler">Zənglər</string>
     <string name="internet">Internet</string>
     <string name="kredit">Kreditlər</string>
@@ -96,7 +96,7 @@
     <string name="learnBalanceCode">*111*1*7#</string>
     <string name="OnlineOdemeRefill">https://azercell.3dsecure.az/</string>
     <string name="MeneZengEt">Call Me</string>
-    <string name="gizlicellGizletcell">Gizlicell və Gizletcell</string>
+    <string name="gizlicellGizletcell">Gizletcell</string>
     <string name="callScreening">Zənglərin filtri</string>
     <string name="duetCard">Duet Card</string>
     <string name="callForwarding">Zənglərin Yönləndirilməsi</string>
@@ -121,7 +121,7 @@
     <string name="mipOneGbPrice">1 GB - 5 AZN</string>
     <string name="mipFiveGbPrice">5 GB - 10 AZN</string>
     <string name="mipTenGbPrice">10 GB - 15 AZN</string>
-    <string name="mipUnlimitPrice">Limitsiz - 30 AZN</string>
+    <string name="mipUnlimitPrice">Unlimite d - 30 AZN</string>
     <string name="thePriceOf">Qiyməti </string>
     <string name="simCreditTittle">SimCredit</string>
     <string name="simCreditDes">Əgər təcili zəng etmək və ya SMS göndərmək lazımdır, amma siz heç bir kredit yoxdur, siz Simkredit istifadə edə bilərsiniz</string>
@@ -213,16 +213,12 @@
     <string name="unlimOneAzn">1 AZN</string>
     <string name="unlimNintyNineAzn">0.99 AZN</string>
     <string name="unlimOneTwoAzn">1.2 AZN</string>
-    <string name="UssdCodeOneH">*100*60</string>
-    <string name="UssdCodethreeH">*100*180</string>
     <string name="fromFriday">Cümə günündən - 00:00,</string>
     <string name="tillSunday">Bazar Gününə qədər - 23:59:59,</string>
     <string name="maxSpeed">Maksimal sürət - 512kb/s</string>
     <string name="fromZerotillEight">00:00– 08:00-a qədər</string>
-    <string name="UssdCodeWeekend">*100*67</string>
     <string name="DailyFiftyMbA">50 MB - 0.25 AZN</string>
     <string name="DailyFifeHundredMB">500 MB - 1.20 AZN</string>
-    <string name="UssdCodeDailyFiftyMB">*100*50+</string>
     <string name="OneTimeMB">Birdəfəlik internet paketı</string>
     <string name="gizletCelllDes">Nömrənizi istəyinizə görə gizlətmək üçün Gizlətcell xidmətindən yararlana bilərsiniz.</string>
     <string name="gizletCellDesX"> Bunun üçün zəng vurduğunuz abunəçinin nömrəsindən əvvəl #31# işarələrini yığın.</string>
@@ -242,9 +238,7 @@
     <string name="theNearestOfficeIs">Ən yaxın Ofis</string>
     <string name="distance">Məsafə:</string>
     <string name="notReady">Hazır deyil..</string>
-
-
-
+    <string name="barringCodePlz">Please, Enter Your Barring code</string>
 
 
 </resources>

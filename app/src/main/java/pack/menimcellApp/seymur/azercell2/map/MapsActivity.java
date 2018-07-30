@@ -32,7 +32,9 @@ import com.akexorcist.googledirection.model.Direction;
 import com.akexorcist.googledirection.model.Leg;
 import com.akexorcist.googledirection.model.Route;
 import com.akexorcist.googledirection.util.DirectionConverter;
+
 import pack.menimcellApp.seymur.azercell2.R;
+
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -53,11 +55,11 @@ import java.util.Map;
 import static pack.menimcellApp.seymur.azercell2.R.id.map;
 
 
-public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallback, View.OnClickListener {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, View.OnClickListener {
 
     GoogleMap mMap;
     private LocationManager locationManager;
-    Location location;
+    Location location = null;
     private double latitude;
     private double longitude;
     TextView LatLong;
@@ -73,16 +75,15 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
     HashMap<Double, Double> valueOfOficceName;
     Collection<Double> valueOfOficceNameFix;
     //latitude of offices
-    double[] ListLat  = {40.3835595, 40.3764934, 40.384283, 40.3715289};
+    double[] ListLat = {40.3835595, 40.3764934, 40.384283, 40.3715289};
     //longtitude of offices
     double[] ListLong = {49.8241838, 49.8478365, 49.9537396, 49.8384542};
-    String[] nameOfOffice = {"Mushteri Xidmetleri","28May","Xatai","Torqoviy"};
+    String[] nameOfOffice = {"Mushteri Xidmetleri", "28May", "Xatai", "Torqoviy"};
     //put them to LIST
     List<double[]> values = new ArrayList<double[]>();
     List<String[]> valueNameOffice = new ArrayList<String[]>();
-    NestedHashMap2<String,Double,Double> threeValuesHashmap = new NestedHashMap2<>();
-
-
+    NestedHashMap2<String, Double, Double> threeValuesHashmap = new NestedHashMap2<>();
+    boolean network_enabled = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,8 +93,9 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setSupportActionBar(myToolbar);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         getSupportActionBar().setTitle(R.string.MainMenu);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -101,16 +103,32 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(map);
         mapFragment.getMapAsync(this);
-        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCAION);
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCAION);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         if (locationManager != null) {
+            network_enabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
             if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 buildAlertMessageNoGps();
-            }else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+            } else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 getLocation();
             }
         }
+
+        if (network_enabled){
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
+            }
+        location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+        }
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         onBackPressed();
@@ -241,7 +259,8 @@ public class MapsActivity extends AppCompatActivity  implements OnMapReadyCallba
     String duration;
     ArrayList<LatLng> directionPositionList;
     String status;
-    String serverKey = "AIzaSyAy0UuApXDEh-B96IDVlPBAiBU4ZDmykvQ";
+//    String serverKey = "AIzaSyAy0UuApXDEh-B96IDVlPBAiBU4ZDmykvQ";
+    String serverKey = "AIzaSyBdliMlDIjOwSLo8v0UWxq6da05P1rePGI";
     public void showNearestOffice(){
         for (int i = 0 ; i <nameOfOffice.length ; i++){
             threeValuesHashmap.put(valueNameOffice.get(0)[i],values.get(0)[i],values.get(1)[i]);

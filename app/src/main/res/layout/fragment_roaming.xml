@@ -9,7 +9,8 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <Switch
             android:id="@+id/RoamingSwitchBtn"
@@ -24,6 +25,7 @@
             android:layout_marginTop="32dp"
             android:checked="false"
             android:text="@string/roaming"
+            android:textColor="@color/gray"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

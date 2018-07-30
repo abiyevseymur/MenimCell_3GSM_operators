@@ -2,6 +2,7 @@ package pack.menimcellApp.seymur.azercell2.fragments.Tariffs;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,13 +63,10 @@ public class TariffTelebe extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tariff_telebe, container, false);
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).showUpButton();
-        }
         return view;
     }
 

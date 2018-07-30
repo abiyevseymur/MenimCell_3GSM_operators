@@ -1,5 +1,6 @@
 package pack.menimcellApp.seymur.azercell2.fragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import pack.menimcellApp.seymur.azercell2.BalanceMenu;
+import pack.menimcellApp.seymur.azercell2.ObjectClasses.USSDcodes;
 import pack.menimcellApp.seymur.azercell2.R;
 import pack.menimcellApp.seymur.azercell2.SendSMSTariff;
 
@@ -64,7 +66,7 @@ public class ayliqInternet extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    Context context;
     // NUMBER AND SMS
     String numb = "2525";
     String MIP50 = "50";
@@ -88,14 +90,12 @@ public class ayliqInternet extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ayliq_internet, container, false);
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).showUpButton();
-        }
+        context = getContext();
         mip50 = (Button) view.findViewById(R.id.mip50);
         mip50.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+              /*  Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
                 //Add your data to bundle
                 textSMS = MIP50;
@@ -103,7 +103,10 @@ public class ayliqInternet extends Fragment {
                 b.putString("second",textSMS);
                 b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.mipFiftyPrice));
                 intent.putExtras(b);
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.mip50mbUSSDcode),getString(R.string.get),getString(R.string.mipFiftyPrice),context);
+                startActivity(intentA);
             }
         });
         //
@@ -111,7 +114,7 @@ public class ayliqInternet extends Fragment {
         mip500.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+        /*        Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
                 //Add your data to bundle
                 textSMS = MIP500;
@@ -119,14 +122,17 @@ public class ayliqInternet extends Fragment {
                 b.putString("second",textSMS);
                 b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.mipfiveHundredPrice));
                 intent.putExtras(b);
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.mip500mbUSSDcode),getString(R.string.get),getString(R.string.mipfiveHundredPrice),context);
+                startActivity(intentA);
             }
         });
         mip1000 = (Button) view.findViewById(R.id.mip1000);
         mip1000.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+            /*    Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
                 //Add your data to bundle
                 textSMS = MIP1000;
@@ -134,14 +140,17 @@ public class ayliqInternet extends Fragment {
                 b.putString("second",textSMS);
                 b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.mipOneGbPrice));
                 intent.putExtras(b);
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.mip1000mbUSSDcode),getString(R.string.get),getString(R.string.mipOneGbPrice),context);
+                startActivity(intentA);
             }
         });
         mip5000 = (Button) view.findViewById(R.id.mip5000);
         mip5000.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+              /*  Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
                 //Add your data to bundle
                 textSMS = MIP5000;
@@ -149,14 +158,17 @@ public class ayliqInternet extends Fragment {
                 b.putString("second",textSMS);
                 b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.mipFiveGbPrice));
                 intent.putExtras(b);
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.mip50000mbUSSDcode),getString(R.string.get),getString(R.string.mipFiveGbPrice),context);
+                startActivity(intentA);
             }
         });
         mip10000 = (Button) view.findViewById(R.id.mip10000);
         mip10000.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+        /*        Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
                 //Add your data to bundle
                 textSMS = MIP10000;
@@ -164,14 +176,17 @@ public class ayliqInternet extends Fragment {
                 b.putString("second",textSMS);
                 b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.mipTenGbPrice));
                 intent.putExtras(b);
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.mip10000mbUSSDcode),getString(R.string.get),getString(R.string.mipTenGbPrice),context);
+                startActivity(intentA);
             }
         });
         mipLimitsiz = (Button) view.findViewById(R.id.mipLimitsiz);
         mipLimitsiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+        /*        Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
                 //Add your data to bundle
                 textSMS = MIPU;
@@ -179,7 +194,10 @@ public class ayliqInternet extends Fragment {
                 b.putString("second",textSMS);
                 b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.mipUnlimitPrice));
                 intent.putExtras(b);
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.mip50000mbUSSDcode),getString(R.string.get),getString(R.string.mipUnlimitPrice),context);
+                startActivity(intentA);
             }
         });
 

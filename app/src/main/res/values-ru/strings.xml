@@ -50,7 +50,7 @@
     <string name="sebekeXaric">Вне сети (1 мин.)</string>
     <string name="derhalQosulma">Подключиться</string>
     <string name="azercelimInterval">* Интервал для звонков - 1 минута, для Интернета - 51 КБ</string>
-    <string name="azercelimTarifQiymeti">Цена изменения тарифа по SMS составляет 1 AZN. </string>
+    <string name="azercelimTarifQiymeti">Цена изменения тарифа составляет </string>
     <string name="zengler">Звонки</string>
     <string name="internet">интернет</string>
 
@@ -66,7 +66,7 @@
     <string name="paketPrice">Абонентская плата</string>
     <string name="olkedaxili">Местные звонки</string>
     <string name="gencolarasi">Звонки между Gencl ol.</string>
-    <string name="tarifdaxilisms">внутрисетевые SMS-сообщения</string>
+    <string name="tarifdaxilisms">внутрисетевые SMS</string>
     <string name="min">Мин</string>
     <string name="gb">ГБ</string>
     <string name="tarifdaxilizengleristifadensonra">* Звонки среди GeNcOL: 1 мин. = 0,02 AZN</string>
@@ -96,8 +96,8 @@
     <string name="noAnyNumb">Нет номера</string>
     <string name="connect">соединение</string>
     <string name="internetSettings">Настройки Интернета</string>
-    <string name="nearestoficces">Nearest Offices</string>
-    <string name="trafficUsage">Ближайшие офисы</string>
+    <string name="nearestoficces">Ближайшие офисы</string>
+    <string name="trafficUsage">Интернет трафик</string>
     <string name="all">Все</string>
     <string name="title_activity_maps">карта</string>
     <string name="nearestOffices">Показать ближайшие офисы</string>
@@ -114,7 +114,7 @@
     <string name="callSignature">Подпись звонка</string>
     <string name="secondLine">вторая линия</string>
     <string name="MeneZengEt">Позвони мне</string>
-    <string name="gizlicellGizletcell">Gizlicell &amp; Gizletcell</string>
+    <string name="gizlicellGizletcell">Скрытый звонок</string>
     <string name="callScreeningPlus">Фильтр звонков+</string>
     <string name="callScreening">Фильтр звонков</string>
     <string name="duetCard">Дуэт-карта</string>
@@ -188,7 +188,7 @@
     <string name="Whenbusy">Когда телефон занят</string>
     <string name="WhenNotAnswered">Когда телефон не отвечает</string>
     <string name="WhenOff">Когда телефон выключен</string>
-    <string name="ForwardTo">переслать</string>
+    <string name="ForwardTo">Переадресировать</string>
     <string name="barringTo">Запрет на</string>
     <string name="CallScreening">Фильтр звонков</string>
     <string name="CheckTheNumberBlackList"><u>Проверить список номеров</u></string>
@@ -227,21 +227,17 @@
     <string name="unlimThreeH">Безлимитный 3 часа</string>
     <string name="unlimNight">Безлимитный ночной пакет</string>
     <string name="UnlimWeekend">Безлимитный уикенд пакет</string>
-    <string name="unlimfortyQ" />
+
     <string name="unlimFortyQ">0.4 АЗН</string>
     <string name="unlimOneAzn">1 АЗН</string>
     <string name="unlimNintyNineAzn">0.99 АЗН</string>
     <string name="unlimOneTwoAzn">1.2 АЗН</string>
-    <string name="UssdCodeOneH">*100*60</string>
-    <string name="UssdCodethreeH">*100*180</string>
     <string name="fromFriday">с Пятницы - 00:00,</string>
     <string name="tillSunday">до Воскресения - 23:59:59,</string>
     <string name="maxSpeed">Макс скорость - 512kb/s</string>
     <string name="fromZerotillEight">от 00:00 - до 08:00</string>
-    <string name="UssdCodeWeekend">*100*67</string>
     <string name="DailyFiftyMbA">50 МБ - 0.25 АЗН</string>
     <string name="DailyFifeHundredMB">500 МБ - 1.20 АЗН</string>
-    <string name="UssdCodeDailyFiftyMB">*100*50+</string>
     <string name="OneTimeMB">Одноразовый интернет-пакет</string>
     <string name="gizletCelllDes">С Gizlətcell вы можете скрыть номер по своему желанию.</string>
     <string name="gizletCellDesX">Для этого достаточно набрать код #31#перед номером абонента, которому вы звоните.</string>
@@ -267,5 +263,7 @@
     <string name="transferDesc">Абоненты Azercell могут делиться своим балансом с любым абонентом SimSim.</string>
     <string name="didNotGetSettings">Не получили настройки?</string>
     <!--Elaveler by Murad-->
+
+    <string name="barringCodePlz">Please, Enter Your Barring code</string>
 
 </resources>

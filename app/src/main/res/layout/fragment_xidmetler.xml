@@ -1,9 +1,10 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fxidmetlerFrameLayput"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="pack.menimcellApp.seymur.azercell2.fragments.Xidmetler">
 
     <LinearLayout
@@ -21,9 +22,6 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
                 android:gravity="center"
                 android:paddingBottom="3dp"
                 android:paddingTop="3dp"
@@ -41,8 +39,6 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_column="6"
-                android:layout_row="6"
                 android:scrollbars="none">
 
                 <LinearLayout
@@ -52,15 +48,14 @@
 
                     <GridLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="170dp"
+                        android:layout_height="180dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginEnd="0dp"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="0dp"
                         android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
-                        android:elevation="7dp"
-                        android:paddingBottom="20dp"
+                        android:background="@drawable/shadow_opacity_azercell"
+                        android:paddingBottom="30dp"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
                         android:paddingTop="30dp">
@@ -68,12 +63,12 @@
                         <TextView
                             android:layout_width="210dp"
                             android:layout_height="wrap_content"
+                            android:layout_row="0"
                             android:paddingEnd="10dp"
                             android:paddingStart="10dp"
                             android:text="@string/azercellim"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="210dp"
@@ -85,8 +80,7 @@
                             android:paddingStart="10dp"
                             android:paddingTop="5dp"
                             android:text="@string/sebeke_daxil"
-                            android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/tarif1"
@@ -96,7 +90,7 @@
                             android:layout_marginEnd="15dp"
                             android:layout_marginStart="15dp"
                             android:layout_row="3"
-                            android:background="@drawable/buttonpink"
+                            android:background="@drawable/button"
                             android:fadeScrollbars="false"
                             android:text="@string/etrafli"
                             android:textAlignment="center"
@@ -106,13 +100,13 @@
 
                     <GridLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="170dp"
+                        android:layout_height="180dp"
                         android:layout_marginEnd="0dp"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="0dp"
                         android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
-                        android:paddingBottom="20dp"
+                        android:background="@drawable/shadow_opacity_azercell"
+                        android:paddingBottom="30dp"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
                         android:paddingTop="30dp">
@@ -124,19 +118,16 @@
                             android:paddingStart="10dp"
                             android:text="@string/gencol"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="210dp"
                             android:layout_height="42dp"
                             android:layout_column="0"
                             android:layout_row="1"
-
                             android:paddingTop="5dp"
                             android:text="@string/gencolDes"
-                            android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/tarif2"
@@ -146,7 +137,7 @@
                             android:layout_marginEnd="15dp"
                             android:layout_marginStart="15dp"
                             android:layout_row="3"
-                            android:background="@drawable/buttonpink"
+                            android:background="@drawable/button"
                             android:fadeScrollbars="false"
                             android:text="@string/etrafli"
                             android:textAlignment="center"
@@ -156,13 +147,13 @@
 
                     <GridLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="170dp"
+                        android:layout_height="180dp"
                         android:layout_marginEnd="0dp"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="0dp"
                         android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
-                        android:paddingBottom="20dp"
+                        android:background="@drawable/shadow_opacity_azercell"
+                        android:paddingBottom="30dp"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
                         android:paddingTop="30dp">
@@ -170,13 +161,11 @@
                         <TextView
                             android:layout_width="210dp"
                             android:layout_height="wrap_content"
-                            android:elevation="0dp"
                             android:paddingEnd="10dp"
                             android:paddingStart="10dp"
                             android:text="@string/bolge"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="210dp"
@@ -188,8 +177,7 @@
                             android:paddingStart="10dp"
                             android:paddingTop="5dp"
                             android:text="@string/bolgeDes"
-                            android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/tarif3"
@@ -199,7 +187,7 @@
                             android:layout_marginEnd="15dp"
                             android:layout_marginStart="15dp"
                             android:layout_row="3"
-                            android:background="@drawable/buttonpink"
+                            android:background="@drawable/button"
                             android:fadeScrollbars="false"
                             android:text="@string/etrafli"
                             android:textAlignment="center"
@@ -209,13 +197,13 @@
 
                     <GridLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="170dp"
+                        android:layout_height="180dp"
                         android:layout_marginEnd="0dp"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="0dp"
                         android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
-                        android:paddingBottom="20dp"
+                        android:background="@drawable/shadow_opacity_azercell"
+                        android:paddingBottom="30dp"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
                         android:paddingTop="30dp">
@@ -227,8 +215,7 @@
                             android:paddingStart="10dp"
                             android:text="@string/gencsim"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="210dp"
@@ -240,8 +227,7 @@
                             android:paddingStart="10dp"
                             android:paddingTop="5dp"
                             android:text="@string/gencsimDes"
-                            android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/tarif4"
@@ -251,7 +237,7 @@
                             android:layout_marginEnd="15dp"
                             android:layout_marginStart="15dp"
                             android:layout_row="3"
-                            android:background="@drawable/buttonpink"
+                            android:background="@drawable/button"
                             android:fadeScrollbars="false"
                             android:text="@string/etrafli"
                             android:textAlignment="center"
@@ -261,13 +247,13 @@
 
                     <GridLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="170dp"
+                        android:layout_height="180dp"
                         android:layout_marginEnd="0dp"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="0dp"
                         android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
-                        android:paddingBottom="20dp"
+                        android:background="@drawable/shadow_opacity_azercell"
+                        android:paddingBottom="30dp"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
                         android:paddingTop="30dp">
@@ -279,8 +265,7 @@
                             android:paddingStart="10dp"
                             android:text="@string/kombo"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="210dp"
@@ -290,8 +275,7 @@
                             android:paddingEnd="10dp"
                             android:paddingStart="10dp"
                             android:text="@string/komboDes"
-                            android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/tarif5"
@@ -301,7 +285,7 @@
                             android:layout_marginEnd="15dp"
                             android:layout_marginStart="15dp"
                             android:layout_row="3"
-                            android:background="@drawable/buttonpink"
+                            android:background="@drawable/button"
                             android:fadeScrollbars="false"
                             android:text="@string/etrafli"
                             android:textAlignment="center"
@@ -311,13 +295,13 @@
 
                     <GridLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="170dp"
+                        android:layout_height="180dp"
                         android:layout_marginEnd="40dp"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="40dp"
                         android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
-                        android:paddingBottom="20dp"
+                        android:background="@drawable/shadow_opacity_azercell"
+                        android:paddingBottom="30dp"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
                         android:paddingTop="30dp">
@@ -329,8 +313,7 @@
                             android:paddingStart="10dp"
                             android:text="@string/telebe"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="210dp"
@@ -342,8 +325,7 @@
                             android:paddingStart="10dp"
                             android:paddingTop="5dp"
                             android:text="@string/telebeDes"
-                            android:textAlignment="center"
-                            android:textColor="@color/white" />
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/tarif6"
@@ -353,7 +335,7 @@
                             android:layout_marginEnd="15dp"
                             android:layout_marginStart="15dp"
                             android:layout_row="3"
-                            android:background="@drawable/buttonpink"
+                            android:background="@drawable/button"
                             android:fadeScrollbars="false"
                             android:text="@string/etrafli"
                             android:textAlignment="center"
@@ -394,8 +376,6 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_column="6"
-                android:layout_row="6"
                 android:scrollbars="none">
 
                 <LinearLayout
@@ -412,7 +392,7 @@
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="0dp"
                         android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
+                        android:background="@drawable/shadow_opacity_azercell"
                         android:padding="30dp">
 
                         <Button
@@ -423,7 +403,7 @@
                             android:layout_marginEnd="15dp"
                             android:layout_marginStart="15dp"
                             android:layout_row="3"
-                            android:background="@drawable/buttonpink"
+                            android:background="@drawable/button"
                             android:fadeScrollbars="false"
                             android:text="@string/etrafli"
                             android:textAlignment="center"
@@ -433,13 +413,13 @@
                             android:layout_width="210dp"
                             android:layout_height="wrap_content"
                             android:layout_column="0"
+
                             android:layout_row="1"
                             android:paddingEnd="10dp"
                             android:paddingStart="10dp"
                             android:text="@string/ayliqMip"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                     </GridLayout>
 
@@ -450,18 +430,18 @@
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="0dp"
                         android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
+                        android:background="@drawable/shadow_opacity_azercell"
                         android:padding="30dp">
 
                         <TextView
                             android:layout_width="210dp"
                             android:layout_height="wrap_content"
                             android:paddingEnd="10dp"
+
                             android:paddingStart="10dp"
                             android:text="@string/gundelikMip"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
 
                         <Button
@@ -472,7 +452,7 @@
                             android:layout_marginEnd="15dp"
                             android:layout_marginStart="15dp"
                             android:layout_row="3"
-                            android:background="@drawable/buttonpink"
+                            android:background="@drawable/button"
                             android:fadeScrollbars="false"
                             android:text="@string/etrafli"
                             android:textAlignment="center"
@@ -487,7 +467,7 @@
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="0dp"
                         android:layout_marginStart="40dp"
-                        android:background="@drawable/windowtarif"
+                        android:background="@drawable/shadow_opacity_azercell"
                         android:padding="30dp">
 
                         <TextView
@@ -497,8 +477,7 @@
                             android:paddingStart="10dp"
                             android:text="@string/limitsizMip"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <Button
                             android:id="@+id/mipDigerAction"
@@ -508,7 +487,7 @@
                             android:layout_marginEnd="15dp"
                             android:layout_marginStart="15dp"
                             android:layout_row="3"
-                            android:background="@drawable/buttonpink"
+                            android:background="@drawable/button"
                             android:fadeScrollbars="false"
                             android:text="@string/etrafli"
                             android:textAlignment="center"

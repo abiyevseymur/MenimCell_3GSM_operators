@@ -1,8 +1,10 @@
 package pack.menimcellApp.seymur.azercell2.fragments.Tariffs;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import pack.menimcellApp.seymur.azercell2.BalanceMenu;
+import pack.menimcellApp.seymur.azercell2.ObjectClasses.USSDcodes;
 import pack.menimcellApp.seymur.azercell2.R;
 import pack.menimcellApp.seymur.azercell2.SendSMSTariff;
 
@@ -72,19 +75,18 @@ public class TarifDoubleK extends Fragment {
     Button Kombo16;
     TextView k8Price;
     TextView k16Price;
+    Context context;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tarif_double_k, container, false);
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).showUpButton();
-        }
+        context = getContext();
         Kombo8 = (Button) view.findViewById(R.id.Kombo8Btn);
         Kombo8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+       /*         Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
 //Add your data to bundle
                 textSMS = "K8";
@@ -93,14 +95,17 @@ public class TarifDoubleK extends Fragment {
                 b.putString("messageTittle",getString(R.string.ThePriceOfSMS) + " " + getString(R.string.smsPrice)+", " +
                         getString(R.string.tariffPriceIs) +" "+ getString(R.string.k8Price) + " "+ getString(R.string.azn ));
                 intent.putExtras(b);
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.k8Tarrif),getString(R.string.azercelimTarifQiymeti),getString(R.string.k8Price),getString(R.string.azn),context);
+                startActivity(intentA);
             }
         });
         Kombo16 = (Button) view.findViewById(R.id.Kombo16Btn);
         Kombo16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+           /*     Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
 //Add your data to bundle
                 textSMS = "K16";
@@ -109,7 +114,10 @@ public class TarifDoubleK extends Fragment {
                 b.putString("messageTittle",getString(R.string.ThePriceOfSMS)+ " " + getString(R.string.smsPrice)+", " +
                         getString(R.string.tariffPriceIs) +" "+ getString(R.string.k16Price) + " "+ getString( R.string.azn));
                 intent.putExtras(b);
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.k16Tarrif),getString(R.string.azercelimTarifQiymeti),getString(R.string.k16Price),getString(R.string.azn),context);
+                startActivity(intentA);
             }
         });
 

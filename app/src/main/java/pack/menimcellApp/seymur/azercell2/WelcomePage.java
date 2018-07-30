@@ -17,7 +17,7 @@ public class WelcomePage extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_welcome_page);
         //welcomepage
-        int SPLASH_TIME_OUT = 800;
+        int SPLASH_TIME_OUT = 600;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

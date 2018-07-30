@@ -25,7 +25,7 @@ import pack.menimcellApp.seymur.azercell2.fragments.VAS.CallScreening;
  * Use the {@link ServicesVAS#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ServicesVAS extends Fragment implements View.OnClickListener {
+public class ServicesVAS extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -79,24 +79,7 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
     ImageButton CallScreening;
     CLIR_SOCLIR fClirSoclir;
     ImageButton ClirSoclir;
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_services_vas, container, false);
-        if(getActivity() != null)
 
-        ((BalanceMenu)getActivity()).hideUpButton();
-        CallForwarding = (ImageButton) view.findViewById(R.id.callForwardMain);
-        Callbarring = (ImageButton)view.findViewById(R.id.CallBarring);
-        CallScreening = (ImageButton)view.findViewById(R.id.CallScreening);
-        ClirSoclir = (ImageButton)view.findViewById(R.id.ClirAndSoclir);
-        ClirSoclir.setOnClickListener(this);
-        CallScreening.setOnClickListener(this);
-        CallForwarding.setOnClickListener(this);
-        Callbarring.setOnClickListener(this);
-        return view;
-    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -112,51 +95,7 @@ public class ServicesVAS extends Fragment implements View.OnClickListener {
         mListener = null;
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case(R.id.callForwardMain):
-                FragmentTransaction ft = null;
-                if (this.getFragmentManager() != null) {
-                    ft = this.getFragmentManager().beginTransaction();
-                    ft.replace(R.id.fragment_container,fCallForwarding,"e");
-                    ft.addToBackStack("e");
-                    ft.commit();
-                    break;
-                }
 
-            case(R.id.CallBarring):
-                FragmentTransaction ftm = null;
-                if (this.getFragmentManager() != null) {
-                    ftm = this.getFragmentManager().beginTransaction();
-                    ftm.replace(R.id.fragment_container,fCallbarring,"e");
-                    ftm.addToBackStack("e");
-                    ftm.commit();
-                    break;
-                }
-
-            case(R.id.CallScreening):
-                FragmentTransaction ftCB = null;
-                if (this.getFragmentManager() != null) {
-                    ftCB = this.getFragmentManager().beginTransaction();
-                    ftCB.replace(R.id.fragment_container,fCallScreening,"e");
-                    ftCB.addToBackStack("e");
-                    ftCB.commit();
-                    break;
-                }
-
-            case(R.id.ClirAndSoclir):
-                FragmentTransaction ftCS = null;
-                if (this.getFragmentManager() != null) {
-                    ftCS = this.getFragmentManager().beginTransaction();
-                    ftCS.replace(R.id.fragment_container,fClirSoclir,"e");
-                    ftCS.addToBackStack("e");
-                    ftCS.commit();
-                    break;
-                }
-
-        }
-    }
 
     /**
      * This interface must be implemented by activities that contain this

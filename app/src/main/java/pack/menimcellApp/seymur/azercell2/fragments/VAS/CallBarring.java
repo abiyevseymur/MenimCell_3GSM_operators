@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import pack.menimcellApp.seymur.azercell2.BalanceMenu;
 import pack.menimcellApp.seymur.azercell2.R;
@@ -92,9 +93,9 @@ public class CallBarring extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_call_barring, container, false);
-        if (((BalanceMenu) getActivity()) != null) {
+    /*    if (((BalanceMenu) getActivity()) != null) {
             ((BalanceMenu) getActivity()).showUpButton();
-        }
+        }*/
         context = getContext();
         incomingCalls = (CheckBox)view.findViewById(R.id.incomingCalls);
         incomingSMS = (CheckBox) view.findViewById(R.id.incomingSMS);
@@ -126,24 +127,26 @@ public class CallBarring extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case(R.id.activateCallBarring):
-                USSDcodes cb = new USSDcodes();
-                if(incomingCalls.isChecked()){
-                    Intent intent = cb.sendUssdCode(incomingCBCallsAc + PasswordCB.getText().toString(),getString(R.string.Activate),getString(R.string.barringTo), getString(R.string.AllIncoming),getString(R.string.Calls),context);
-                    startActivity(intent);
+                if(PasswordCB.getText().toString().trim().length() == 4) {
+                    USSDcodes cb = new USSDcodes();
+                    if (incomingCalls.isChecked()) {
+                        Intent intent = cb.sendUssdCode(incomingCBCallsAc + PasswordCB.getText().toString(), getString(R.string.Activate), getString(R.string.barringTo), getString(R.string.AllIncoming), getString(R.string.Calls), context);
+                        startActivity(intent);
+                    } else if (incomingSMS.isChecked()) {
+                        Intent intent = cb.sendUssdCode(incomingCBSMSAc + PasswordCB.getText().toString() + CBSMSonly, getString(R.string.Activate), getString(R.string.barringTo), getString(R.string.AllIncoming), getString(R.string.sms), context);
+                        startActivity(intent);
+                    } else if (outgoingCalls.isChecked()) {
+                        Intent intent = cb.sendUssdCode(outgoingCBCallsAc + PasswordCB.getText().toString() + CBSMSonly, getString(R.string.Activate), getString(R.string.barringTo), getString(R.string.AllOutgoing), getString(R.string.Calls), context);
+                        startActivity(intent);
+                    } else if (outgoingSMS.isChecked()) {
+                        Intent intent = cb.sendUssdCode(outgoingCBSMSAc + PasswordCB.getText().toString(), getString(R.string.Activate), getString(R.string.barringTo), getString(R.string.AllOutgoing), getString(R.string.sms), context);
+                        startActivity(intent);
+                    }
+                    break;
                 }
-                else if(incomingSMS.isChecked()){
-                    Intent intent = cb.sendUssdCode(incomingCBSMSAc + PasswordCB.getText().toString() + CBSMSonly,getString(R.string.Activate),getString(R.string.barringTo), getString(R.string.AllIncoming),getString(R.string.sms),context);
-                    startActivity(intent);
+                else{
+                    Toast.makeText(getActivity(), R.string.barringCodePlz, Toast.LENGTH_SHORT).show();
                 }
-                else if(outgoingCalls.isChecked()){
-                    Intent intent = cb.sendUssdCode(outgoingCBCallsAc + PasswordCB.getText().toString() + CBSMSonly,getString(R.string.Activate),getString(R.string.barringTo), getString(R.string.AllOutgoing),getString(R.string.Calls),context);
-                    startActivity(intent);
-                }
-                else if(outgoingSMS.isChecked()){
-                    Intent intent = cb.sendUssdCode(outgoingCBSMSAc + PasswordCB.getText().toString(),getString(R.string.Activate),getString(R.string.barringTo), getString(R.string.AllOutgoing),getString(R.string.sms),context);
-                    startActivity(intent);
-                }
-                break;
             case(R.id.deactivateCallBarring):
                 USSDcodes cbDeac = new USSDcodes();
                 if(incomingCalls.isChecked()){

@@ -79,9 +79,6 @@ public class DigerMIP extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_diger_mi, container, false);
         context = getContext();
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).showUpButton();
-        }
         view.findViewById(R.id.unlimitedOneHour).setOnClickListener(this);
         view.findViewById(R.id.unlimitedThreeHour).setOnClickListener(this);
         view.findViewById(R.id.unlimitedWeekend).setOnClickListener(this);
@@ -109,17 +106,17 @@ public class DigerMIP extends Fragment implements View.OnClickListener {
 
             if (v.getId() == R.id.unlimitedOneHour) {
                 USSDcodes s = new USSDcodes();
-                Intent intent = s.sendUssdCode(getString(R.string.UssdCodeOneH),  getString(R.string.get), getString(R.string.unlimOneH), getString(R.string.unlimfortyQ), context);
+                Intent intent = s.sendUssdCode(getString(R.string.mip1saadUSSDcode),  getString(R.string.get), getString(R.string.unlimOneH),getString(R.string.unlimFortyQ),  context);
                 startActivity(intent);
             }
             else if(v.getId() == R.id.unlimitedThreeHour){
                 USSDcodes s = new USSDcodes();
-                Intent intent  = s.sendUssdCode(getString(R.string.UssdCodethreeH) , getString(R.string.get),getString(R.string.unlimThreeH),getString(R.string.unlimOneAzn),context);
+                Intent intent  = s.sendUssdCode(getString(R.string.mip3saadUSSDcode) , getString(R.string.get),getString(R.string.unlimThreeH),getString(R.string.unlimOneAzn),context);
                 startActivity(intent);
             }
             else if(v.getId() == R.id.unlimitedWeekend) {
                 USSDcodes s = new USSDcodes();
-                Intent intent  = s.sendUssdCode(getString(R.string.UssdCodeWeekend) ,getString(R.string.get),getString(R.string.UnlimWeekend), getString(R.string.unlimOneTwoAzn),getString(R.string.fromFriday),getString(R.string.tillSunday),getString(R.string.maxSpeed),context);
+                Intent intent  = s.sendUssdCode(getString(R.string.mipHeftesonuUSSDcode) ,getString(R.string.get),getString(R.string.UnlimWeekend), getString(R.string.unlimOneTwoAzn),getString(R.string.fromFriday),getString(R.string.tillSunday),getString(R.string.maxSpeed),context);
                 startActivity(intent);
             }
             else if(v.getId() == R.id.unlimitedNight) {

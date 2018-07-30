@@ -1,58 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-
-    tools:context="pack.menimcellApp.seymur.azercell2.BalanceMenu"
-    android:weightSum="1">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:paddingEnd="0dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="0dp"
-        android:paddingStart="5dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        android:visibility="visible"
-        ads:logo="@drawable/ic_action_bar_logo"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-        <!--       <ImageView
-                   android:id="@+id/logoSettings"
-                   android:layout_width="wrap_content"
-                   android:layout_height="40dp"
-                   android:layout_gravity="end"
-                   android:adjustViewBounds="true"
-                   android:paddingEnd="20dp"
-                   android:paddingRight="20dp"
-                   android:src="@drawable/settings"
-                   android:contentDescription="settings" />-->
-    </android.support.v7.widget.Toolbar>
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.98" />
-
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/colorPrimary"
-        app:itemTextColor="@color/white"
-        app:itemIconTint="@color/white"
-        app:menu="@menu/navigation" />
-
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_height="match_parent">
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="match_parent"
@@ -63,6 +15,56 @@
         ads:adUnitId="@string/banner_ad_unit_id"
         tools:ignore="ObsoleteLayoutParam">
     </com.google.android.gms.ads.AdView>
-</LinearLayout>
 
+    <Button
+        android:id="@+id/azercelbtn"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/azercell_btn_main"
+        android:text="Azercell"
+        android:textSize="24sp"
+        ads:layout_constraintBottom_toTopOf="@+id/bakcellbtn"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintHorizontal_bias="0.498"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/adView"
+        ads:layout_constraintVertical_bias="0.858"
+        tools:text="Azercell" />
 
+    <Button
+        android:id="@+id/narbtn"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/nar_btn_main"
+        android:text="Nar"
+        android:textSize="24sp"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintHorizontal_bias="0.498"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/adView"
+        ads:layout_constraintVertical_bias="0.694"
+        tools:text="Nar" />
+
+    <Button
+        android:id="@+id/bakcellbtn"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bakcell_btn_main"
+        android:text="Bakcell"
+        android:textSize="24sp"
+        ads:layout_constraintBottom_toTopOf="@+id/narbtn"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintHorizontal_bias="0.506"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/adView"
+        ads:layout_constraintVertical_bias="0.922"
+        tools:text="Bakcell" />
+
+</android.support.constraint.ConstraintLayout>

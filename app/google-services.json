@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:767485387864:android:30415336d374b99f",
         "android_client_info": {
-          "package_name": "pack.menimcellApp.seymur.azercell2"
+          "package_name": "com.example.seymur.azercell2"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "767485387864-eov08q01cp8egn74hqjgpnd24kj7bn59.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "pack.menimcellApp.seymur.azercell2",
+            "package_name": "com.example.seymur.azercell2",
             "certificate_hash": "275a2145171213277f1c70a0364ac23caaca9a7d"
           }
         },

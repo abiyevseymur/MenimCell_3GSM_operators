@@ -9,6 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         android:scrollbars="none">
 
         <LinearLayout
@@ -33,7 +34,7 @@
                     android:layout_marginTop="31dp"
                     android:gravity="center"
                     android:text="@string/CallScreening"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/gray"
                     android:textSize="24sp" />
             </LinearLayout>
 
@@ -211,7 +212,7 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/CheckTheNumberBlackList"
-                    android:textColor="@color/pinkAcces"
+                    android:textColor="@color/gray"
                     android:textSize="18sp"
                     android:textStyle="italic" />
 

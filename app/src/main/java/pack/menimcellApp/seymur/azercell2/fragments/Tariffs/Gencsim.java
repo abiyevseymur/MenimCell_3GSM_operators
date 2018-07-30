@@ -1,8 +1,10 @@
 package pack.menimcellApp.seymur.azercell2.fragments.Tariffs;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import pack.menimcellApp.seymur.azercell2.BalanceMenu;
+import pack.menimcellApp.seymur.azercell2.ObjectClasses.USSDcodes;
 import pack.menimcellApp.seymur.azercell2.R;
 import pack.menimcellApp.seymur.azercell2.SendSMSTariff;
 
@@ -65,25 +68,24 @@ public class Gencsim extends Fragment {
         }
     }
     TextView tittleMessage;
+    Context context;
     Button gencsimBtn;
     // NUMBER AND SMS
     String numb = "7575";
     String textSMS = "GencSim";
     //
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_gencsim, container, false);
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).showUpButton();
-        }
+        context = getContext();
         tittleMessage = (TextView)view.findViewById(R.id.thePriceOfTariffGencsim) ;
         gencsimBtn = (Button) view.findViewById(R.id.gencSimBtn);
         gencsimBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+              /* Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
 //Add your data to bundle
 
@@ -91,7 +93,10 @@ public class Gencsim extends Fragment {
                 b.putString("second",textSMS);
                 b.putString("messageTittle",tittleMessage.getText().toString());
                 intent.putExtras(b);
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.gencsimTarrif),getString(R.string.azercelimTarifQiymeti),getString(R.string.simpleTarrif),getString(R.string.azn),context);
+                startActivity(intentA);
             }
         });
         return view;

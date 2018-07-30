@@ -74,9 +74,7 @@ public class GundelikMIP extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_gundelik_mi, container, false);
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).showUpButton();
-        }
+
         context = getContext();
         view.findViewById(R.id.daily50mb).setOnClickListener(this);
         view.findViewById(R.id.daily500mbAuto).setOnClickListener(this);
@@ -101,11 +99,11 @@ public class GundelikMIP extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         if(v.getId() == R.id.daily50mb){
             USSDcodes s = new USSDcodes();
-            Intent intent = s.sendUssdCode(getString(R.string.UssdCodeDailyFiftyMB),getString(R.string.get),getString(R.string.DailyFiftyMbA), context);
+            Intent intent = s.sendUssdCode(getString(R.string.mipGUN50mbUSSDcode),getString(R.string.get),getString(R.string.DailyFiftyMbA), context);
             startActivity(intent);
         }
         else if(v.getId() == R.id.daily500mbAuto){
-            Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+        /*    Intent intent = new Intent(getActivity(), SendSMSTariff.class);
             Bundle b = new Bundle();
             textSMS = "Gun+";
             //Add your data to bundle
@@ -113,10 +111,13 @@ public class GundelikMIP extends Fragment implements View.OnClickListener {
             b.putString("second",textSMS);
             b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.DailyFifeHundredMB) +", " +getString(R.string.autoyeniletme) );
             intent.putExtras(b);
+            startActivity(intent);*/
+            USSDcodes s = new USSDcodes();
+            Intent intent = s.sendUssdCode(getString(R.string.mipGUN500mbUSSDcode),getString(R.string.get),getString(R.string.DailyFifeHundredMB), context);
             startActivity(intent);
         }
         else if(v.getId() == R.id.Daily500mbManual){
-            Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+         /*   Intent intent = new Intent(getActivity(), SendSMSTariff.class);
             Bundle b = new Bundle();
             //Add your data to bundle
             textSMS = "Gun";
@@ -124,6 +125,9 @@ public class GundelikMIP extends Fragment implements View.OnClickListener {
             b.putString("second",textSMS);
             b.putString("messageTittle",getString(R.string.thePriceOf) + " " + getString(R.string.DailyFifeHundredMB) + ", "+getString(R.string.OneTimeMB));
             intent.putExtras(b);
+            startActivity(intent);*/
+            USSDcodes s = new USSDcodes();
+            Intent intent = s.sendUssdCode(getString(R.string.mipGUN500mbUSSDcodeOnce),getString(R.string.get),getString(R.string.DailyFifeHundredMB),getString(R.string.OneTimeMB), context);
             startActivity(intent);
         }
 

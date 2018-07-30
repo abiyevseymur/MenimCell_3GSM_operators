@@ -72,9 +72,9 @@ public class CLIR_SOCLIR extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_clir__soclir, container, false);
-        if (((BalanceMenu)getActivity()) != null) {
+     /*   if (((BalanceMenu)getActivity()) != null) {
             ((BalanceMenu)getActivity()).showUpButton();
-        }
+        }*/
         OneDaySoclir = (Button)view. findViewById(R.id.SoclirOneD);
         OneDaySoclir.setOnClickListener(this);
         SevenDaySoclir = (Button)view.findViewById(R.id.SoclirSevenD);

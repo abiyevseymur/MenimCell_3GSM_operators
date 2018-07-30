@@ -3,8 +3,11 @@ package pack.menimcellApp.seymur.azercell2.fragments;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -12,11 +15,19 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
 
 import pack.menimcellApp.seymur.azercell2.BalanceMenu;
 import pack.menimcellApp.seymur.azercell2.ObjectClasses.USSDcodes;
 import pack.menimcellApp.seymur.azercell2.R;
+import pack.menimcellApp.seymur.azercell2.forFragments;
+
+import static pack.menimcellApp.seymur.azercell2.R.color.white;
+import static pack.menimcellApp.seymur.azercell2.fragments.Credit.getApplicationContext;
 
 
 /**
@@ -70,96 +81,233 @@ public class BalanceNew extends Fragment implements View.OnClickListener{
         }
         ftransfer = new Transfer();
         fcredit = new Credit();
+        froaming = new Roaming();
 
     }
 
     Context context;
-    ImageButton getBalanceImageBtn;
-    ImageButton refillImageBtn;
-    ImageButton getCreditImageBtn;
-    ImageButton getTransferImageBtn;
-
+    Button btnService1;
+    Button btnService2;
+    Button btnService3;
+    Button btnService4;
+    Button btnService5;
+    Button btnService6;
+    Button btnService7;
+    Button btnService8;
+    Button btnService9;
+    Button btnService10;
+    Context mContext;
     @SuppressLint("ClickableViewAccessibility")
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_balance_new, container, false);
         context = getContext();
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).hideUpButton();
-        }
         //recieve balance
-        getBalanceImageBtn = (ImageButton) view.findViewById(R.id.getBalance);
-        getBalanceImageBtn.setOnTouchListener(new View.OnTouchListener() {
+
+        // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
+        //
+        // Create Frist fragment here:
+        // In case this activity was started with special instructions from an Intent,
+        // pass the Intent's extras to the fragment as arguments
+        // Add the fragment to the 'fragment_container' FrameLayout
+        btnService1 = (Button) view.findViewById(R.id.buttonok);
+        btnService1.setOnClickListener(this);
+        btnService1.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 Log.i("IMAGE", "motion event: " + motionEvent.toString());
                 switch (motionEvent.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        getBalanceImageBtn.setImageResource(R.drawable.balance_white);
+                        btnService1.setBackgroundResource(R.drawable.shadow_azercell_services);
+                        btnService1.setPadding(0,50,0,20);
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
-                        getBalanceImageBtn.setImageResource(R.drawable.getbalance);
+                        btnService1.setBackgroundResource(R.drawable.shadow_opacity_azercell_services);
+                        btnService1.setPadding(0,50,0,20);
                         break;
                     }
                 }
                 return false;
             }
         });
-        getBalanceImageBtn.setOnClickListener(this);
-        refillImageBtn = (ImageButton) view.findViewById(R.id.refill);
-        refillImageBtn.setOnTouchListener(new View.OnTouchListener() {
+        btnService2 = (Button) view.findViewById(R.id.btnService2);
+        btnService2.setOnClickListener(this);
+        btnService2.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 Log.i("IMAGE", "motion event: " + motionEvent.toString());
                 switch (motionEvent.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        refillImageBtn.setImageResource(R.drawable.refill_white);
+                        btnService2.setBackgroundResource(R.drawable.shadow_azercell_services);
+                        btnService2.setPadding(0,50,0,20);
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
-                        refillImageBtn.setImageResource(R.drawable.gettariff);
+                        btnService2.setBackgroundResource(R.drawable.shadow_opacity_azercell_services);
+                        btnService2.setPadding(0,50,0,20);
                         break;
                     }
                 }
                 return false;
             }
-        });
-        view.findViewById(R.id.refill).setOnClickListener(this);
-        getCreditImageBtn = (ImageButton) view.findViewById(R.id.getCredit);
-        getCreditImageBtn.setOnClickListener(this);
-        getCreditImageBtn.setOnTouchListener(new View.OnTouchListener() {
+        });    btnService3 = (Button) view.findViewById(R.id.btnService3);
+        btnService3.setOnClickListener(this);
+        btnService3.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 Log.i("IMAGE", "motion event: " + motionEvent.toString());
                 switch (motionEvent.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        getCreditImageBtn.setImageResource(R.drawable.credit_white);
+                        btnService3.setBackgroundResource(R.drawable.shadow_azercell_services);
+                        btnService3.setPadding(0,50,0,20);
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
-                        getCreditImageBtn.setImageResource(R.drawable.getcredit);
+                        btnService3.setBackgroundResource(R.drawable.shadow_opacity_azercell_services);
+                        btnService3.setPadding(0,50,0,20);
                         break;
                     }
                 }
                 return false;
             }
-        });
-        getTransferImageBtn = (ImageButton)view.findViewById(R.id.getTransfer);
-        getTransferImageBtn.setOnClickListener(this);
-        getTransferImageBtn.setOnTouchListener(new View.OnTouchListener() {
+        });    btnService4 = (Button) view.findViewById(R.id.btnService4);
+        btnService4.setOnClickListener(this);
+        btnService4.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 Log.i("IMAGE", "motion event: " + motionEvent.toString());
                 switch (motionEvent.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        getTransferImageBtn.setImageResource(R.drawable.transfer_white);
+                        btnService4.setBackgroundResource(R.drawable.shadow_azercell_services);
+                        btnService4.setPadding(0,50,0,20);
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
-                        getTransferImageBtn.setImageResource(R.drawable.transfer);
+                        btnService4.setBackgroundResource(R.drawable.shadow_opacity_azercell_services);
+                        btnService4.setPadding(0,50,0,20);
+                        break;
+                    }
+                }
+                return false;
+            }
+        });    btnService5 = (Button) view.findViewById(R.id.btnService5);
+        btnService5.setOnClickListener(this);
+        btnService5.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                Log.i("IMAGE", "motion event: " + motionEvent.toString());
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        btnService5.setBackgroundResource(R.drawable.shadow_azercell_services);
+                        btnService5.setPadding(0,50,0,20);
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        btnService5.setBackgroundResource(R.drawable.shadow_opacity_azercell_services);
+                        btnService5.setPadding(0,50,0,20);
+                        break;
+                    }
+                }
+                return false;
+            }
+        });    btnService6 = (Button) view.findViewById(R.id.btnService6);
+        btnService6.setOnClickListener(this);
+        btnService6.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                Log.i("IMAGE", "motion event: " + motionEvent.toString());
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        btnService6.setBackgroundResource(R.drawable.shadow_azercell_services);
+                        btnService6.setPadding(0,50,0,20);
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        btnService6.setBackgroundResource(R.drawable.shadow_opacity_azercell_services);
+                        btnService6.setPadding(0,50,0,20);
+                        break;
+                    }
+                }
+                return false;
+            }
+        });    btnService7 = (Button) view.findViewById(R.id.btnService7);
+        btnService7.setOnClickListener(this);
+        btnService7.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                Log.i("IMAGE", "motion event: " + motionEvent.toString());
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        btnService7.setBackgroundResource(R.drawable.shadow_azercell_services);
+                        btnService7.setPadding(0,50,0,20);
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        btnService7.setBackgroundResource(R.drawable.shadow_opacity_azercell_services);
+                        btnService7.setPadding(0,50,0,20);
+                        break;
+                    }
+                }
+                return false;
+            }
+        });    btnService8 = (Button) view.findViewById(R.id.btnService8);
+        btnService8.setOnClickListener(this);
+        btnService8.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                Log.i("IMAGE", "motion event: " + motionEvent.toString());
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        btnService8.setBackgroundResource(R.drawable.shadow_azercell_services);
+                        btnService8.setPadding(0,50,0,20);
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        btnService8.setBackgroundResource(R.drawable.shadow_opacity_azercell_services);
+                        btnService8.setPadding(0,50,0,20);
+                        break;
+                    }
+                }
+                return false;
+            }
+        });    btnService9 = (Button) view.findViewById(R.id.btnService9);
+        btnService9.setOnClickListener(this);
+        btnService9.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                Log.i("IMAGE", "motion event: " + motionEvent.toString());
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        btnService9.setBackgroundResource(R.drawable.shadow_azercell_services);
+                        btnService9.setPadding(0,50,0,20);
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        btnService9.setBackgroundResource(R.drawable.shadow_opacity_azercell_services);
+                        btnService9.setPadding(0,50,0,20);
+                        break;
+                    }
+                }
+                return false;
+            }
+        });    btnService10 = (Button) view.findViewById(R.id.btnService10);
+        btnService10.setOnClickListener(this);
+        btnService10.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                Log.i("IMAGE", "motion event: " + motionEvent.toString());
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        btnService10.setBackgroundResource(R.drawable.shadow_azercell_services);
+                        btnService10.setPadding(0,50,0,20);
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        btnService10.setBackgroundResource(R.drawable.shadow_opacity_azercell_services);
+                        btnService10.setPadding(0,50,0,20);
                         break;
                     }
                 }
@@ -186,45 +334,63 @@ public class BalanceNew extends Fragment implements View.OnClickListener{
     }
     Transfer ftransfer;
     Credit fcredit;
-
+    Roaming froaming;
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.getBalance:
-                USSDcodes ussdCode = new USSDcodes();
-                Intent intentA = ussdCode.sendUssdCode(getString(R.string.balanceUSSDcode),getString(R.string.theBalanceWillSend),context);
-                startActivity(intentA);
-            break;
 
-            case  R.id.refill:
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://azercell.3dsecure.az/"));
-                if(getActivity() != null)
-                getActivity().startActivity(i);
-            break;
+             if (view.getId() == R.id.buttonok) {
+                 USSDcodes ussdCode = new USSDcodes();
+                 Intent intentA = ussdCode.sendUssdCode(getString(R.string.balanceUSSDcode),getString(R.string.theBalanceWillSend),context);
+                 startActivity(intentA);
 
-            case R.id.getCredit:
-                FragmentTransaction ft = null;
-                if (this.getFragmentManager() != null) {
-                    ft = this.getFragmentManager().beginTransaction();
-                    ft.replace(R.id.fragment_container,fcredit,"back");
-                    ft.addToBackStack("back");
-                    ft.commit();
-                    break;
-                }
+            }
+            else if(view.getId() == R.id.btnService2) {
+                 Intent i = new Intent(Intent.ACTION_VIEW);
+                 i.setData(Uri.parse("https://azercell.3dsecure.az/"));
+                 if(getActivity() != null)
+                     getActivity().startActivity(i);
+             }
+             else if(view.getId() == R.id.btnService3) {
+                 Intent intent = new Intent(getActivity(), forFragments.class);
+                 intent.putExtra("fragment","credit");
+                 startActivity(intent);
+             }
+             else if(view.getId() == R.id.btnService4) {
+                 Intent intent = new Intent(getActivity(), forFragments.class);
+                 intent.putExtra("fragment","transfer");
+                 startActivity(intent);
+             }
+             else if(view.getId() == R.id.btnService5) {
+                 Intent intent = new Intent(getActivity(), forFragments.class);
+                 intent.putExtra("fragment","roaming");
+                 startActivity(intent);
+             }
+             else if(view.getId() == R.id.btnService6) {
+                 Intent intent = new Intent(getActivity(), forFragments.class);
+                 intent.putExtra("fragment","internet");
+                 startActivity(intent);
+             }
+             else if(view.getId() == R.id.btnService7) {
+                 Intent intent = new Intent(getActivity(), forFragments.class);
+                 intent.putExtra("fragment","callforwarding");
+                 startActivity(intent);
+             }
+             else if(view.getId() == R.id.btnService8) {
+                 Intent intent = new Intent(getActivity(), forFragments.class);
+                 intent.putExtra("fragment","callbarring");
+                 startActivity(intent);
+             }
+             else if(view.getId() == R.id.btnService9) {
+                 Intent intent = new Intent(getActivity(), forFragments.class);
+                 intent.putExtra("fragment","callscreening");
+                 startActivity(intent);
+             }
+             else if(view.getId() == R.id.btnService10) {
+                 Intent intent = new Intent(getActivity(), forFragments.class);
+                 intent.putExtra("fragment","gizletcell");
+                 startActivity(intent);
+             }
 
-            case R.id.getTransfer:
-                FragmentTransaction t = null;
-                if (this.getFragmentManager() != null) {
-                    t = this.getFragmentManager().beginTransaction();
-                    t.replace(R.id.fragment_container,ftransfer );
-                    t.addToBackStack("e");
-                    t.commit();
-                    break;
-
-                }
-
-        }
 
     }
 

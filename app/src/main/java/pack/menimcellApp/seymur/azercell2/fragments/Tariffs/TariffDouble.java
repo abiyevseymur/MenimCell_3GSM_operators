@@ -1,8 +1,10 @@
 package pack.menimcellApp.seymur.azercell2.fragments.Tariffs;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import pack.menimcellApp.seymur.azercell2.BalanceMenu;
+import pack.menimcellApp.seymur.azercell2.ObjectClasses.USSDcodes;
 import pack.menimcellApp.seymur.azercell2.R;
 import pack.menimcellApp.seymur.azercell2.SendSMSTariff;
 
@@ -68,28 +71,30 @@ public class TariffDouble extends Fragment {
     // NUMBER AND SMS
     String numb = "7575";
     String textSMS;
+
     //
     Button Gencol5;
+    Context context;
     Button GencOl8;
     TextView G5price;
     TextView G8price;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          View view = inflater.inflate(R.layout.fragment_tariff_double, container, false);
-        if (((BalanceMenu)getActivity()) != null) {
-            ((BalanceMenu)getActivity()).showUpButton();
-        }
+//        if (((BalanceMenu)getActivity()) != null) {
+//            ((BalanceMenu)getActivity()).showUpButton();
+//        }
         //textTarifDes = (TextView) view.findViewById(R.id.tarifDes);
         G5price = (TextView)view.findViewById(R.id.G5tarrifsPrice);
         G8price = (TextView) view.findViewById(R.id.G8tariffsPrice) ;
-
+        context = getContext();
         Gencol5 = (Button) view.findViewById(R.id.btnG5);
         Gencol5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+               /* Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
                 textSMS = "G5";
                 b.putString("first", numb);
@@ -98,14 +103,17 @@ public class TariffDouble extends Fragment {
                         getString(R.string.tariffPriceIs) +" "+ getString(R.string.g5Price) + " "+ getString(R.string.azn ));
                 intent.putExtras(b);
 
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.g5Tarrif),getString(R.string.azercelimTarifQiymeti),getString(R.string.g5Price),getString(R.string.azn),context);
+                startActivity(intentA);
             }
         });
         GencOl8 = (Button) view.findViewById(R.id.btnG8);
         GencOl8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), SendSMSTariff.class);
+              /*  Intent intent = new Intent(getActivity(), SendSMSTariff.class);
                 Bundle b = new Bundle();
                 textSMS = "G8";
                 b.putString("first", numb);
@@ -114,7 +122,10 @@ public class TariffDouble extends Fragment {
                         getString(R.string.tariffPriceIs)+" " + getString(R.string.g8Price) +" " + getString(R.string.azn) );
                 intent.putExtras(b);
 
-                startActivity(intent);
+                startActivity(intent);*/
+                USSDcodes ussdCode = new USSDcodes();
+                Intent intentA = ussdCode.sendUssdCode(getString(R.string.g8Tarrif),getString(R.string.azercelimTarifQiymeti),getString(R.string.g8Price),getString(R.string.azn),context);
+                startActivity(intentA);
             }
         });
 

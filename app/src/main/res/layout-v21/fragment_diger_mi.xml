@@ -2,22 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.fragments.DigerMIP">
+    android:background="@color/white"
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.DigerMIP">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/limitsizMip"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -26,25 +17,32 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="25dp"
+                android:paddingTop="25dp">
 
                 <GridLayout
                     android:layout_width="290dp"
-                    android:layout_height="130dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/button">
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shadow_opacity_azercell_services">
 
                     <Button
                         android:id="@+id/unlimitedOneHour"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="10dp"
                         android:layout_row="3"
                         android:background="@drawable/buttonpink"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:text="@string/derhalQosulma"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/unlimOneHDes"
@@ -56,8 +54,8 @@
                         android:gravity="center_vertical|fill_vertical|center"
                         android:paddingTop="10dp"
                         android:text="@string/unlimOneH"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp" />
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView45"
@@ -68,27 +66,32 @@
                         android:layout_row="2"
                         android:gravity="center"
                         android:text="@string/unlimFortyQ"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
                 </GridLayout>
 
                 <GridLayout
                     android:layout_width="290dp"
-                    android:layout_height="130dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/button">
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shadow_opacity_azercell_services">
 
                     <Button
                         android:id="@+id/unlimitedThreeHour"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="10dp"
                         android:layout_row="3"
                         android:background="@drawable/buttonpink"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:text="@string/derhalQosulma"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/unlimThreeHDes"
@@ -100,8 +103,8 @@
                         android:gravity="center_vertical"
                         android:paddingTop="10dp"
                         android:text="@string/unlimThreeH"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp" />
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView46"
@@ -112,28 +115,34 @@
                         android:layout_row="2"
                         android:gravity="center"
                         android:text="@string/unlimOneAzn"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
                 </GridLayout>
 
                 <GridLayout
                     android:layout_width="290dp"
-                    android:layout_height="130dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/button"
-                    android:elevation="0dp" tools:targetApi="lollipop">
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:elevation="0dp"
+                    tools:targetApi="lollipop">
 
                     <Button
                         android:id="@+id/unlimitedNight"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="10dp"
                         android:layout_row="3"
                         android:background="@drawable/buttonpink"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:text="@string/derhalQosulma"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/unlimNightDes"
@@ -145,8 +154,8 @@
                         android:gravity="center_vertical"
                         android:paddingTop="10dp"
                         android:text="@string/unlimNight"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp" />
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView47"
@@ -157,18 +166,19 @@
                         android:layout_row="2"
                         android:gravity="center"
                         android:text="@string/unlimNintyNineAzn"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
                 </GridLayout>
 
                 <GridLayout
                     android:layout_width="290dp"
-                    android:layout_height="130dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/button"
-                    android:elevation="0dp" tools:targetApi="lollipop">
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:elevation="0dp"
+                    tools:targetApi="lollipop">
 
                     <TextView
                         android:id="@+id/UnlimWeekDes"
@@ -180,18 +190,23 @@
                         android:gravity="center_vertical"
                         android:paddingTop="10dp"
                         android:text="@string/UnlimWeekend"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp" />
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
 
                     <Button
                         android:id="@+id/unlimitedWeekend"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="10dp"
                         android:layout_row="3"
                         android:background="@drawable/buttonpink"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:text="@string/derhalQosulma"
-                        android:textSize="16sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/textView48"
@@ -202,8 +217,8 @@
                         android:layout_row="2"
                         android:gravity="center"
                         android:text="@string/unlimOneTwoAzn"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
 
                 </GridLayout>
             </LinearLayout>

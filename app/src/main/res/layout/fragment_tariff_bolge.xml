@@ -1,6 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/background_gradient"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="pack.menimcellApp.seymur.azercell2.fragments.Tariffs.tariffBolge">
@@ -27,11 +27,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="0"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="25dp"
                     android:layout_row="0"
                     android:text="@string/Umelumat"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/gray"
                     android:textSize="24sp" />
 
                 <TextView
@@ -39,9 +40,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
                     android:text="@string/TariffDesWebBolge"
                     android:textAlignment="center"
+                    android:textColor="@color/gray"
                     android:textSize="15sp" />
 
                 <LinearLayout
@@ -49,7 +50,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/whitebtn"
                     android:orientation="horizontal"
                     android:padding="5dp"
                     android:paddingEnd="10dp"
@@ -59,7 +59,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/bolgedeZeng"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
 
                     <TextView
@@ -70,7 +70,7 @@
                         android:elevation="0dp"
                         android:text="0.05"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="20sp" />
 
                     <TextView
@@ -82,7 +82,7 @@
                         android:gravity="center_vertical"
                         android:text="@string/qepik"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -91,7 +91,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/whitebtn"
                     android:orientation="horizontal"
                     android:padding="5dp"
                     android:paddingEnd="10dp"
@@ -101,7 +100,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1 SMS"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
 
                     <TextView
@@ -111,7 +110,7 @@
                         android:layout_weight="0.05"
                         android:text="0.03"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="20sp" />
 
                     <TextView
@@ -121,7 +120,7 @@
                         android:layout_marginStart="5dp"
                         android:gravity="center_vertical"
                         android:text="@string/qepik"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -130,7 +129,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/whitebtn"
                     android:orientation="horizontal"
                     android:padding="5dp"
                     android:paddingEnd="10dp"
@@ -141,7 +139,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1 MMS"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
 
                     <TextView
@@ -151,7 +149,7 @@
                         android:layout_weight="1.01"
                         android:text="0.10"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="20sp" />
 
                     <TextView
@@ -161,7 +159,7 @@
                         android:layout_marginStart="5dp"
                         android:gravity="center_vertical"
                         android:text="@string/qepik"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -171,7 +169,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/whitebtn"
                     android:orientation="horizontal"
                     android:padding="5dp"
                     android:paddingEnd="10dp"
@@ -181,7 +178,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1 MB"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
 
                     <TextView
@@ -191,7 +188,7 @@
                         android:layout_weight="0.05"
                         android:text="0.40"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="20sp" />
 
                     <TextView
@@ -201,28 +198,33 @@
                         android:layout_marginStart="5dp"
                         android:gravity="center_vertical"
                         android:text="@string/qepik"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="16sp" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/intervalBolge" />
+                    android:text="@string/intervalBolge"
+                    android:textColor="@color/gray" />
 
                 <TextView
                     android:id="@+id/thePriceofBolge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/azercelimTarifQiymeti" />
+                    android:text="@string/azercelimTarifQiymeti"
+                    android:textColor="@color/gray" />
 
                 <Button
                     android:id="@+id/btnBolge"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="25dp"
                     android:background="@drawable/buttonpink"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:text="@string/derhalQosulma" />
 
             </LinearLayout>

@@ -1,5 +1,6 @@
 package pack.menimcellApp.seymur.azercell2.fragments;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,8 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import pack.menimcellApp.seymur.azercell2.BalanceMenu;
 import pack.menimcellApp.seymur.azercell2.R;
+import pack.menimcellApp.seymur.azercell2.forFragments;
 import pack.menimcellApp.seymur.azercell2.fragments.Tariffs.Gencsim;
 import pack.menimcellApp.seymur.azercell2.fragments.Tariffs.Tarif;
 import pack.menimcellApp.seymur.azercell2.fragments.Tariffs.TarifDoubleK;
@@ -94,9 +95,9 @@ public class Xidmetler extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_xidmetler, container, false);
-        if (getActivity() != null){
-            ((BalanceMenu) getActivity()).hideUpButton();
-    }
+//        if (getActivity() != null){
+//            ((BalanceMenu) getActivity()).hideUpButton();
+//    }
         view.findViewById(R.id.tarif1).setOnClickListener(this);
         view.findViewById(R.id.tarif2).setOnClickListener(this);
         view.findViewById(R.id.tarif3).setOnClickListener(this);
@@ -125,98 +126,124 @@ public class Xidmetler extends Fragment implements View.OnClickListener {
 
     }
 
+    Fragment other;
     @Override
     public void onClick(View view) {
        if (view.getId() == R.id.tarif1) {
-           FragmentTransaction t = null;
+
+     /*      FragmentTransaction t = null;
+
            if (this.getFragmentManager() != null) {
                t = this.getFragmentManager().beginTransaction();
-               t.replace(R.id.fragment_container, ftarif);
+               t.replace(R.id.tablayout_id, ftarif);
                t.addToBackStack("e");
                t.commit();
-           }
+           }*/
+
+
+
+            Intent intent = new Intent(getActivity(), forFragments.class);
+            intent.putExtra("fragment","azercellim");
+            startActivity(intent);
 
         }
 
         else if (view.getId() == R.id.tarif2) {
-           FragmentTransaction t = null;
+           Intent intent = new Intent(getActivity(), forFragments.class);
+           intent.putExtra("fragment","gencol");
+           startActivity(intent);
+          /* FragmentTransaction t = null;
            if (this.getFragmentManager() != null) {
                t = this.getFragmentManager().beginTransaction();
                t.replace(R.id.fragment_container, ftarifdouble);
                t.addToBackStack("e");
                t.commit();
-           }
+           }*/
 
         } else if (view.getId() == R.id.tarif3){
-           FragmentTransaction t = null;
+          /* FragmentTransaction t = null;
            if (this.getFragmentManager() != null) {
                t = this.getFragmentManager().beginTransaction();
                t.replace(R.id.fragment_container, fbolge);
                t.addToBackStack("e");
                t.commit();
-           }
-
+           }*/
+           Intent intent = new Intent(getActivity(), forFragments.class);
+           intent.putExtra("fragment","bolge");
+           startActivity(intent);
         }
         else if (view.getId() == R.id.tarif4){
-           FragmentTransaction t = null;
+           /*FragmentTransaction t = null;
            if (this.getFragmentManager() != null) {
                t = this.getFragmentManager().beginTransaction();
                t.replace(R.id.fragment_container, fgencsim);
                t.addToBackStack("e");
                t.commit();
 
-           }
-
+           }*/
+           Intent intent = new Intent(getActivity(), forFragments.class);
+           intent.putExtra("fragment","gencsim");
+           startActivity(intent);
         }
         else if (view.getId() == R.id.tarif5){
-           FragmentTransaction t = null;
+    /*       FragmentTransaction t = null;
            if (this.getFragmentManager() != null) {
                t = this.getFragmentManager().beginTransaction();
                t.replace(R.id.fragment_container, ftarifdoubleK);
                t.addToBackStack("e");
                t.commit();
-           }
-
+           }*/
+           Intent intent = new Intent(getActivity(), forFragments.class);
+           intent.putExtra("fragment","kombo");
+           startActivity(intent);
        }
         else if (view.getId() == R.id.tarif6){
-           FragmentTransaction t = null;
+        /*   FragmentTransaction t = null;
            if (this.getFragmentManager() != null) {
                t = this.getFragmentManager().beginTransaction();
                t.replace(R.id.fragment_container, ftelebe);
                t.addToBackStack("e");
                t.commit();
-           }
-
+           }*/
+           Intent intent = new Intent(getActivity(), forFragments.class);
+           intent.putExtra("fragment","telebe");
+           startActivity(intent);
         }
        else if (view.getId() == R.id.mipAyAction){
-           FragmentTransaction t = null;
+          /* FragmentTransaction t = null;
            if (this.getFragmentManager() != null) {
                t = this.getFragmentManager().beginTransaction();
                t.replace(R.id.fragment_container, mipAy);
                t.addToBackStack("e");
                t.commit();
-           }
-
+           }*/
+           Intent intent = new Intent(getActivity(), forFragments.class);
+           intent.putExtra("fragment","mipAy");
+           startActivity(intent);
        }
        else if (view.getId() == R.id.mipGunAction){
-           FragmentTransaction t = null;
+          /* FragmentTransaction t = null;
            if (this.getFragmentManager() != null) {
                t = this.getFragmentManager().beginTransaction();
                t.replace(R.id.fragment_container, mipGun);
                t.addToBackStack("e");
                t.commit();
-           }
-
+           }*/
+           Intent intent = new Intent(getActivity(), forFragments.class);
+           intent.putExtra("fragment","mipGun");
+           startActivity(intent);
        }
        else if (view.getId() == R.id.mipDigerAction){
-           FragmentTransaction t = null;
+           /*FragmentTransaction t = null;
            if (this.getFragmentManager() != null) {
                t = this.getFragmentManager().beginTransaction();
                t.replace(R.id.fragment_container, mipDiger);
                t.addToBackStack("e");
                t.commit();
-           }
-
+           }*/
+           Intent intent = new Intent(getActivity(), forFragments.class);
+           intent.putExtra("fragment","mipDiger");
+           startActivity(intent);
        }
     }
 

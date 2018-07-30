@@ -1,9 +1,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background_gradient"
+    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.fragments.Tariffs.TarifDoubleK">
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.Tariffs.TarifDoubleK">
 
     <GridLayout
         android:layout_width="match_parent"
@@ -26,19 +26,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="0"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="25dp"
                     android:layout_row="0"
                     android:text="@string/Umelumat"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/gray"
                     android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/komboTarifDesWeb"
                     android:textAlignment="center"
+                    android:textColor="@color/gray"
                     android:textSize="15sp" />
 
                 <LinearLayout
@@ -54,7 +57,7 @@
                         android:gravity="center_vertical"
                         android:text="Kombo 8"
                         android:textAlignment="center"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="24sp" />
 
                     <LinearLayout
@@ -63,7 +66,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="3dp"
                         android:paddingEnd="10dp"
@@ -74,7 +76,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/paketPrice"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -85,7 +87,7 @@
                             android:layout_weight="0.05"
                             android:text="@string/k8Price"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -95,7 +97,7 @@
                             android:layout_marginStart="5dp"
                             android:gravity="center_vertical"
                             android:text="@string/qepik"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -105,7 +107,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="3dp"
                         android:paddingEnd="10dp"
@@ -116,7 +117,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/sebekeDaxilZengSayi"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -126,7 +127,7 @@
                             android:layout_weight="0.05"
                             android:text="200"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -136,7 +137,7 @@
                             android:layout_marginStart="5dp"
                             android:gravity="center_vertical"
                             android:text="@string/min"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -146,7 +147,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="5dp"
                         android:paddingEnd="10dp"
@@ -157,7 +157,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/tarifdaxilisms"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -167,7 +167,7 @@
                             android:layout_weight="0.03"
                             android:text="@string/limitsiz"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -179,7 +179,7 @@
                             android:layout_weight="0.00"
                             android:gravity="center_vertical"
                             android:text=""
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -189,7 +189,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="5dp"
                         android:paddingEnd="10dp"
@@ -201,7 +200,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/internet"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -211,7 +210,7 @@
                             android:layout_weight="1.01"
                             android:text="500"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -221,7 +220,7 @@
                             android:layout_marginStart="5dp"
                             android:gravity="center_vertical"
                             android:text="@string/mb"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="18sp" />
 
                     </LinearLayout>
@@ -232,7 +231,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="3dp"
                         android:paddingEnd="10dp"
@@ -243,7 +241,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/olkedaxili"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -253,7 +251,7 @@
                             android:layout_weight="0.05"
                             android:text="0.05"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -263,7 +261,7 @@
                             android:layout_marginStart="5dp"
                             android:gravity="center_vertical"
                             android:text="@string/qepik"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -273,7 +271,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="3dp"
                         android:paddingEnd="10dp"
@@ -284,7 +281,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/offNetSMS"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -294,7 +291,7 @@
                             android:layout_weight="0.05"
                             android:text="0.03"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -304,17 +301,21 @@
                             android:layout_marginStart="5dp"
                             android:gravity="center_vertical"
                             android:text="@string/qepik"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
                     </LinearLayout>
 
                     <Button
                         android:id="@+id/Kombo8Btn"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginTop="25dp"
                         android:layout_weight="1"
                         android:background="@drawable/buttonpink"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:text="@string/derhalQosulma" />
 
                 </LinearLayout>
@@ -334,7 +335,7 @@
                         android:gravity="center_vertical"
                         android:text="Kombo 16"
                         android:textAlignment="center"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/gray"
                         android:textSize="24sp" />
 
                     <LinearLayout
@@ -343,7 +344,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="3dp"
                         android:paddingEnd="10dp"
@@ -354,7 +354,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/paketPrice"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -365,7 +365,7 @@
                             android:layout_weight="0.05"
                             android:text="@string/k16Price"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -375,7 +375,7 @@
                             android:layout_marginStart="5dp"
                             android:gravity="center_vertical"
                             android:text="@string/qepik"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -385,7 +385,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="3dp"
                         android:paddingEnd="10dp"
@@ -396,7 +395,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/sebekeDaxilZengSayi"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -406,7 +405,7 @@
                             android:layout_weight="0.05"
                             android:text="400"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -416,7 +415,7 @@
                             android:layout_marginStart="5dp"
                             android:gravity="center_vertical"
                             android:text="@string/min"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -426,7 +425,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="5dp"
                         android:paddingEnd="10dp"
@@ -437,7 +435,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/tarifdaxilisms"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -447,7 +445,7 @@
                             android:layout_weight="0.03"
                             android:text="@string/limitsiz"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -459,7 +457,7 @@
                             android:layout_weight="0.00"
                             android:gravity="center_vertical"
                             android:text=""
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -469,7 +467,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="5dp"
                         android:paddingEnd="10dp"
@@ -481,7 +478,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/internet"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -491,7 +488,7 @@
                             android:layout_weight="1.01"
                             android:text="1500"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -501,7 +498,7 @@
                             android:layout_marginStart="5dp"
                             android:gravity="center_vertical"
                             android:text="@string/mb"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="18sp" />
 
                     </LinearLayout>
@@ -512,7 +509,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="3dp"
                         android:paddingEnd="10dp"
@@ -523,7 +519,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/olkedaxili"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -533,7 +529,7 @@
                             android:layout_weight="0.05"
                             android:text="0.05"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -543,7 +539,7 @@
                             android:layout_marginStart="5dp"
                             android:gravity="center_vertical"
                             android:text="@string/qepik"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -553,7 +549,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        android:background="@drawable/whitebtn"
                         android:orientation="horizontal"
                         android:padding="3dp"
                         android:paddingEnd="10dp"
@@ -564,7 +559,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/offNetSMS"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
 
                         <TextView
@@ -574,7 +569,7 @@
                             android:layout_weight="0.05"
                             android:text="0.03"
                             android:textAlignment="viewEnd"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="20sp" />
 
                         <TextView
@@ -584,17 +579,21 @@
                             android:layout_marginStart="5dp"
                             android:gravity="center_vertical"
                             android:text="@string/qepik"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/gray"
                             android:textSize="16sp" />
                     </LinearLayout>
 
                     <Button
                         android:id="@+id/Kombo16Btn"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginTop="25dp"
                         android:layout_weight="1"
                         android:background="@drawable/buttonpink"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:text="@string/derhalQosulma" />
 
                 </LinearLayout>
@@ -608,12 +607,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/interval1deq" />
+                        android:text="@string/interval1deq"
+                        android:textColor="@color/gray" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/CountryWideMin" />
+                        android:text="@string/CountryWideMin"
+                        android:textColor="@color/gray" />
                 </LinearLayout>
 
             </LinearLayout>

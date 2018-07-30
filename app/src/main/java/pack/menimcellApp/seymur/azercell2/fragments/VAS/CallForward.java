@@ -84,9 +84,9 @@ public class CallForward extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_call_forward, container, false);
         context = getContext();
-        if (((BalanceMenu) getActivity()) != null) {
+  /*      if (((BalanceMenu) getActivity()) != null) {
             ((BalanceMenu) getActivity()).showUpButton();
-        }
+        }*/
         CallforwardingNumber = (EditText) view.findViewById(R.id.callforwardPhoneNumb);
         callForwardingAll = (RadioButton) view.findViewById(R.id.AllCallsForwarding);
         callForwardingBusy = (RadioButton) view.findViewById(R.id.callforwardingBusy);

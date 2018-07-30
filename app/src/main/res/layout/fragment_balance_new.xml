@@ -1,148 +1,187 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/frameLayoutCredit"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
+    android:orientation="horizontal"
     android:layout_height="match_parent"
-    tools:context="com.menimcellApp.seymur.azercell2.pack.menimcellApp.seymur.azercell2.fragments.BalanceNew">
+    android:background="@color/white"
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.BalanceNew">
 
-    <RelativeLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:gravity="center">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/getCredit"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/getBalanceBtn"
-            android:background="@drawable/balance_button"
-            android:paddingBottom="40dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
-            android:paddingTop="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:srcCompat="@drawable/getcredit" />
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
 
-        <Button
-            android:id="@+id/getBalanceBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignEnd="@+id/getCredit"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/getCredit"
-            android:layout_below="@+id/getBalance"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/balance_button"
-            android:text="@string/getbalance"
-            android:textColor="@android:color/black"
-            android:textSize="12sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/getTransfer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/refill"
-            android:layout_alignStart="@+id/refill"
-            android:layout_below="@+id/refillBtn"
-            android:background="@drawable/balance_button"
-            android:paddingBottom="40dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
-            android:paddingTop="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:srcCompat="@drawable/transfer" />
+                <Button
+                    android:id="@+id/buttonok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
 
-        <Button
-            android:id="@+id/refillBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignLeft="@+id/getTransfer"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignStart="@+id/getTransfer"
-            android:layout_below="@+id/refill"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/balance_button"
-            android:text="@string/refillOnline"
-            android:textColor="@android:color/black"
-            android:textSize="12sp" />
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:drawableTop="@drawable/getbalance"
+                    android:paddingTop="25dp"
+                    android:text="@string/getbalance"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
 
-        <ImageButton
-            android:id="@+id/refill"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/balance_button"
-            android:paddingBottom="40dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
-            android:paddingTop="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.502"
-            app:srcCompat="@drawable/gettariff" />
 
-        <Button
-            android:id="@+id/getCreditBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignEnd="@+id/getCredit"
-            android:layout_alignLeft="@+id/getCredit"
-            android:layout_alignRight="@+id/getCredit"
-            android:layout_alignStart="@+id/getCredit"
-            android:layout_below="@+id/getCredit"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/balance_button"
-            android:text="@string/credit"
-            android:textColor="@android:color/black"
-            android:textSize="12sp" />
+                <Button
+                    android:id="@+id/btnService2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:drawableTop="@drawable/refillonline"
+                    android:paddingTop="25dp"
+                    android:text="@string/refillOnline"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/getBalance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="@drawable/balance_button"
-            android:paddingBottom="40dp"
-            android:paddingLeft="50dp"
-            android:paddingRight="50dp"
-            android:paddingTop="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/getbalance"
-            tools:ignore="UnknownId" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/TransferBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignEnd="@+id/getTransfer"
-            android:layout_alignLeft="@+id/getTransfer"
-            android:layout_alignRight="@+id/getTransfer"
-            android:layout_alignStart="@+id/getTransfer"
-            android:layout_below="@+id/getTransfer"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/balance_button"
-            android:text="@string/transfer"
-            android:textColor="@android:color/black"
-            android:textSize="12sp" />
+                <Button
+                    android:id="@+id/btnService3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:drawableTop="@drawable/credit"
+                    android:paddingTop="25dp"
+                    android:text="@string/credit"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
 
-    </RelativeLayout>
+                <Button
+                    android:id="@+id/btnService4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:drawableTop="@drawable/transfer"
+                    android:paddingTop="25dp"
+                    android:text="@string/transfer"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
-</FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnService5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:drawableTop="@drawable/roaming"
+                    android:paddingTop="25dp"
+                    android:text="@string/Roaming"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnService6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:drawableTop="@drawable/internet"
+                    android:paddingTop="25dp"
+                    android:text="@string/internet"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnService7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:drawableTop="@drawable/callforwarding"
+                    android:paddingTop="25dp"
+                    android:text="@string/callForwarding"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnService8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:drawableTop="@drawable/barring"
+                    android:paddingTop="25dp"
+                    android:text="@string/CallBarring"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnService9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:drawableTop="@drawable/screening"
+                    android:paddingTop="25dp"
+                    android:text="@string/callScreening"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnService10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_azercell_services"
+                    android:drawableTop="@drawable/gizletcell"
+                    android:paddingTop="25dp"
+                    android:text="@string/gizlicellGizletcell"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
