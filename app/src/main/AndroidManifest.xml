@@ -58,7 +58,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".WebChatLogin">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -89,10 +88,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".map.MapsActivity"
-            android:label="@string/title_activity_balance_menu" />
-
         <receiver
             android:name="com.mixpanel.android.mpmetrics.GCMReceiver"
             android:permission="com.google.android.c2dm.permission.SEND">
@@ -110,7 +105,9 @@
 
         <!-- 5231f67325196afa0ebaf041b8ba95cb67756817 -->
         <activity android:name=".MenimAzercell" />
-        <activity android:name=".forFragments"></activity>
+        <activity android:name=".forFragments" />
+        <activity android:name=".MenimBakcell" />
+        <activity android:name=".MenimNar"></activity>
     </application>
 
 </manifest>

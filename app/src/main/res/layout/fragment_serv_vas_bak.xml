@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutCredit"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.ServVasBak">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+
+                    android:background="@drawable/shadow_opacity_bakcell_services"
+                    android:drawableTop="@drawable/getbalance_b"
+                    android:paddingTop="25dp"
+                    android:text="@string/getbalance"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+
+                <Button
+                    android:id="@+id/btnService2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_bakcell_services"
+                    android:drawableTop="@drawable/refillonline_b"
+                    android:paddingTop="25dp"
+                    android:text="@string/refillOnline"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnService3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_bakcell_services"
+                    android:drawableTop="@drawable/credit_b"
+                    android:paddingTop="25dp"
+                    android:text="@string/credit"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnService4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_bakcell_services"
+                    android:drawableTop="@drawable/transfer_b"
+                    android:paddingTop="25dp"
+                    android:text="@string/transfer"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnService5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_bakcell_services"
+                    android:drawableTop="@drawable/roaming_b"
+                    android:paddingTop="25dp"
+                    android:text="@string/Roaming"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnService6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_bakcell_services"
+                    android:drawableTop="@drawable/internet_b"
+                    android:paddingTop="25dp"
+                    android:text="@string/internet"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnService7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_bakcell_services"
+                    android:drawableTop="@drawable/callforwarding_b"
+                    android:paddingTop="25dp"
+                    android:text="@string/callForwarding"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnService8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_bakcell_services"
+                    android:drawableTop="@drawable/barring_b"
+                    android:paddingTop="25dp"
+                    android:text="@string/CallBarring"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnService9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_bakcell_services"
+                    android:drawableTop="@drawable/screening_b"
+                    android:paddingTop="25dp"
+                    android:text="@string/callScreening"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnService10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/shadow_opacity_bakcell_services"
+                    android:drawableTop="@drawable/gizletcell_b"
+                    android:paddingTop="25dp"
+                    android:text="@string/gizlicellGizletcell"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

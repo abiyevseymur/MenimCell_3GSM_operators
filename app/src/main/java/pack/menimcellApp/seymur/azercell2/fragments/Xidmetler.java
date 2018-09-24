@@ -87,6 +87,7 @@ public class Xidmetler extends Fragment implements View.OnClickListener {
         fgencsim = new Gencsim();
         fbolge = new tariffBolge();
         ftelebe = new TariffTelebe();
+
     }
 
 //    private ShowNextFragment showNextFragment;
@@ -108,6 +109,7 @@ public class Xidmetler extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.mipGunAction).setOnClickListener(this);
         view.findViewById(R.id.mipDigerAction).setOnClickListener(this);
         return view;
+ 
     }
 
     // TODO: Rename method, update argument and hook method into UI event

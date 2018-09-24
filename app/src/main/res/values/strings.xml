@@ -11,7 +11,7 @@
     <string name="title_activity_balance_menu">MenimCell</string>
     <string name="title_home">Home</string>
     <string name="title_Xercler">Services</string>
-    <string name="title_Xidmetler">Store</string>
+    <string name="title_Xidmetler">Services</string>
     <string name="title_Servis">Contacts</string>
     <string name="title_Ayar">More</string>
     <string name="balans_artirma">Refill</string>
@@ -43,7 +43,7 @@
     <string name="Roaming">Roaming</string>
 
 
-    <!--USSSD CODES-->
+    <!--USSSD CODES Azercell-->
     <string name="balanceUSSDcode">*111*1*7</string>
     <string name="mip50mbUSSDcode">*100*50</string>
     <string name="mip500mbUSSDcode">*100*500</string>
@@ -71,8 +71,8 @@
     <string name="g8Tarrif">*750*4*2</string>
     <string name="k8Tarrif">*750*4*8</string>
     <string name="k16Tarrif">*750*4*16</string>
-
-
+    <!--USSSD CODES Azercell-->
+    <string name="balanceUSSDcodeB">*100</string>
 
     <!-- -->
     <string name="Umelumat">INFORMATION</string>
@@ -184,9 +184,6 @@
     <string name="checkMyDebts"><![CDATA[<u>Check my Debts</u>]]></string>
 
 
-
-
-
     <string name="attention">Attention!</string>
     <string name="learnMyDebts">Learn My Debts for</string>
     <string name="accepted">Accepted</string>
@@ -287,26 +284,28 @@
     <string name="theNearestOfficeIs">The nearest Office is</string>
     <string name="distance">Distance:</string>
     <string name="notReady">Not Ready..</string>
-    <!--Elaveler by Murad-->
+
     <string name="getbalance">Get Balance</string>
     <string name="refillOnline">Refill Online</string>
     <string name="transferDesc">Azercell subscribers can share their balance with any SimSim subscriber.</string>
     <string name="didNotGetSettings">Did Not Get the Settings?</string>
-    <!--Elaveler by Murad-->
+
 
     <!--DO not Touch!!!-->
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <!--<string name="banner_ad_unit_id">ca-app-pub-5793905217254232/9615117839</string>-->
+    <!--DO not Touch!!!-->
+
+
+    <string name="loading">Coming Soon… Follow us on</string>
+    <string name="barringCodePlz">Please, Enter Your Barring code</string>
+    <string name="PrivacyPolicy">Privacy Policy</string>
+    <string name="title_activity_main_menim_cell">MainMenimCell</string>
     <string name="getautomatiInternetSettings">Get Automatic Internet Settings</string>
     <string name="amount">The amount</string>
     <string name="willbesent">fee, will be send to</string>
     <string name="numb">Number</string>
-    <string name="barringCodePlz">Please, Enter Your Barring code</string>
-    <string name="PrivacyPolicy">Privacy Policy</string>
-    <string name="title_activity_main_menim_cell">MainMenimCell</string>
-    <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="title_activity_menim_azercellim">MenimAzercellim</string>
-
-    <!--DO not Touch!!!-->
-
+    <string name="facebook"><a href="https://bit.ly/2G5Xana/">FACEBOOK</a></string>
+    <string name="instagram">INSTAGRAM</string>
+    <string name="and">and</string>
+    <string name="instalink">və</string>
 </resources>

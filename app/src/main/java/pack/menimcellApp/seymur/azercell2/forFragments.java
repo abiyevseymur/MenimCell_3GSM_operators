@@ -8,7 +8,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import pack.menimcellApp.seymur.azercell2.fragments.Credit;
 import pack.menimcellApp.seymur.azercell2.fragments.DigerMIP;
@@ -28,10 +30,13 @@ import pack.menimcellApp.seymur.azercell2.fragments.VAS.CallForward;
 import pack.menimcellApp.seymur.azercell2.fragments.VAS.CallScreening;
 import pack.menimcellApp.seymur.azercell2.fragments.ayliqInternet;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 public class forFragments extends AppCompatActivity {
     Bundle extras;
     String serviceName;
     Fragment openFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -165,4 +170,5 @@ public class forFragments extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

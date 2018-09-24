@@ -12,7 +12,7 @@
     <string name="title_activity_balance_menu">MenimCell</string>
     <string name="title_home">Главная</string>
     <string name="title_Xercler">Сервисы</string>
-    <string name="title_Xidmetler">магазин</string>
+    <string name="title_Xidmetler">Сервисы</string>
     <string name="title_Servis">контакты</string>
     <string name="title_Ayar">еще</string>
     <string name="balans_artirma">пополнить</string>
@@ -264,6 +264,8 @@
     <string name="didNotGetSettings">Не получили настройки?</string>
     <!--Elaveler by Murad-->
 
-    <string name="barringCodePlz">Please, Enter Your Barring code</string>
+    <string name="barringCodePlz">Введите свой код</string>
+    <string name="loading">Уже очень скоро!=) Следите за нами на</string>
+    <string name="and">и</string>
 
 </resources>

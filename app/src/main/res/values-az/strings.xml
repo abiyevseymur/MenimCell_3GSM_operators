@@ -9,7 +9,7 @@
     <string name="title_activity_balance_menu">Mənimcell</string>
     <string name="title_home">Əsas</string>
     <string name="title_Xercler">Xidmətlər</string>
-    <string name="title_Xidmetler">Store</string>
+    <string name="title_Xidmetler">Xidmətlər</string>
     <string name="title_Servis">Kontaktlar</string>
     <string name="title_Ayar">Ətrafli</string>
     <string name="balans_artirma">Artır</string>
@@ -239,6 +239,10 @@
     <string name="distance">Məsafə:</string>
     <string name="notReady">Hazır deyil..</string>
     <string name="barringCodePlz">Please, Enter Your Barring code</string>
+    <string name="loading">Tezliklə… Hələki Bizi İzləyin</string>
+    <string name="and">və</string>
+
+
 
 
 </resources>

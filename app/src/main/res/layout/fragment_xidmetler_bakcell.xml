@@ -1,0 +1,506 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fxidmetlerFrameLayput"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.XidmetlerBakcell">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/tarifler"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/scrollViewBakTariff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:verticalScrollbarPosition="right">
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="40dp"
+                        android:background="@drawable/shadow_opacity_bakcell"
+                        android:paddingBottom="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="30dp">
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_row="0"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/azercellim"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="1"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/sebeke_daxil"
+                            android:textAlignment="center" />
+
+                        <Button
+                            android:id="@+id/tarif1"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/button_bakcell"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shadow_opacity_bakcell"
+                        android:paddingBottom="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="30dp">
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/gencol"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="42dp"
+                            android:layout_column="0"
+                            android:layout_row="1"
+                            android:paddingTop="5dp"
+                            android:text="@string/gencolDes"
+                            android:textAlignment="center" />
+
+                        <Button
+                            android:id="@+id/tarif2"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/button_bakcell"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shadow_opacity_bakcell"
+                        android:paddingBottom="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="30dp">
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/bolge"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="1"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/bolgeDes"
+                            android:textAlignment="center" />
+
+                        <Button
+                            android:id="@+id/tarif3"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/button_bakcell"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shadow_opacity_bakcell"
+                        android:paddingBottom="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="30dp">
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/gencsim"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="1"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/gencsimDes"
+                            android:textAlignment="center" />
+
+                        <Button
+                            android:id="@+id/tarif4"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/button_bakcell"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shadow_opacity_bakcell"
+                        android:paddingBottom="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="30dp">
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/kombo"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="1"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/komboDes"
+                            android:textAlignment="center" />
+
+                        <Button
+                            android:id="@+id/tarif5"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/button_bakcell"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shadow_opacity_bakcell"
+                        android:paddingBottom="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="30dp">
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/telebe"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_row="1"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/telebeDes"
+                            android:textAlignment="center" />
+
+                        <Button
+                            android:id="@+id/tarif6"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/button_bakcell"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                    </GridLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/MIP"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gridLayout2"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="horizontal">
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="40dp"
+                        android:background="@drawable/shadow_opacity_bakcell"
+                        android:padding="30dp">
+
+                        <Button
+                            android:id="@+id/mipAyAction"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/button_bakcell"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+
+                            android:layout_row="1"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/ayliqMip"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shadow_opacity_bakcell"
+                        android:padding="30dp">
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="10dp"
+
+                            android:paddingStart="10dp"
+                            android:text="@string/gundelikMip"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+
+                        <Button
+                            android:id="@+id/mipGunAction"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/button_bakcell"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/shadow_opacity_bakcell"
+                        android:padding="30dp">
+
+                        <TextView
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:text="@string/limitsizMip"
+                            android:textAlignment="center"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/mipDigerAction"
+                            android:layout_width="180dp"
+                            android:layout_height="38dp"
+                            android:layout_column="0"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_row="3"
+                            android:background="@drawable/button_bakcell"
+                            android:fadeScrollbars="false"
+                            android:text="@string/etrafli"
+                            android:textAlignment="center"
+                            android:textColor="@color/white" />
+
+                    </GridLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

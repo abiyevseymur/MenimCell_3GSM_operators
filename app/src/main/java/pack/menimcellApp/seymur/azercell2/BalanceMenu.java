@@ -4,8 +4,10 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 
@@ -13,6 +15,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
@@ -23,17 +26,16 @@ import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Date;
 
 import pack.menimcellApp.seymur.azercell2.fragments.BalanceNew;
-import pack.menimcellApp.seymur.azercell2.fragments.ServicesVAS;
 import pack.menimcellApp.seymur.azercell2.fragments.Xidmetler;
 
 
 public class BalanceMenu extends AppCompatActivity implements View.OnClickListener {
     final String TAG = "cycle";
-    ServicesVAS fxercler;
     Xidmetler fxidmetler;
     BalanceNew fbalance;
     ImageView logoSettings;
@@ -108,8 +110,12 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
     BalanceNew firstFragment;
     String NetworkCarrierName = "None";
     static String phoneNumber;
-    private Context mContext;
+    Context mContext;
     Button AzercellBtn;
+    Button BakcellBtn;
+    Button NarBtn;
+    TextView Privacy;
+    private InterstitialAd mInterstitialAd;
     private AdView mAdView;
     @SuppressLint("HardwareIds")
     @TargetApi(Build.VERSION_CODES.M)
@@ -120,15 +126,30 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
         mContext = getApplicationContext();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         //Google ADS
-        MobileAds.initialize(mContext, "ca-app-pub-3940256099942544/6300978111");
+        MobileAds.initialize(mContext, "ca-app-pub-5793905217254232~2047872944");
 
         mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("34807B4D4FB6E3663C310659FF76B41D")
-                .build();
+        AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
+        // code for testing "ca-app-pub-3940256099942544/6300978111"
+        //ads Full Screen
+    /*    mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-5793905217254232/7823098985");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+
+        });*/
+
+        //test add
+        // mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
         //
+
         // Create Frist fragment here:
         // In case this activity was started with special instructions from an Intent,
         // pass the Intent's extras to the fragment as arguments
@@ -136,9 +157,16 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
 
         AzercellBtn = (Button)findViewById(R.id.azercelbtn);
         AzercellBtn.setOnClickListener(this);
+        BakcellBtn = (Button)findViewById(R.id.bakcellbtn);
+        BakcellBtn.setOnClickListener(this);
+        NarBtn = (Button)findViewById(R.id.narbtn);
+        NarBtn.setOnClickListener(this);
+        Privacy = (TextView)findViewById(R.id.PrivacyP);
+        Privacy.setOnClickListener(this);
+
         fxidmetler = new Xidmetler();
         fbalance = new BalanceNew();
-        fxercler = new ServicesVAS();
+
         mContext = getApplicationContext();
 //        mixpanel.getPeople().identify(trackingDistinctId); //this is the distinct_id
 //        // that will be used for people analytics. You must set this explicitly in order
@@ -302,6 +330,25 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
         if (v.getId() == R.id.azercelbtn){
             Intent intent = new Intent(this, MenimAzercell.class);
             startActivity(intent);
+            // for full screen ads
+              /*  if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }*/
+        }
+        if (v.getId() == R.id.bakcellbtn){
+            Intent intent = new Intent(this, MenimNar.class);
+            startActivity(intent);
+        }
+        if (v.getId() == R.id.narbtn){
+            Intent intent = new Intent(this, MenimNar.class);
+            startActivity(intent);
+        }
+        if(v.getId() == R.id.PrivacyP){
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse("http://menimcell.com/Privacy-Policy/"));
+            startActivity(i);
         }
     }
 }

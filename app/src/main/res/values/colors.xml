@@ -3,6 +3,9 @@
     <color name="colorPrimary">#64267C</color>
     <color name="colorPrimaryOpacity80">#835196</color>
     <color name="colorBakcell">#CE1831</color>
+    <color name="colorBakcellTab">#D02B42</color>
+    <color name="colorBakcellBtn">#D95567</color>
+
     <color name="colorBakcellAccess">#D22E45</color>
     <color name="colorNar">#B51144</color>
     <color name="colorNarAccess">#BC2856</color>

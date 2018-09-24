@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
+        ads:adUnitId="ca-app-pub-5793905217254232/9615117839"
         tools:ignore="ObsoleteLayoutParam">
     </com.google.android.gms.ads.AdView>
 
@@ -44,10 +44,10 @@
         android:textSize="24sp"
         ads:layout_constraintBottom_toBottomOf="parent"
         ads:layout_constraintEnd_toEndOf="parent"
-        ads:layout_constraintHorizontal_bias="0.498"
+        ads:layout_constraintHorizontal_bias="0.496"
         ads:layout_constraintStart_toStartOf="parent"
         ads:layout_constraintTop_toBottomOf="@+id/adView"
-        ads:layout_constraintVertical_bias="0.694"
+        ads:layout_constraintVertical_bias="0.656"
         tools:text="Nar" />
 
     <Button
@@ -66,5 +66,20 @@
         ads:layout_constraintTop_toBottomOf="@+id/adView"
         ads:layout_constraintVertical_bias="0.922"
         tools:text="Bakcell" />
+
+    <TextView
+        android:id="@+id/PrivacyP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/PrivacyPolicy"
+        android:textSize="16sp"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintHorizontal_bias="0.498"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/narbtn"
+        ads:layout_constraintVertical_bias="0.851" />
 
 </android.support.constraint.ConstraintLayout>

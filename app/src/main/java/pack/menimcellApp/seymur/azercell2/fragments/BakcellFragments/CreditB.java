@@ -1,31 +1,24 @@
-package pack.menimcellApp.seymur.azercell2.fragments;
+package pack.menimcellApp.seymur.azercell2.fragments.BakcellFragments;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
-import pack.menimcellApp.seymur.azercell2.BalanceMenu;
 import pack.menimcellApp.seymur.azercell2.R;
-import pack.menimcellApp.seymur.azercell2.fragments.VAS.CLIR_SOCLIR;
-import pack.menimcellApp.seymur.azercell2.fragments.VAS.CallBarring;
-import pack.menimcellApp.seymur.azercell2.fragments.VAS.CallForward;
-import pack.menimcellApp.seymur.azercell2.fragments.VAS.CallScreening;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ServicesVAS.OnFragmentInteractionListener} interface
+ * {@link CreditB.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ServicesVAS#newInstance} factory method to
+ * Use the {@link CreditB#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ServicesVAS extends Fragment {
+public class CreditB extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -37,7 +30,7 @@ public class ServicesVAS extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ServicesVAS() {
+    public CreditB() {
         // Required empty public constructor
     }
 
@@ -47,11 +40,11 @@ public class ServicesVAS extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ServicesVAS.
+     * @return A new instance of fragment CreditB.
      */
     // TODO: Rename and change types and number of parameters
-    public static ServicesVAS newInstance(String param1, String param2) {
-        ServicesVAS fragment = new ServicesVAS();
+    public static CreditB newInstance(String param1, String param2) {
+        CreditB fragment = new CreditB();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,20 +59,14 @@ public class ServicesVAS extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        fCallForwarding = new CallForward();
-        fCallbarring = new CallBarring();
-        fCallScreening = new CallScreening();
-        fClirSoclir = new CLIR_SOCLIR();
     }
-    CallForward fCallForwarding;
-    ImageButton CallForwarding;
-    CallBarring fCallbarring;
-    ImageButton Callbarring;
-    CallScreening fCallScreening;
-    ImageButton CallScreening;
-    CLIR_SOCLIR fClirSoclir;
-    ImageButton ClirSoclir;
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_credit_b, container, false);
+    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -88,14 +75,22 @@ public class ServicesVAS extends Fragment {
         }
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
 
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
-
-
 
     /**
      * This interface must be implemented by activities that contain this
