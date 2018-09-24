@@ -177,6 +177,7 @@
     <string name="creditOneFortyAzn">1.40 AZN</string>
     <string name="creditOneEightyAzn">1.80 AZN</string>
     <string name="creditTwoAzn">2 AZN</string>
+
     <string name="creditOneAznFee">+0.20 AZN</string>
     <string name="creditOneFortyAznFee">+0.28 AZN</string>
     <string name="creditOneEightyAznFee">+0.36 AZN</string>
@@ -308,4 +309,24 @@
     <string name="instagram">INSTAGRAM</string>
     <string name="and">and</string>
     <string name="instalink">və</string>
+
+
+    <!---Bakcell!-->
+    <string name="cinCreditTittle">CinKredit</string>
+    <string name="cinCreditDes">With a new CINKredit service, you can stay in touch longer. Service application fee 0.05 Azn</string>
+    <string name="klassCreditDes">New KlassKredit service from Bakcell, offer you to stay in touch longer. Every Klass subscriber can get KlassKredit up to 7 AZN.</string>
+    <string name="klassCreditTittle">KlassKredit</string>
+    <string name="creditFiveAzn">5 AZN</string>
+    <string name="crediFiveAznFee">+1.00 AZN</string>
+    <string name="checkMyCreditBalance">Check my credit balance</string>
+
+    <!---Bakcel0 USSD codesl!-->
+    <string name="ussdCodeTwoAznCin">*250*2</string>
+    <string name="ussdCodeOneAznKlass">*250*1</string>
+    <string name="ussdCodeTwoAznKlass">*250*2</string>
+    <string name="ussdCodeFiveAznKlass">*250*5</string>
+    <string name="ussdCodeCheckCinCredit">*150*1</string>
+    <string name="ussdCodeCheckKlassCredit">*250*0</string>
+
+
 </resources>

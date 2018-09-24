@@ -1,14 +1,25 @@
 package pack.menimcellApp.seymur.azercell2.fragments.BakcellFragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import pack.menimcellApp.seymur.azercell2.ObjectClasses.USSDcodes;
 import pack.menimcellApp.seymur.azercell2.R;
+
+import static pack.menimcellApp.seymur.azercell2.R.color.colorBakcellAccess;
+import static pack.menimcellApp.seymur.azercell2.R.color.pinkAcces;
+import static pack.menimcellApp.seymur.azercell2.R.color.white;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,7 +29,7 @@ import pack.menimcellApp.seymur.azercell2.R;
  * Use the {@link CreditB#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CreditB extends Fragment {
+public class CreditB extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -60,12 +71,67 @@ public class CreditB extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    private Context context;
+    TextView checkDebtsC;
+    TextView checkDebtsK;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_credit_b, container, false);
+        View view = inflater.inflate(R.layout.fragment_credit_b, container, false);
+        checkDebtsC = view.findViewById(R.id.checkDebtsCin);
+        checkDebtsC.setText(Html.fromHtml(getString(R.string.checkMyDebts)));
+        checkDebtsK = view.findViewById(R.id.checkDebtsKlass);
+        checkDebtsK.setText(Html.fromHtml(getString(R.string.checkMyDebts)));
+
+        view.findViewById(R.id.CinCreditOneAzn).setOnClickListener(this);
+        view.findViewById(R.id.CinCreditwoAznBtn).setOnClickListener(this);
+        view.findViewById(R.id.checkDebtsCin).setOnClickListener(this);
+        view.findViewById(R.id.klassCreditOneAzn).setOnClickListener(this);
+        view.findViewById(R.id.klassCrediFiveAznBtn).setOnClickListener(this);
+        view.findViewById(R.id.checkDebtsCin).setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        checkDebtsC.setTextColor(getResources().getColor(white));
+                        checkDebtsC.setBackgroundColor(getResources().getColor(colorBakcellAccess));
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        checkDebtsC.setTextColor(getResources().getColor(colorBakcellAccess));
+                        checkDebtsC.setBackgroundColor(getResources().getColor(white));
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+        view.findViewById(R.id.checkDebtsKlass).setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        checkDebtsK.setTextColor(getResources().getColor(white));
+                        checkDebtsK.setBackgroundColor(getResources().getColor(colorBakcellAccess));
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        checkDebtsK.setTextColor(getResources().getColor(colorBakcellAccess));
+                        checkDebtsK.setBackgroundColor(getResources().getColor(white));
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+        view.findViewById(R.id.checkDebtsCin).setOnClickListener(this);
+        view.findViewById(R.id.checkDebtsKlass).setOnClickListener(this);
+
+
+        return view;
+        //REMEMBER 5% fee for ussd in cinCREDIT
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -90,6 +156,55 @@ public class CreditB extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case (R.id.CinCreditOneAzn):
+
+                USSDcodes ussdA = new USSDcodes();
+                Intent intent = ussdA.sendUssdCode(getString(R.string.ussdCodeOneAzn),getString(R.string.get),getString(R.string.creditOneAzn),getString(R.string.credit),
+                        getString(R.string.creditOneAznFee),getString(R.string.fee),context);
+                startActivity(intent);
+                break;
+
+            case (R.id.CinCreditwoAznBtn):
+                USSDcodes ussd = new USSDcodes();
+                Intent intentA = ussd.sendUssdCode(getString(R.string.ussdCodeTwoAznCin),getString(R.string.get),getString(R.string.creditTwoAzn),getString(R.string.credit),
+                        getString(R.string.creditTwoAznFee),getString(R.string.fee),context);
+                startActivity(intentA);
+                break;
+            case (R.id.klassCreditOneAzn):
+                USSDcodes ussdB = new USSDcodes();
+                Intent intentB = ussdB.sendUssdCode(getString(R.string.ussdCodeOneAznKlass),getString(R.string.get),getString(R.string.creditOneAzn),getString(R.string.credit),
+                        getString(R.string.creditOneAznFee),getString(R.string.fee),context);
+                startActivity(intentB);
+                break;
+            case (R.id.KlassCreditwoAznBtn):
+                USSDcodes ussdF = new USSDcodes();
+                Intent intentF = ussdF.sendUssdCode(getString(R.string.ussdCodeTwoAznKlass),getString(R.string.get),getString(R.string.creditTwoAzn),getString(R.string.credit),
+                        getString(R.string.creditTwoAznFee),getString(R.string.fee),context);
+                startActivity(intentF);
+                break;
+            case (R.id.klassCrediFiveAznBtn):
+                USSDcodes ussdC = new USSDcodes();
+                Intent intentC = ussdC.sendUssdCode(getString(R.string.ussdCodeFiveAznKlass),getString(R.string.get),getString(R.string.creditFiveAzn),getString(R.string.credit),
+                        getString(R.string.crediFiveAznFee),getString(R.string.fee),context);
+                startActivity(intentC);
+                break;
+            case (R.id.checkDebtsCin):
+                USSDcodes ussdE = new USSDcodes();
+                Intent intentE = ussdE.sendUssdCode(getString(R.string.ussdCodeCheckCinCredit),getString(R.string.checkMyCreditBalance),context);
+                startActivity(intentE);
+                break;
+            case (R.id.checkDebtsKlass):
+                USSDcodes ussdD = new USSDcodes();
+                Intent intentD = ussdD.sendUssdCode(getString(R.string.ussdCodeCheckKlassCredit),getString(R.string.checkMyCreditBalance),context);
+                startActivity(intentD);
+                break;
+
+        }
     }
 
     /**

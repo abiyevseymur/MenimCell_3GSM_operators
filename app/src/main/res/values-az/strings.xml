@@ -204,7 +204,7 @@
     <string name="ClirStatus">CLIR Status</string>
     <string name="CantFindNearestWay">Ən yaxın yol tapmaq olmur!</string>
     <!-- 19.03.2018 -->
-    ﻿<string name="unlimOneH">Limitsiz saat paketləri</string>
+    <string name="unlimOneH">Limitsiz saat paketləri</string>
     <string name="unlimThreeH">Limitsiz 3 saat</string>
     <string name="unlimNight">Limitsiz gecə paketi</string>
     <string name="UnlimWeekend">Limitsiz heftəsonu paketi</string>
@@ -243,6 +243,10 @@
     <string name="and">və</string>
 
 
-
-
+    <!---Bakcell!-->
+    <string name="cinCreditTittle">CinKredit</string>
+    <string name="cinCreditDes">İndi yeni CINKredit xidməti ilə Siz daha çox ünsiyyətdə ola bilərsiniz. Sifariş haqqı 0.05 Azn</string>
+    <string name="klassCreditDes">Bakcell-in KlassKredit xidməti sizə daha çox ünsiyyət saxlamaq imkanı təqdim edir. Hər bir Klass abunəçisi 7 AZN-ə qədər KlassKredit əldə edə bilər.</string>
+    <string name="klassCreditTittle">KlassKredit</string>
+    <string name="checkMyCreditBalance">Kredit balansını yoxlamaq</string>
 </resources>

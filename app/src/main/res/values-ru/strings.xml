@@ -268,4 +268,11 @@
     <string name="loading">Уже очень скоро!=) Следите за нами на</string>
     <string name="and">и</string>
 
+    <!---Bakcell!-->
+    <string name="cinCreditTittle">CinKredit</string>
+    <string name="cinCreditDes">С новой услугой CINKredit Вы можете быть на связи еще дольше. Стоимость запроса  0.05 Азн.</string>
+    <string name="klassCreditDes">Это новая услуга от Bakcell, которая предлагает вам общаться еще дольше. Каждый абонент Klass может взять в KlassKredit до 7 AZN.</string>
+    <string name="klassCreditTittle">KlassKredit</string>
+    <string name="checkMyCreditBalance">Проверить свой кредитный баланс</string>
+
 </resources>
