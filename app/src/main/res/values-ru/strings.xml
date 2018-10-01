@@ -274,5 +274,9 @@
     <string name="klassCreditDes">Это новая услуга от Bakcell, которая предлагает вам общаться еще дольше. Каждый абонент Klass может взять в KlassKredit до 7 AZN.</string>
     <string name="klassCreditTittle">KlassKredit</string>
     <string name="checkMyCreditBalance">Проверить свой кредитный баланс</string>
+    <string name="moneyTransfer">Перевод денег</string>
+    <string name="transferDescB">Вы всегда можете пополнить счет Ваших близких с помощью карт оплат.</string>
+    <string name="switchAmount">Выберите сумму</string>
+    <string name="numb">Номер</string>
 
 </resources>

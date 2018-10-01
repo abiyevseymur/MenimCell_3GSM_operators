@@ -249,4 +249,8 @@
     <string name="klassCreditDes">Bakcell-in KlassKredit xidməti sizə daha çox ünsiyyət saxlamaq imkanı təqdim edir. Hər bir Klass abunəçisi 7 AZN-ə qədər KlassKredit əldə edə bilər.</string>
     <string name="klassCreditTittle">KlassKredit</string>
     <string name="checkMyCreditBalance">Kredit balansını yoxlamaq</string>
+    <string name="moneyTransfer">Pul köçürmə</string>
+    <string name="transferDescB">Siz öz və ya yaxınlarınızın hesabını ödəmə kartları ilə hər zaman artıra bilərsiniz.</string>
+    <string name="switchAmount">Məbləğı seçin</string>
+    <string name="numb">nomrəyə</string>
 </resources>

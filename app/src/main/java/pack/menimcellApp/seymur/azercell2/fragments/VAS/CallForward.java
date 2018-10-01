@@ -119,7 +119,7 @@ public class CallForward extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case (R.id.activeCallForwarding):
-                if (CallforwardingNumber.getText().toString().trim().length() == 13) {
+                if (CallforwardingNumber.getText().toString().trim().length() > 0) {
                     if (callForwardingAll.isChecked()) {
                         textMessage = callForwardingAll.getText().toString();
                         USSDcodes s = new USSDcodes();

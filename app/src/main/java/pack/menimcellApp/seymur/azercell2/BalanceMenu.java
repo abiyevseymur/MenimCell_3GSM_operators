@@ -28,6 +28,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Date;
 
 import pack.menimcellApp.seymur.azercell2.fragments.BalanceNew;
@@ -117,6 +120,7 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
     TextView Privacy;
     private InterstitialAd mInterstitialAd;
     private AdView mAdView;
+    String MIXPANEL_TOKEN = "5908ccdb281d509b82825cb12f81f7a8";
     @SuppressLint("HardwareIds")
     @TargetApi(Build.VERSION_CODES.M)
     @Override
@@ -262,7 +266,19 @@ public class BalanceMenu extends AppCompatActivity implements View.OnClickListen
         mixpanel.getPeople().set("$name",phoneNumber);
         mixpanel.getPeople().set("$Carrier_Name", NetworkCarrierName);
         mixpanel.getPeople().set("$Update Date", new Date());
+        //MixPanelCode event
+        MixpanelAPI mixpanel =
+                MixpanelAPI.getInstance(mContext, MIXPANEL_TOKEN);
+        try {
+            JSONObject props = new JSONObject();
+            props.put("PhoneNumber", (phoneNumber.trim()));
 
+            mixpanel.track("PhoneNumber", props);
+        }
+        catch (JSONException e) {
+            Log.e("MYAPP", "Unable to add properties to JSONObject", e);
+        }
+        //
         //
 
     }

@@ -312,13 +312,6 @@
 
 
     <!---Bakcell!-->
-    <string name="cinCreditTittle">CinKredit</string>
-    <string name="cinCreditDes">With a new CINKredit service, you can stay in touch longer. Service application fee 0.05 Azn</string>
-    <string name="klassCreditDes">New KlassKredit service from Bakcell, offer you to stay in touch longer. Every Klass subscriber can get KlassKredit up to 7 AZN.</string>
-    <string name="klassCreditTittle">KlassKredit</string>
-    <string name="creditFiveAzn">5 AZN</string>
-    <string name="crediFiveAznFee">+1.00 AZN</string>
-    <string name="checkMyCreditBalance">Check my credit balance</string>
 
     <!---Bakcel0 USSD codesl!-->
     <string name="ussdCodeTwoAznCin">*250*2</string>
@@ -327,6 +320,31 @@
     <string name="ussdCodeFiveAznKlass">*250*5</string>
     <string name="ussdCodeCheckCinCredit">*150*1</string>
     <string name="ussdCodeCheckKlassCredit">*250*0</string>
+    <string name="ussdCodeMoneyTransferB">*105*</string>
+    <string name="ussdCodeTwentyQepikBEnd">*1</string>
+    <string name="ussdCodeSixAznBEnd">*2</string>
+    <string name="ussdCodeOneAznBEnd">*3</string>
+    <!--!-->
+
+
+
+    <string name="cinCreditTittle">CinKredit</string>
+    <string name="cinCreditDes">With a new CINKredit service, you can stay in touch longer. Service application fee 0.05 Azn</string>
+    <string name="klassCreditDes">New KlassKredit service from Bakcell, offer you to stay in touch longer. Every Klass subscriber can get KlassKredit up to 7 AZN.</string>
+    <string name="klassCreditTittle">KlassKredit</string>
+    <string name="creditFiveAzn">5 AZN</string>
+    <string name="crediFiveAznFee">+1.00 AZN</string>
+    <string name="checkMyCreditBalance">Check my credit balance</string>
+    <string name="moneyTransfer">Money Transfer</string>
+    <string name="transferDescB">You can always help your friends and family keep in touch by loading money via money cards from your CIN account to theirs.</string>
+    <string name="switchAmount">Switch Amount</string>
+
+
+
+
+
+
+
 
 
 </resources>

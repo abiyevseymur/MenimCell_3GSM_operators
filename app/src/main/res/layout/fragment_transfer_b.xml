@@ -1,0 +1,162 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.BakcellFragments.TransferB">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:gravity="center"
+                    android:text="@string/moneyTransfer"
+                    android:textColor="@color/gray"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/paycellDes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/transferDescB"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/enterPhoneN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center"
+                    android:text="@string/enterTheNumbYouSend" />
+
+                <EditText
+                    android:id="@+id/transferPhoneNumb"
+                    style="@android:style/Widget.Holo.Light.AutoCompleteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="050/051******"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:textColor="@color/colorPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/switchPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center"
+                    android:text="@string/switchAmount" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="-6dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/send20qB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="0.2 azn       (+0.02)"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteY="289dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/send1aznB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="1 azn          (+0.05)"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="221dp"
+                        tools:layout_editor_absoluteY="289dp" />
+
+                    <RadioButton
+                        android:id="@+id/send6aznB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="6 azn          (+0.30)"
+                        android:textSize="18sp"
+                        tools:layout_editor_absoluteX="221dp"
+                        tools:layout_editor_absoluteY="289dp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/sendPaycellB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/button"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="@string/send" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
