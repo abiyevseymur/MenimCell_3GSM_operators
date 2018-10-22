@@ -71,8 +71,9 @@
     <string name="g8Tarrif">*750*4*2</string>
     <string name="k8Tarrif">*750*4*8</string>
     <string name="k16Tarrif">*750*4*16</string>
-    <!--USSSD CODES Azercell-->
     <string name="balanceUSSDcodeB">*100</string>
+    <!--USSSD CODES Azercell-->
+
 
     <!-- -->
     <string name="Umelumat">INFORMATION</string>
@@ -313,7 +314,7 @@
 
     <!---Bakcell!-->
 
-    <!---Bakcel0 USSD codesl!-->
+    <!---Bakcell USSD codesl!-->
     <string name="ussdCodeTwoAznCin">*250*2</string>
     <string name="ussdCodeOneAznKlass">*250*1</string>
     <string name="ussdCodeTwoAznKlass">*250*2</string>
@@ -324,8 +325,10 @@
     <string name="ussdCodeTwentyQepikBEnd">*1</string>
     <string name="ussdCodeSixAznBEnd">*2</string>
     <string name="ussdCodeOneAznBEnd">*3</string>
-    <!--!-->
+    <string name="ussdCodeRoamingActivate">*121#1</string>
+    <string name="ussdCodeRoamingDeactivate">*121#0</string>
 
+    <!--!-->
 
 
     <string name="cinCreditTittle">CinKredit</string>
@@ -338,13 +341,7 @@
     <string name="moneyTransfer">Money Transfer</string>
     <string name="transferDescB">You can always help your friends and family keep in touch by loading money via money cards from your CIN account to theirs.</string>
     <string name="switchAmount">Switch Amount</string>
-
-
-
-
-
-
-
+    <string name="automaticSettings">AUTOMATIC SETTINGS</string>
 
 
 </resources>

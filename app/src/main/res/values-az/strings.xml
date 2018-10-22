@@ -253,4 +253,5 @@
     <string name="transferDescB">Siz öz və ya yaxınlarınızın hesabını ödəmə kartları ilə hər zaman artıra bilərsiniz.</string>
     <string name="switchAmount">Məbləğı seçin</string>
     <string name="numb">nomrəyə</string>
+    <string name="automaticSettings">AUTOMATIC SETTINGS</string>
 </resources>

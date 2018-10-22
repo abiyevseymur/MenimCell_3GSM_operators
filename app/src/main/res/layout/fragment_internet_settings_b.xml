@@ -2,9 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pack.menimcellApp.seymur.azercell2.fragments.InternetSettings">
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.BakcellFragments.InternetSettingsB">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,9 +21,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:gravity="center_vertical"
-                android:text="@string/internetSettings"
+                android:text="@string/automaticSettings"
                 android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorBakcell"
                 android:textSize="20sp" />
 
             <TextView
@@ -72,13 +71,13 @@
             android:weightSum="1">
 
             <Button
-                android:id="@+id/settings9595"
+                android:id="@+id/settingsBakcell"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/button"
+                android:background="@drawable/button_bakcell"
                 android:text="@string/recieve9595"
                 android:textSize="20sp" />
 
@@ -90,7 +89,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/button"
+                android:background="@drawable/button_bakcell"
                 android:text="@string/didNotGetSettings"
                 android:textSize="20sp" />
         </LinearLayout>

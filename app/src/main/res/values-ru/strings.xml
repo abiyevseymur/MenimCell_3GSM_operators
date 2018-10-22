@@ -246,7 +246,7 @@
     <string name="gizletcellthirtydayPrice">30 дней- 4.13 АЗН</string>
     <string name="gizletcelldesCLIR">Gizlicell позволяет вам постоянно скрывать свой номер во время звонка.</string>
     <string name="CLIRPrice">CLIR - 11.80 АЗН</string>
-    <string name="ClirSubscription">Для подключкние обратитесь в службу поддержки клиентов или офисы Azercell Express</string>
+    <string name="ClirSubscription">Для подключение обратитесь в службу поддержки клиентов или офисы Azercell Express</string>
     <string name="add">Добавить</string>
     <string name="remove">Удалить</string>
     <string name="telebeBtnDes">подойди со студенческим билетом и удостоверением личности в офисы обслуживания клиентов или Azercell Ekspres.</string>
@@ -278,5 +278,6 @@
     <string name="transferDescB">Вы всегда можете пополнить счет Ваших близких с помощью карт оплат.</string>
     <string name="switchAmount">Выберите сумму</string>
     <string name="numb">Номер</string>
+    <string name="automaticSettings">AUTOMATIC SETTINGS</string>
 
 </resources>

@@ -1,10 +1,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="pack.menimcellApp.seymur.azercell2.fragments.Roaming">
+    tools:context="pack.menimcellApp.seymur.azercell2.fragments.BakcellFragments.RoamingB">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -32,29 +31,35 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/activateRoamingAzercell"
+                    android:id="@+id/activateRoamingBakcell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginStart="15dp"
-                    android:background="@drawable/button"
+                    android:background="@drawable/button_bakcell"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
                     android:text="@string/Activate"
                     tools:layout_editor_absoluteX="40dp"
                     tools:layout_editor_absoluteY="127dp" />
 
                 <Button
-                    android:id="@+id/deactivateRoamingAzercell"
+                    android:id="@+id/deactivateRoamingBakcell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="15dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginStart="10dp"
-                    android:background="@drawable/button"
+                    android:background="@drawable/button_bakcell"
                     android:paddingEnd="5dp"
                     android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="5dp"
                     android:text="@string/deaktive"
                     tools:layout_editor_absoluteX="195dp"
                     tools:layout_editor_absoluteY="126dp" />
